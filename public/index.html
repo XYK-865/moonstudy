@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf7f0" />
+    <title>MoonStudy · 学习打卡与统计</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./host.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="intro">
+        <p class="eyebrow">MOONBIT · 本地学习记录</p>
+        <h1>今天学了什么？</h1>
+        <p>用几分钟留下学习足迹。无需账号，记录只保存在这个浏览器里。</p>
+      </header>
+
+      <div id="notice" class="notice" role="alert" hidden></div>
+      <button id="backup-raw" class="backup" type="button" hidden>下载原始数据备份</button>
+
+      <section class="card" aria-labelledby="form-title">
+        <div class="card-heading">
+          <h2 id="form-title">记一次学习</h2>
+          <span class="pill">首版候选 v002</span>
+        </div>
+        <form id="study-form">
+          <div class="grid">
+            <label>日期
+              <input id="date" name="date" type="date" required />
+            </label>
+            <label>学习时长（分钟）
+              <input id="minutes" name="minutes" type="number" min="1" max="1440" step="1" placeholder="40" required />
+            </label>
+          </div>
+          <label>学习内容
+            <input id="topic" name="topic" type="text" maxlength="100" placeholder="例如：MoonBit 基础" required />
+          </label>
+          <div class="grid">
+            <label>完成情况
+              <select id="completed" name="completed">
+                <option value="true">已完成</option>
+                <option value="false">未完成</option>
+              </select>
+            </label>
+            <label>备注（可选）
+              <input id="note" name="note" type="text" maxlength="500" placeholder="学习了变量和函数" />
+            </label>
+          </div>
+          <button id="save" class="primary" type="submit">保存记录</button>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="summary-title">
+        <div class="card-heading">
+          <h2 id="summary-title">学习概览</h2>
+          <span id="record-count" class="muted">0 条记录</span>
+        </div>
+        <div class="metrics">
+          <div><span>今日学习</span><strong id="today-minutes">0</strong><small>分钟</small></div>
+          <div><span>本周学习</span><strong id="week-minutes">0</strong><small>分钟</small></div>
+          <div><span>累计学习</span><strong id="total-minutes">0</strong><small>分钟</small></div>
+          <div><span>完成率</span><strong id="completion-rate">0%</strong><small>全部记录</small></div>
+          <div><span>投入最多</span><strong id="top-topic">暂无</strong><small>按累计分钟</small></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="topics-title">
+        <div class="card-heading">
+          <h2 id="topics-title">学习主题</h2>
+          <span class="muted">按累计分钟排序</span>
+        </div>
+        <p id="empty-topics" class="empty">保存记录后，这里会显示每个主题的投入时间。</p>
+        <ul id="topics" class="topic-list"></ul>
+      </section>
+
+      <section class="card" aria-labelledby="history-title">
+        <div class="card-heading">
+          <h2 id="history-title">历史记录</h2>
+          <span class="muted">发现写错的记录，可以删除后重新填写</span>
+        </div>
+        <p id="empty-history" class="empty">还没有记录，先写下今天学了什么吧。</p>
+        <ul id="history" class="history"></ul>
+        <button id="more-history" class="secondary" type="button" hidden>显示更多记录</button>
+      </section>
+
+      <section class="card" aria-labelledby="report-title">
+        <div class="card-heading">
+          <h2 id="report-title">本周学习报告</h2>
+          <span class="muted">周一到今天 · Markdown 文本</span>
+        </div>
+        <p class="report-help">点击一次生成报告，内容可复制到笔记，也可下载为 .md 文件。</p>
+        <div class="actions">
+          <button id="generate-report" class="secondary" type="button">生成周报</button>
+          <button id="download-report" class="secondary" type="button" hidden>下载 .md</button>
+        </div>
+        <label id="report-label" class="report-label" hidden>周报预览
+          <textarea id="report-output" readonly rows="12"></textarea>
+        </label>
+      </section>
+      <p class="footnote">本演示仍在验收中；浏览器缓存被清除或换设备后，记录不会自动同步。</p>
+    </main>
+  </body>
+</html>
