@@ -1,6 +1,4 @@
 import {
-  activity_series,
-  add_record,
   daily_report,
   export_backup,
   moonstudy_ready,
@@ -105,85 +103,6 @@ function saveThemePreference(preference) {
   }
 }
 
-function renderBarChart(dayMap, now) {
-  const chart = document.getElementById("bar-chart");
-  const days = [];
-  for (let offset = -6; offset <= 0; offset += 1) {
-    const date = localDate(shiftedDate(now, offset));
-    days.push(dayMap.get(date) ?? { date, minutes: 0, completed_count: 0 });
-  }
-  const maximum = Math.max(1, ...days.map(day => day.minutes));
-  chart.replaceChildren();
-  for (const day of days) {
-    const column = document.createElement("div");
-    column.className = "bar-column";
-    column.title = day.date + " · " + day.minutes + " 分钟";
-    const value = document.createElement("strong");
-    value.textContent = String(day.minutes);
-    const track = document.createElement("div");
-    track.className = "bar-track";
-    const fill = document.createElement("i");
-    fill.style.height = (day.minutes === 0 ? 0 : Math.max(8, day.minutes * 100 / maximum)) + "%";
-    track.append(fill);
-    const label = document.createElement("span");
-    label.textContent = day.date.slice(5);
-    column.append(value, track, label);
-    chart.append(column);
-  }
-}
-
-function activityGridRange(now) {
-  const end = shiftedDate(now, 6 - now.getDay());
-  return { start: shiftedDate(end, -370), end };
-}
-
-function renderHeatmap(dayMap, now, range) {
-  const heatmap = document.getElementById("heatmap");
-  const monthLabels = document.getElementById("heatmap-months");
-  heatmap.replaceChildren();
-  monthLabels.replaceChildren();
-  let previousMonth = -1;
-  for (let week = 0; week < 53; week += 1) {
-    const markerDate = shiftedDate(range.start, week * 7 + 3);
-    if (markerDate.getMonth() !== previousMonth) {
-      const label = document.createElement("span");
-      label.textContent = String(markerDate.getMonth() + 1) + "月";
-      label.style.gridColumn = String(week + 1);
-      monthLabels.append(label);
-      previousMonth = markerDate.getMonth();
-    }
-  }
-  for (let cursor = new Date(range.start); cursor <= range.end; cursor = shiftedDate(cursor, 1)) {
-    const date = localDate(cursor);
-    const future = cursor > now;
-    const day = dayMap.get(date) ?? { minutes: 0, record_count: 0, completed_count: 0 };
-    const cell = document.createElement("i");
-    const level = future ? 0 : Math.min(4, day.completed_count);
-    cell.dataset.level = String(level);
-    if (future) {
-      cell.classList.add("future");
-      cell.title = date + " · 尚未到达";
-    } else {
-      cell.title = date + " · 完成 " + day.completed_count + " 条 · 学习 " + day.minutes + " 分钟";
-    }
-    heatmap.append(cell);
-  }
-}
-
-function renderInsights(raw, now) {
-  const range = activityGridRange(now);
-  const result = JSON.parse(activity_series(raw, localDate(range.start), localDate(now)));
-  if (!result.ok) {
-    showNotice(result.message);
-    renderBarChart(new Map(), now);
-    renderHeatmap(new Map(), now, range);
-    return;
-  }
-  const dayMap = new Map(result.days.map(day => [day.date, day]));
-  renderBarChart(dayMap, now);
-  renderHeatmap(dayMap, now, range);
-}
-
 function resetReportPreview() {
   reportLabel.hidden = true;
   downloadReportButton.hidden = true;
@@ -223,16 +142,6 @@ function render() {
   dateInput.max = localDate(now);
   reportDateInput.max = localDate(now);
   resetReportPreview();
-  const summary = state.summary;
-  document.getElementById("today-minutes").textContent = String(summary.today_minutes);
-  document.getElementById("week-minutes").textContent = String(summary.week_minutes);
-  document.getElementById("total-minutes").textContent = String(summary.total_minutes);
-  document.getElementById("completion-rate").textContent = String(summary.completion_rate) + "%";
-  const topTopic = document.getElementById("top-topic");
-  topTopic.textContent = summary.top_topic;
-  topTopic.title = summary.top_topic;
-  document.getElementById("record-count").textContent = String(summary.record_count) + " 条记录";
-  renderInsights(raw, now);
 }
 
 function updateReportControls() {
@@ -349,50 +258,8 @@ reportButton.addEventListener("click", generateReport);
 downloadReportButton.addEventListener("click", () => {
   triggerDownload(reportOutput.value, currentReportFilename, "text/markdown;charset=utf-8");
 });
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let raw;
-  try {
-    raw = readRaw();
-  } catch {
-    showNotice("浏览器存储不可用，无法保存记录。");
-    return;
-  }
-  const now = localDate(new Date());
-  const minutes = Number(document.getElementById("minutes").value);
-  if (!Number.isInteger(minutes)) {
-    showNotice("学习时长必须是整数分钟。");
-    return;
-  }
-  const result = JSON.parse(add_record(
-    raw,
-    crypto.randomUUID(),
-    dateInput.value,
-    document.getElementById("topic").value,
-    minutes,
-    document.getElementById("completed").value === "true",
-    document.getElementById("note").value,
-    now,
-  ));
-  if (!result.ok) {
-    showNotice(result.message);
-    return;
-  }
-  try {
-    localStorage.setItem(STORAGE_KEY, result.storage_json);
-  } catch {
-    showNotice("浏览器存储写入失败，记录没有保存。请检查剩余空间或存储权限。");
-    return;
-  }
-  form.reset();
-  dateInput.value = now;
-  render();
-  document.getElementById("app-refresh")?.click();
-  showNotice("记录已保存。");
-});
-
-// 学习主题与历史记录由 MoonBit + Rabbita 渲染：本层在恢复备份后通知它重新读取，
-// 它在删除记录后通过 moonstudy:data-changed 事件让本层刷新概览与图表。
+// S1 中表单、概览、图表、主题与历史已经属于同一个 MoonBit/Rabbita
+// 状态树。本层仅在数据变化时刷新报告/备份控件状态；恢复备份后再通知应用重读。
 window.addEventListener("moonstudy:data-changed", () => render());
 updateReportControls();
 console.info(moonstudy_ready());

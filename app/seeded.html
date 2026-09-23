@@ -8,6 +8,10 @@
          运行前把构建产物复制到本目录：_build/js/release/build/app/app.js -> app/app.js
          本页先写入两条今日记录，再加载 Rabbita 应用，用于验证 FFI 与核心包统计。 -->
     <link rel="stylesheet" href="../public/styles.css" />
+    <script>
+      window.requestAnimationFrame = (callback) => setTimeout(() => callback(performance.now()), 16);
+      window.cancelAnimationFrame = (id) => clearTimeout(id);
+    </script>
   </head>
   <body>
     <script>
@@ -20,7 +24,7 @@
       ];
       localStorage.setItem("moonstudy.records.v1", JSON.stringify({ schema_version: 1, records }));
     </script>
-    <main id="app"></main>
+    <main class="shell"><div id="app-main"></div></main>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

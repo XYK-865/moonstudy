@@ -7,9 +7,13 @@
     <!-- 本地开发用页面，不参与 GitHub Pages 发布（Pages 只发布 public/）。
          运行前把构建产物复制到本目录：_build/js/release/build/app/app.js -> app/app.js -->
     <link rel="stylesheet" href="../public/styles.css" />
+    <script>
+      window.requestAnimationFrame = (callback) => setTimeout(() => callback(performance.now()), 16);
+      window.cancelAnimationFrame = (id) => clearTimeout(id);
+    </script>
   </head>
   <body>
-    <main id="app"></main>
+    <main class="shell"><div id="app-main"></div></main>
     <script type="module" src="./app.js"></script>
   </body>
 </html>
