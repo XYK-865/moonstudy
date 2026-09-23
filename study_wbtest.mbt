@@ -150,3 +150,22 @@ test "equal topic totals keep the first entered topic" {
   assert_eq(topic_stats(records)[0].topic, "英语")
   assert_eq(summarize(records, "2026-09-15", "2026-09-14").top_topic, "英语")
 }
+
+///|
+test "activity statistics aggregate minutes and completed records by day" {
+  let records = [
+    make_record("a", "2026-09-14", "MoonBit", 40, true, ""),
+    make_record("b", "2026-09-14", "英语", 20, false, ""),
+    make_record("c", "2026-09-16", "数学", 30, true, ""),
+    make_record("old", "2026-09-01", "旧记录", 99, true, ""),
+  ]
+  let days = activity_stats(records, "2026-09-14", "2026-09-16")
+  assert_eq(days.length(), 2)
+  assert_eq(days[0].date, "2026-09-14")
+  assert_eq(days[0].minutes, 60)
+  assert_eq(days[0].record_count, 2)
+  assert_eq(days[0].completed_count, 1)
+  assert_eq(days[1].date, "2026-09-16")
+  assert_eq(days[1].minutes, 30)
+  assert_eq(days[1].completed_count, 1)
+}

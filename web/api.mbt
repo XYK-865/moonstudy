@@ -49,3 +49,31 @@ pub fn weekly_report(
 ) -> String {
   @study.report_from_storage_json(raw, week_start, today)
 }
+
+///|
+#export_name("daily_report")
+pub fn daily_report(raw : String, date : String) -> String {
+  @study.daily_report_from_storage_json(raw, date)
+}
+
+///|
+#export_name("activity_series")
+pub fn activity_series(
+  raw : String,
+  start_date : String,
+  end_date : String,
+) -> String {
+  @study.activity_from_storage_json(raw, start_date, end_date)
+}
+
+///|
+#export_name("export_backup")
+pub fn export_backup(raw : String) -> String {
+  @study.export_storage_json(raw)
+}
+
+///|
+#export_name("restore_backup")
+pub fn restore_backup(candidate : String) -> String {
+  @study.restore_storage_json(candidate)
+}

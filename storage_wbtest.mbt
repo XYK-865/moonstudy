@@ -106,3 +106,40 @@ test "missing delete target and duplicate existing ids do not rewrite data" {
   ])
   assert_true(!load_storage(duplicate).ok)
 }
+
+///|
+test "complete backup is canonical and valid backup can be restored" {
+  let raw = encode_storage([
+    make_record("a", "2026-09-14", "MoonBit", 40, true, ""),
+  ])
+  let exported = export_storage(raw)
+  assert_true(exported.ok)
+  assert_eq(load_storage(exported.storage_json).records.length(), 1)
+  let restored = restore_storage(exported.storage_json)
+  assert_true(restored.ok)
+  assert_eq(load_storage(restored.storage_json).records[0].topic, "MoonBit")
+}
+
+///|
+test "restore refuses blank damaged and incompatible backups" {
+  assert_true(!restore_storage("").ok)
+  assert_true(!restore_storage("{bad").ok)
+  let incompatible = ToJson::to_json(StorageEnvelope::{
+    schema_version: 2,
+    records: [],
+  }).stringify()
+  assert_true(!restore_storage(incompatible).ok)
+}
+
+///|
+test "activity storage contract validates range and damaged input" {
+  let raw = encode_storage([
+    make_record("a", "2026-09-14", "MoonBit", 40, true, ""),
+  ])
+  let result = activity_from_storage(raw, "2026-09-01", "2026-09-30")
+  assert_true(result.ok)
+  assert_eq(result.days.length(), 1)
+  assert_eq(result.days[0].minutes, 40)
+  assert_true(!activity_from_storage(raw, "2026-09-31", "2026-10-01").ok)
+  assert_true(!activity_from_storage("{bad", "2026-09-01", "2026-09-30").ok)
+}

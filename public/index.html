@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#faf7f0" />
+    <meta name="description" content="使用 MoonBit 编写的本地学习打卡、趋势统计与报告助手。" />
     <title>MoonStudy · 学习打卡与统计</title>
     <link rel="stylesheet" href="./styles.css" />
     <script type="module" src="./host.js"></script>
@@ -11,18 +12,28 @@
   <body>
     <main class="shell">
       <header class="intro">
-        <p class="eyebrow">MOONBIT · 本地学习记录</p>
-        <h1>今天学了什么？</h1>
-        <p>用几分钟留下学习足迹。无需账号，记录只保存在这个浏览器里。</p>
+        <div>
+          <p class="eyebrow">MOONBIT · 本地学习记录</p>
+          <h1>今天学了什么？</h1>
+          <p>用几分钟留下学习足迹。无需账号，记录只保存在这个浏览器里。</p>
+        </div>
+        <label class="theme-picker">界面颜色
+          <select id="theme-select" aria-label="界面颜色">
+            <option value="system">跟随系统</option>
+            <option value="light">亮色</option>
+            <option value="dark">暗色</option>
+          </select>
+        </label>
       </header>
 
+      <noscript><p class="notice">此应用需要浏览器启用 JavaScript。</p></noscript>
       <div id="notice" class="notice" role="alert" hidden></div>
-      <button id="backup-raw" class="backup" type="button" hidden>下载原始数据备份</button>
+      <button id="backup-raw" class="backup" type="button" hidden>下载无法读取的原始数据</button>
 
       <section class="card" aria-labelledby="form-title">
         <div class="card-heading">
           <h2 id="form-title">记一次学习</h2>
-          <span class="pill">首版候选 v002</span>
+          <span class="pill">提交候选 v003</span>
         </div>
         <form id="study-form">
           <div class="grid">
@@ -57,11 +68,42 @@
           <span id="record-count" class="muted">0 条记录</span>
         </div>
         <div class="metrics">
-          <div><span>今日学习</span><strong id="today-minutes">0</strong><small>分钟</small></div>
-          <div><span>本周学习</span><strong id="week-minutes">0</strong><small>分钟</small></div>
-          <div><span>累计学习</span><strong id="total-minutes">0</strong><small>分钟</small></div>
-          <div><span>完成率</span><strong id="completion-rate">0%</strong><small>全部记录</small></div>
-          <div><span>投入最多</span><strong id="top-topic">暂无</strong><small>按累计分钟</small></div>
+          <div class="metric"><span>今日学习</span><strong id="today-minutes">0</strong><small>分钟</small></div>
+          <div class="metric"><span>本周学习</span><strong id="week-minutes">0</strong><small>分钟</small></div>
+          <div class="metric"><span>累计学习</span><strong id="total-minutes">0</strong><small>分钟</small></div>
+          <div class="metric"><span>完成率</span><strong id="completion-rate">0%</strong><small>全部记录</small></div>
+          <div class="metric metric-topic"><span>投入最多</span><strong id="top-topic">暂无</strong><small>按累计分钟</small></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="trend-title">
+        <div class="card-heading">
+          <h2 id="trend-title">学习趋势</h2>
+          <span class="muted">统计由 MoonBit 计算</span>
+        </div>
+        <div class="trend-block">
+          <div class="subheading">
+            <h3>最近 7 天学习时长</h3>
+            <span class="muted">单位：分钟</span>
+          </div>
+          <div id="bar-chart" class="bar-chart" role="img" aria-label="最近七天学习时长柱状图"></div>
+        </div>
+        <div class="trend-block">
+          <div class="subheading">
+            <h3>过去一年完成记录</h3>
+            <span class="muted">颜色越深，完成记录越多</span>
+          </div>
+          <div class="heatmap-scroll">
+            <div class="heatmap-frame">
+              <div class="heatmap-corner" aria-hidden="true"></div>
+              <div id="heatmap-months" class="heatmap-months" aria-hidden="true"></div>
+              <div class="heatmap-weekdays" aria-hidden="true"><span>日</span><span></span><span>二</span><span></span><span>四</span><span></span><span>六</span></div>
+              <div id="heatmap" class="heatmap" role="img" aria-label="过去一年每日完成记录格子图；将鼠标停在格子上可查看日期"></div>
+            </div>
+          </div>
+          <div class="heatmap-legend" aria-label="颜色图例">
+            <span>少</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span>多</span>
+          </div>
         </div>
       </section>
 
@@ -86,19 +128,44 @@
 
       <section class="card" aria-labelledby="report-title">
         <div class="card-heading">
-          <h2 id="report-title">本周学习报告</h2>
-          <span class="muted">周一到今天 · Markdown 文本</span>
+          <h2 id="report-title">学习报告</h2>
+          <span class="muted">日报或周报 · Markdown 文本</span>
         </div>
-        <p class="report-help">点击一次生成报告，内容可复制到笔记，也可下载为 .md 文件。</p>
+        <p class="report-help">选择报告类型后生成内容，可复制到笔记，也可下载为 `.md` 文件。</p>
+        <div class="report-controls">
+          <label>报告类型
+            <select id="report-type">
+              <option value="daily">日报</option>
+              <option value="weekly">周报</option>
+            </select>
+          </label>
+          <label id="report-date-label">日报日期
+            <input id="report-date" type="date" />
+          </label>
+        </div>
         <div class="actions">
-          <button id="generate-report" class="secondary" type="button">生成周报</button>
+          <button id="generate-report" class="secondary" type="button">生成日报</button>
           <button id="download-report" class="secondary" type="button" hidden>下载 .md</button>
         </div>
-        <label id="report-label" class="report-label" hidden>周报预览
+        <label id="report-label" class="report-label" hidden><span id="report-preview-title">日报预览</span>
           <textarea id="report-output" readonly rows="12"></textarea>
         </label>
       </section>
-      <p class="footnote">本演示仍在验收中；浏览器缓存被清除或换设备后，记录不会自动同步。</p>
+
+      <section class="card" aria-labelledby="data-title">
+        <div class="card-heading">
+          <h2 id="data-title">数据备份与恢复</h2>
+          <span class="muted">完整 JSON · 只保存在你手中</span>
+        </div>
+        <p class="report-help">建议提交前和清理浏览器数据前下载备份。恢复时会先由 MoonBit 校验，不会导入损坏文件。</p>
+        <div class="actions">
+          <button id="export-data" class="secondary" type="button">导出完整备份</button>
+          <button id="choose-restore" class="secondary" type="button">选择备份恢复</button>
+          <input id="restore-file" type="file" accept="application/json,.json" hidden />
+        </div>
+      </section>
+
+      <p class="footnote">数据默认只在当前浏览器中保存。换设备前请先导出完整备份。</p>
     </main>
   </body>
 </html>

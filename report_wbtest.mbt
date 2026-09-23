@@ -35,3 +35,27 @@ test "report escapes user text and refuses damaged storage" {
   assert_true(!report_from_storage("{bad", "2026-09-14", "2026-09-16").ok)
   assert_true(!report_from_storage(raw, "2026-09-17", "2026-09-16").ok)
 }
+
+///|
+test "daily report includes only the selected day" {
+  let records = [
+    make_record("a", "2026-09-16", "MoonBit", 25, true, "变量"),
+    make_record("b", "2026-09-16", "英语", 15, false, "阅读"),
+    make_record("other", "2026-09-15", "旧记录", 99, true, ""),
+  ]
+  let markdown = daily_markdown(records, "2026-09-16")
+  assert_true(markdown.contains("# 学习日报"))
+  assert_true(markdown.contains("今日学习：40 分钟"))
+  assert_true(markdown.contains("学习记录：2 条"))
+  assert_true(markdown.contains("完成率：50%"))
+  assert_true(!markdown.contains("旧记录"))
+}
+
+///|
+test "daily report handles empty date and damaged storage" {
+  let empty = daily_report_from_storage(encode_storage([]), "2026-09-16")
+  assert_true(empty.ok)
+  assert_true(empty.markdown.contains("当日暂无学习记录"))
+  assert_true(!daily_report_from_storage("{bad", "2026-09-16").ok)
+  assert_true(!daily_report_from_storage(encode_storage([]), "2026-09-31").ok)
+}

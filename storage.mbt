@@ -6,11 +6,23 @@ pub struct StorageEnvelope {
 } derive(FromJson, ToJson, Debug)
 
 ///|
+pub extend StorageEnvelope with @moonbitlang/core/json.FromJson::{from_json}
+
+///|
+pub extend StorageEnvelope with ToJson::{to_json}
+
+///|
+pub extend StorageEnvelope with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
 pub struct StorageLoad {
   ok : Bool
   message : String
   records : Array[StudyRecord]
 } derive(Debug)
+
+///|
+pub extend StorageLoad with @moonbitlang/core/debug.Debug::{to_repr}
 
 ///|
 pub struct StorageAction {
@@ -20,6 +32,12 @@ pub struct StorageAction {
 } derive(ToJson, Debug)
 
 ///|
+pub extend StorageAction with ToJson::{to_json}
+
+///|
+pub extend StorageAction with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
 pub struct ViewState {
   ok : Bool
   message : String
@@ -27,6 +45,25 @@ pub struct ViewState {
   summary : StudySummary
   topics : Array[TopicStat]
 } derive(ToJson, Debug)
+
+///|
+pub extend ViewState with ToJson::{to_json}
+
+///|
+pub extend ViewState with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
+pub struct ActivityResult {
+  ok : Bool
+  message : String
+  days : Array[DayStat]
+} derive(ToJson, Debug)
+
+///|
+pub extend ActivityResult with ToJson::{to_json}
+
+///|
+pub extend ActivityResult with @moonbitlang/core/debug.Debug::{to_repr}
 
 ///|
 pub fn encode_storage(records : Array[StudyRecord]) -> String {
@@ -210,4 +247,76 @@ pub fn add_to_storage_json(
 ///|
 pub fn delete_from_storage_json(raw : String, id : String) -> String {
   ToJson::to_json(delete_from_storage(raw, id)).stringify()
+}
+
+///|
+pub fn activity_from_storage(
+  raw : String,
+  start_date : String,
+  end_date : String,
+) -> ActivityResult {
+  let loaded = load_storage(raw)
+  if !loaded.ok {
+    return { ok: false, message: loaded.message, days: [], }
+  }
+  if !valid_iso_date(start_date) ||
+    !valid_iso_date(end_date) ||
+    start_date > end_date {
+    return { ok: false, message: "统计日期范围无效", days: [], }
+  }
+  {
+    ok: true,
+    message: "",
+    days: activity_stats(loaded.records, start_date, end_date),
+  }
+}
+
+///|
+pub fn activity_from_storage_json(
+  raw : String,
+  start_date : String,
+  end_date : String,
+) -> String {
+  ToJson::to_json(activity_from_storage(raw, start_date, end_date)).stringify()
+}
+
+///|
+/// Return a canonical, complete storage envelope after validating current data.
+pub fn export_storage(raw : String) -> StorageAction {
+  let loaded = load_storage(raw)
+  if !loaded.ok {
+    return { ok: false, message: loaded.message, storage_json: raw, }
+  }
+  {
+    ok: true,
+    message: "完整备份已生成",
+    storage_json: encode_storage(loaded.records),
+  }
+}
+
+///|
+/// Validate untrusted backup text before the browser is allowed to store it.
+pub fn restore_storage(candidate : String) -> StorageAction {
+  if candidate.trim().to_owned().length() == 0 {
+    return { ok: false, message: "备份文件为空", storage_json: "", }
+  }
+  let loaded = load_storage(candidate)
+  if !loaded.ok {
+    return { ok: false, message: loaded.message, storage_json: "", }
+  }
+  {
+    ok: true,
+    message: "备份验证通过",
+    storage_json: encode_storage(loaded.records),
+  }
+}
+
+///|
+pub fn export_storage_json(raw : String) -> String {
+  ToJson::to_json(export_storage(raw)).stringify()
+}
+
+///|
+pub fn restore_storage_json(candidate : String) -> String {
+  ToJson::to_json(restore_storage(candidate)).stringify()
 }

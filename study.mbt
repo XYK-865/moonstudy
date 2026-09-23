@@ -10,6 +10,18 @@ pub struct StudyRecord {
 } derive(Eq, Debug, ToJson, FromJson)
 
 ///|
+pub extend StudyRecord with Eq::{equal, not_equal}
+
+///|
+pub extend StudyRecord with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
+pub extend StudyRecord with ToJson::{to_json}
+
+///|
+pub extend StudyRecord with @moonbitlang/core/json.FromJson::{from_json}
+
+///|
 /// Values displayed on the dashboard.
 pub struct StudySummary {
   today_minutes : Int
@@ -22,12 +34,48 @@ pub struct StudySummary {
 } derive(Eq, Debug, ToJson)
 
 ///|
+pub extend StudySummary with Eq::{equal, not_equal}
+
+///|
+pub extend StudySummary with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
+pub extend StudySummary with ToJson::{to_json}
+
+///|
 /// Aggregation shown beside the all-time dashboard.
 pub struct TopicStat {
   topic : String
   minutes : Int
   record_count : Int
 } derive(Eq, Debug, ToJson)
+
+///|
+pub extend TopicStat with Eq::{equal, not_equal}
+
+///|
+pub extend TopicStat with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
+pub extend TopicStat with ToJson::{to_json}
+
+///|
+/// Per-day values used by the browser visualizations.
+pub struct DayStat {
+  date : String
+  minutes : Int
+  record_count : Int
+  completed_count : Int
+} derive(Eq, Debug, ToJson)
+
+///|
+pub extend DayStat with Eq::{equal, not_equal}
+
+///|
+pub extend DayStat with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
+pub extend DayStat with ToJson::{to_json}
 
 ///|
 priv struct TopicTotal {
@@ -183,6 +231,43 @@ pub fn topic_stats(records : Array[StudyRecord]) -> Array[TopicStat] {
       record_count: total.record_count,
     })
   }
+  result
+}
+
+///|
+/// Aggregate records inside an inclusive ISO-date range. Only dates containing
+/// records are returned; the browser fills visual zero-days without inventing
+/// any non-zero business values.
+pub fn activity_stats(
+  records : Array[StudyRecord],
+  start_date : String,
+  end_date : String,
+) -> Array[DayStat] {
+  let result : Array[DayStat] = []
+  let positions : Map[String, Int] = Map([])
+  for record in records {
+    if record.date >= start_date && record.date <= end_date {
+      let completed_increment = if record.completed { 1 } else { 0 }
+      if positions.get(record.date) is Some(index) {
+        let current = result[index]
+        result[index] = {
+          date: current.date,
+          minutes: current.minutes + record.minutes,
+          record_count: current.record_count + 1,
+          completed_count: current.completed_count + completed_increment,
+        }
+      } else {
+        positions.set(record.date, result.length())
+        result.push({
+          date: record.date,
+          minutes: record.minutes,
+          record_count: 1,
+          completed_count: completed_increment,
+        })
+      }
+    }
+  }
+  result.sort_by((a, b) => a.date.compare(b.date))
   result
 }
 

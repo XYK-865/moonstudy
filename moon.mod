@@ -1,6 +1,6 @@
 name = "moonstudy/moonstudy"
 
-version = "0.1.0"
+version = "0.3.0"
 
 readme = "README.md"
 
@@ -12,4 +12,4 @@ keywords = [ "study", "tracker", "statistics", "web" ]
 
 preferred_target = "js"
 
-description = "A local-first study tracker and weekly report generator written in MoonBit."
+description = "A local-first study tracker with visualizations, reports, and backup written in MoonBit."
