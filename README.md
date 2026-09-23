@@ -19,7 +19,11 @@ MoonStudy 是一个使用 MoonBit 编写核心业务逻辑的本地优先学习�
 
 ## 在线与本地运行
 
-项目公开后可通过仓库的 GitHub Pages 地址直接使用。当前本地运行方式：
+在线体验：https://xyk-865.github.io/moonstudy/
+
+公开源码：https://github.com/XYK-865/moonstudy
+
+本地运行方式：
 
 ```text
 cd public

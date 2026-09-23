@@ -4,7 +4,7 @@ version = "0.3.0"
 
 readme = "README.md"
 
-repository = ""
+repository = "https://github.com/XYK-865/moonstudy"
 
 license = "MIT"
 
