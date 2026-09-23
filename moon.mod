@@ -13,3 +13,7 @@ keywords = [ "study", "tracker", "statistics", "web" ]
 preferred_target = "js"
 
 description = "A local-first study tracker with visualizations, reports, and backup written in MoonBit."
+
+import {
+  "moonbit-community/rabbita@0.16.2",
+}

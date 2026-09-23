@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MoonStudy · Rabbita 迁移验证页（含种子数据）</title>
+    <!-- 本地开发用页面，不参与 GitHub Pages 发布。
+         运行前把构建产物复制到本目录：_build/js/release/build/app/app.js -> app/app.js
+         本页先写入两条今日记录，再加载 Rabbita 应用，用于验证 FFI 与核心包统计。 -->
+    <link rel="stylesheet" href="../public/styles.css" />
+  </head>
+  <body>
+    <script>
+      const pad = (n) => String(n).padStart(2, "0");
+      const now = new Date();
+      const today = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+      const records = [
+        { id: "r1", date: today, topic: "MoonBit", minutes: 45, completed: true, note: "core" },
+        { id: "r2", date: today, topic: "Rabbita", minutes: 30, completed: false, note: "" },
+      ];
+      localStorage.setItem("moonstudy.records.v1", JSON.stringify({ schema_version: 1, records }));
+    </script>
+    <main id="app"></main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

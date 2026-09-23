@@ -4,3 +4,4 @@ target/
 dist/app.js
 .DS_Store
 
+app/app.js

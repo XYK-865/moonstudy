@@ -1,0 +1,13 @@
+import {
+  "moonstudy/moonstudy" @study,
+  "moonbit-community/rabbita" @rabbita,
+  "moonbit-community/rabbita/html" @html,
+}
+
+supported_targets = "js"
+
+pkgtype(kind: "executable")
+
+options(
+  link: { "js": { "format": "esm" } },
+)
