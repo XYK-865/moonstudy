@@ -7,6 +7,7 @@
     <meta name="description" content="使用 MoonBit 编写的本地学习打卡、趋势统计与报告助手。" />
     <title>MoonStudy · 学习打卡与统计</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./moonstudy-app_v004.mjs"></script>
     <script type="module" src="./host.js"></script>
   </head>
   <body>
@@ -107,24 +108,8 @@
         </div>
       </section>
 
-      <section class="card" aria-labelledby="topics-title">
-        <div class="card-heading">
-          <h2 id="topics-title">学习主题</h2>
-          <span class="muted">按累计分钟排序</span>
-        </div>
-        <p id="empty-topics" class="empty">保存记录后，这里会显示每个主题的投入时间。</p>
-        <ul id="topics" class="topic-list"></ul>
-      </section>
-
-      <section class="card" aria-labelledby="history-title">
-        <div class="card-heading">
-          <h2 id="history-title">历史记录</h2>
-          <span class="muted">发现写错的记录，可以删除后重新填写</span>
-        </div>
-        <p id="empty-history" class="empty">还没有记录，先写下今天学了什么吧。</p>
-        <ul id="history" class="history"></ul>
-        <button id="more-history" class="secondary" type="button" hidden>显示更多记录</button>
-      </section>
+      <!-- 学习主题与历史记录由 MoonBit + Rabbita 渲染（v004 迁移中） -->
+      <div id="app-records"></div>
 
       <section class="card" aria-labelledby="report-title">
         <div class="card-heading">

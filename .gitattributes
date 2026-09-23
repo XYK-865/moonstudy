@@ -4,6 +4,7 @@
 #    标记为生成文件后不再计入 GitHub 语言统计，避免 314KB 产物被算成 JavaScript。
 #    构建产物改名或新增时，必须在这里登记新名称。
 public/moonstudy-core_*.mjs linguist-generated=true
+public/moonstudy-app_*.mjs linguist-generated=true
 
 # 2. moon.mod 被 linguist 误判为 AMPL（同为 .mod 扩展名）；它是 MoonBit 模块文件，
 #    归入 MoonBit 而不是 AMPL。

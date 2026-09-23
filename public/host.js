@@ -2,7 +2,6 @@ import {
   activity_series,
   add_record,
   daily_report,
-  delete_record,
   export_backup,
   moonstudy_ready,
   read_state,
@@ -28,11 +27,8 @@ const downloadReportButton = document.getElementById("download-report");
 const reportLabel = document.getElementById("report-label");
 const reportPreviewTitle = document.getElementById("report-preview-title");
 const reportOutput = document.getElementById("report-output");
-const moreHistoryButton = document.getElementById("more-history");
 const themeSelect = document.getElementById("theme-select");
 const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
-let historyLimit = 25;
-let currentRecords = [];
 let currentReportFilename = "";
 
 function localDate(date) {
@@ -106,56 +102,6 @@ function saveThemePreference(preference) {
     localStorage.setItem(THEME_KEY, preference);
   } catch {
     showNotice("主题已经切换，但浏览器没有保存这项偏好。");
-  }
-}
-
-function renderHistory(records) {
-  const history = document.getElementById("history");
-  const empty = document.getElementById("empty-history");
-  currentRecords = records;
-  history.replaceChildren();
-  empty.hidden = records.length > 0;
-  moreHistoryButton.hidden = records.length <= historyLimit;
-  for (const record of [...records].reverse().slice(0, historyLimit)) {
-    const item = document.createElement("li");
-    const details = document.createElement("div");
-    details.className = "details";
-    const title = document.createElement("strong");
-    title.textContent = record.topic;
-    const subtitle = document.createElement("small");
-    subtitle.textContent = [record.date, record.completed ? "已完成" : "未完成", record.note]
-      .filter(Boolean).join(" · ");
-    const duration = document.createElement("span");
-    duration.className = "duration";
-    duration.textContent = String(record.minutes) + " 分钟";
-    const actions = document.createElement("div");
-    actions.className = "row-actions";
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.className = "danger";
-    remove.textContent = "删除";
-    remove.setAttribute("aria-label", "删除 " + record.date + " 的 " + record.topic + " 记录");
-    remove.addEventListener("click", () => removeRecord(record.id));
-    details.append(title, subtitle);
-    actions.append(duration, remove);
-    item.append(details, actions);
-    history.append(item);
-  }
-}
-
-function renderTopics(topics) {
-  const list = document.getElementById("topics");
-  document.getElementById("empty-topics").hidden = topics.length > 0;
-  list.replaceChildren();
-  for (const topic of topics) {
-    const item = document.createElement("li");
-    const name = document.createElement("strong");
-    name.textContent = topic.topic;
-    const amount = document.createElement("span");
-    amount.textContent = String(topic.minutes) + " 分钟 · " +
-      String(topic.record_count) + " 条";
-    item.append(name, amount);
-    list.append(item);
   }
 }
 
@@ -259,8 +205,6 @@ function render() {
     showNotice("浏览器存储不可用，暂时不能保存记录。");
     setAppControls(false);
     chooseRestoreButton.disabled = true;
-    renderHistory([]);
-    renderTopics([]);
     return;
   }
   const now = new Date();
@@ -270,8 +214,6 @@ function render() {
     backupRawButton.hidden = false;
     setAppControls(false);
     chooseRestoreButton.disabled = false;
-    renderHistory([]);
-    renderTopics([]);
     return;
   }
   showNotice("");
@@ -290,34 +232,7 @@ function render() {
   topTopic.textContent = summary.top_topic;
   topTopic.title = summary.top_topic;
   document.getElementById("record-count").textContent = String(summary.record_count) + " 条记录";
-  renderHistory(state.records);
-  renderTopics(state.topics);
   renderInsights(raw, now);
-}
-
-function removeRecord(id) {
-  if (!window.confirm("确定删除这条学习记录吗？删除后无法在本页面撤销。")) {
-    return;
-  }
-  let raw;
-  try {
-    raw = readRaw();
-  } catch {
-    showNotice("浏览器存储不可用，无法删除记录。");
-    return;
-  }
-  const result = JSON.parse(delete_record(raw, id));
-  if (!result.ok) {
-    showNotice(result.message);
-    return;
-  }
-  try {
-    localStorage.setItem(STORAGE_KEY, result.storage_json);
-  } catch {
-    showNotice("浏览器存储写入失败，记录没有删除。");
-    return;
-  }
-  render();
 }
 
 function updateReportControls() {
@@ -405,8 +320,8 @@ async function restoreData(file) {
     showNotice("浏览器存储写入失败，备份没有恢复。");
     return;
   }
-  historyLimit = 25;
   render();
+  document.getElementById("app-refresh")?.click();
   showNotice("备份恢复完成，共 " + count + " 条记录。");
 }
 
@@ -428,10 +343,6 @@ chooseRestoreButton.addEventListener("click", () => restoreFileInput.click());
 restoreFileInput.addEventListener("change", async () => {
   await restoreData(restoreFileInput.files?.[0]);
   restoreFileInput.value = "";
-});
-moreHistoryButton.addEventListener("click", () => {
-  historyLimit += 25;
-  renderHistory(currentRecords);
 });
 reportTypeInput.addEventListener("change", updateReportControls);
 reportButton.addEventListener("click", generateReport);
@@ -476,9 +387,13 @@ form.addEventListener("submit", (event) => {
   form.reset();
   dateInput.value = now;
   render();
+  document.getElementById("app-refresh")?.click();
   showNotice("记录已保存。");
 });
 
+// 学习主题与历史记录由 MoonBit + Rabbita 渲染：本层在恢复备份后通知它重新读取，
+// 它在删除记录后通过 moonstudy:data-changed 事件让本层刷新概览与图表。
+window.addEventListener("moonstudy:data-changed", () => render());
 updateReportControls();
 console.info(moonstudy_ready());
 render();

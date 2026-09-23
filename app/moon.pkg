@@ -1,7 +1,7 @@
 import {
   "moonstudy/moonstudy" @study,
-  "moonbit-community/rabbita" @rabbita,
-  "moonbit-community/rabbita/html" @html,
+  "moonbit-community/rabbita",
+  "moonbit-community/rabbita/html",
 }
 
 supported_targets = "js"
