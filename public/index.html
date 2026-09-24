@@ -24,13 +24,7 @@
           <h1>今天学了什么？</h1>
           <p>用几分钟留下学习足迹。无需账号，记录只保存在这个浏览器里。</p>
         </div>
-        <label class="theme-picker">界面颜色
-          <select id="theme-select" aria-label="界面颜色">
-            <option value="system">跟随系统</option>
-            <option value="light">亮色</option>
-            <option value="dark">暗色</option>
-          </select>
-        </label>
+        <div id="theme-root"></div>
       </header>
 
       <noscript><p class="notice">此应用需要浏览器启用 JavaScript。</p></noscript>
@@ -39,32 +33,6 @@
 
       <!-- 表单、概览、图表、主题与历史由 MoonBit + Rabbita 统一渲染。 -->
       <div id="app-main"></div>
-
-      <section class="card" aria-labelledby="report-title">
-        <div class="card-heading">
-          <h2 id="report-title">学习报告</h2>
-          <span class="muted">日报或周报 · Markdown 文本</span>
-        </div>
-        <p class="report-help">选择报告类型后生成内容，可复制到笔记，也可下载为 `.md` 文件。</p>
-        <div class="report-controls">
-          <label>报告类型
-            <select id="report-type">
-              <option value="daily">日报</option>
-              <option value="weekly">周报</option>
-            </select>
-          </label>
-          <label id="report-date-label">日报日期
-            <input id="report-date" type="date" />
-          </label>
-        </div>
-        <div class="actions">
-          <button id="generate-report" class="secondary" type="button">生成日报</button>
-          <button id="download-report" class="secondary" type="button" hidden>下载 .md</button>
-        </div>
-        <label id="report-label" class="report-label" hidden><span id="report-preview-title">日报预览</span>
-          <textarea id="report-output" readonly rows="12"></textarea>
-        </label>
-      </section>
 
       <section class="card" aria-labelledby="data-title">
         <div class="card-heading">

@@ -13,6 +13,7 @@ MoonStudy 是一个使用 MoonBit 编写核心业务逻辑的本地优先学习�
 - 最近 7 天学习时长柱状图。
 - 过去一年每日完成量格子图，颜色按当天已完成记录数变化。
 - 指定日期的 Markdown 日报，以及本周 Markdown 周报；均可预览和下载。
+- 任意周 Markdown 周报，以及按相同周进度计算的本周/上周环比。
 - 亮色、暗色、跟随系统三种主题，并记住选择。
 - 完整 JSON 备份和安全恢复；损坏、版本不兼容或重复编号的数据会被拒绝。
 - 长学习内容在概览中限制为两行，不再撑坏卡片；悬停可查看全文。
@@ -49,10 +50,12 @@ http://127.0.0.1:8124/
 - `study.mbt`：记录模型、校验、概览统计、主题统计和按日聚合。
 - `storage.mbt`：版本化存储契约、增删、读取、备份导出和恢复校验。
 - `report.mbt`：Markdown 日报与周报。
-- `web/api.mbt`：10 个浏览器 ESM 导出入口。
-- `public/host.js`：薄浏览器适配，只负责 DOM、localStorage、文件与可视化绘制，不重算非零业务统计。
+- `comparison.mbt`：同进度周环比、跨月/跨年日期切片和变化率。
+- `app/`：MoonBit + Rabbita 页面状态树，负责表单、统计、图表、主题、报告与记录列表。
+- `web/api.mbt`：11 个浏览器 ESM 导出入口。
+- `public/host.js`：剩余的薄浏览器适配，只负责完整备份、文件恢复和损坏数据入口，不重算业务统计。
 
-既有 6 个接口保持兼容：`moonstudy_ready`、`empty_total`、`read_state`、`add_record`、`delete_record`、`weekly_report`。v003 新增：`daily_report`、`activity_series`、`export_backup`、`restore_backup`。
+既有 10 个接口保持兼容：`moonstudy_ready`、`empty_total`、`read_state`、`add_record`、`delete_record`、`weekly_report`、`daily_report`、`activity_series`、`export_backup`、`restore_backup`。v004 新增 `week_comparison`，不改变既有接口、存储键或封套格式。
 
 ## 构建与测试
 
@@ -62,13 +65,13 @@ http://127.0.0.1:8124/
 moon fmt
 moon check --target js
 moon test --target js
-moon build --target js
+moon build --target js --release
 node --check public/host.js
 ```
 
-JS 构建产物位于 `_build/js/debug/build/web/web.js`。发布时将它复制为 `public/moonstudy-core_v003.mjs`。仓库已经保留发布所需的构建结果，以便 GitHub Pages 直接提供静态网页；业务源码仍是唯一实现来源。
+核心 JS 构建产物位于 `_build/js/release/build/web/web.js`，Rabbita 应用产物位于 `_build/js/release/build/app/app.js`。v004 发布候选分别保存在 `public/moonstudy-core_v004.mjs` 与 `public/moonstudy-app_v004.mjs`。仓库保留真实构建结果供 GitHub Pages 直接提供静态网页，并通过 `.gitattributes` 标记为生成文件；MoonBit 源码仍是唯一业务实现来源。
 
-当前 v003 包含 24 项 MoonBit 测试，覆盖统计、日期边界、存储损坏、重复编号、日报、周报、活动聚合和备份恢复。目标浏览器为桌面版 Microsoft Edge，完整演示步骤见 `验收演示说明_v001.md`。
+当前 v004 分支包含 31 项 MoonBit 测试，覆盖统计、日期边界、存储损坏、重复编号、日报、任意周周报、活动聚合、备份恢复和同进度周环比。目标浏览器为桌面版 Microsoft Edge；v004 的 14 类自动验收结果见 `03_测试与验证/浏览器首版验收_v004.md`。v004 尚未合并到 `main`，公开页面仍是 v003。
 
 ## 项目边界
 

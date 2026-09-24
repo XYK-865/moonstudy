@@ -1,15 +1,6 @@
-import {
-  daily_report,
-  export_backup,
-  moonstudy_ready,
-  read_state,
-  restore_backup,
-  weekly_report,
-} from "./moonstudy-core_v003.mjs";
+import { export_backup, moonstudy_ready, read_state, restore_backup } from "./moonstudy-core_v004.mjs";
 
 const STORAGE_KEY = "moonstudy.records.v1";
-const THEME_KEY = "moonstudy.theme.v1";
-const form = document.getElementById("study-form");
 const notice = document.getElementById("notice");
 const backupRawButton = document.getElementById("backup-raw");
 const exportDataButton = document.getElementById("export-data");
@@ -18,16 +9,7 @@ const restoreFileInput = document.getElementById("restore-file");
 const saveButton = document.getElementById("save");
 const dateInput = document.getElementById("date");
 const reportButton = document.getElementById("generate-report");
-const reportTypeInput = document.getElementById("report-type");
 const reportDateInput = document.getElementById("report-date");
-const reportDateLabel = document.getElementById("report-date-label");
-const downloadReportButton = document.getElementById("download-report");
-const reportLabel = document.getElementById("report-label");
-const reportPreviewTitle = document.getElementById("report-preview-title");
-const reportOutput = document.getElementById("report-output");
-const themeSelect = document.getElementById("theme-select");
-const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
-let currentReportFilename = "";
 
 function localDate(date) {
   const year = date.getFullYear();
@@ -75,41 +57,6 @@ function downloadRaw() {
   }
 }
 
-function readThemePreference() {
-  try {
-    const value = localStorage.getItem(THEME_KEY);
-    return ["light", "dark", "system"].includes(value) ? value : "system";
-  } catch {
-    return "system";
-  }
-}
-
-function applyTheme(preference) {
-  const resolved = preference === "system"
-    ? (systemDark.matches ? "dark" : "light")
-    : preference;
-  document.documentElement.dataset.theme = resolved;
-  document.querySelector('meta[name="theme-color"]').content = resolved === "dark"
-    ? "#111915"
-    : "#faf7f0";
-}
-
-function saveThemePreference(preference) {
-  applyTheme(preference);
-  try {
-    localStorage.setItem(THEME_KEY, preference);
-  } catch {
-    showNotice("主题已经切换，但浏览器没有保存这项偏好。");
-  }
-}
-
-function resetReportPreview() {
-  reportLabel.hidden = true;
-  downloadReportButton.hidden = true;
-  reportOutput.value = "";
-  currentReportFilename = "";
-}
-
 function setAppControls(enabled) {
   saveButton.disabled = !enabled;
   reportButton.disabled = !enabled;
@@ -141,42 +88,6 @@ function render() {
   backupRawButton.hidden = true;
   dateInput.max = localDate(now);
   reportDateInput.max = localDate(now);
-  resetReportPreview();
-}
-
-function updateReportControls() {
-  const daily = reportTypeInput.value === "daily";
-  reportDateLabel.hidden = !daily;
-  reportButton.textContent = daily ? "生成日报" : "生成周报";
-  resetReportPreview();
-}
-
-function generateReport() {
-  let raw;
-  try {
-    raw = readRaw();
-  } catch {
-    showNotice("浏览器存储不可用，无法生成报告。");
-    return;
-  }
-  const now = new Date();
-  const daily = reportTypeInput.value === "daily";
-  const reportDate = reportDateInput.value;
-  const result = JSON.parse(daily
-    ? daily_report(raw, reportDate)
-    : weekly_report(raw, weekStart(now), localDate(now)));
-  if (!result.ok) {
-    showNotice(result.message);
-    return;
-  }
-  showNotice("");
-  reportOutput.value = result.markdown;
-  reportPreviewTitle.textContent = daily ? "日报预览" : "周报预览";
-  reportLabel.hidden = false;
-  downloadReportButton.hidden = false;
-  currentReportFilename = daily
-    ? "moonstudy-daily-" + reportDate + ".md"
-    : "moonstudy-weekly-" + localDate(now) + ".md";
 }
 
 function exportData() {
@@ -239,13 +150,6 @@ dateInput.value = today;
 dateInput.max = today;
 reportDateInput.value = today;
 reportDateInput.max = today;
-const initialTheme = readThemePreference();
-themeSelect.value = initialTheme;
-applyTheme(initialTheme);
-systemDark.addEventListener("change", () => {
-  if (themeSelect.value === "system") applyTheme("system");
-});
-themeSelect.addEventListener("change", () => saveThemePreference(themeSelect.value));
 backupRawButton.addEventListener("click", downloadRaw);
 exportDataButton.addEventListener("click", exportData);
 chooseRestoreButton.addEventListener("click", () => restoreFileInput.click());
@@ -253,14 +157,8 @@ restoreFileInput.addEventListener("change", async () => {
   await restoreData(restoreFileInput.files?.[0]);
   restoreFileInput.value = "";
 });
-reportTypeInput.addEventListener("change", updateReportControls);
-reportButton.addEventListener("click", generateReport);
-downloadReportButton.addEventListener("click", () => {
-  triggerDownload(reportOutput.value, currentReportFilename, "text/markdown;charset=utf-8");
-});
-// S1 中表单、概览、图表、主题与历史已经属于同一个 MoonBit/Rabbita
-// 状态树。本层仅在数据变化时刷新报告/备份控件状态；恢复备份后再通知应用重读。
+// MoonBit/Rabbita owns form, overview, charts, comparison, theme and reports.
+// This compatibility layer now keeps only backup/recovery and damaged-data controls.
 window.addEventListener("moonstudy:data-changed", () => render());
-updateReportControls();
 console.info(moonstudy_ready());
 render();

@@ -77,3 +77,13 @@ pub fn export_backup(raw : String) -> String {
 pub fn restore_backup(candidate : String) -> String {
   @study.restore_storage_json(candidate)
 }
+
+///|
+#export_name("week_comparison")
+pub fn week_comparison(
+  raw : String,
+  week_start : String,
+  today : String,
+) -> String {
+  @study.compare_weeks_json(raw, week_start, today)
+}

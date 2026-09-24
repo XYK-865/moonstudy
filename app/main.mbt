@@ -20,6 +20,7 @@ using @html {
   small,
   span,
   strong,
+  textarea,
   ul,
 }
 
@@ -32,6 +33,11 @@ pub struct ViewModel {
   history_limit : Int
   today : String
   week_start : String
+  report_type : String
+  report_date : String
+  report_markdown : String
+  report_title : String
+  report_filename : String
 } derive(Eq)
 
 ///|
@@ -56,6 +62,11 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
       history_limit,
       today,
       week_start: week_start_iso(),
+      report_type: "daily",
+      report_date: today,
+      report_markdown: "",
+      report_title: "日报预览",
+      report_filename: "",
     }
   }
   {
@@ -66,6 +77,11 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
     history_limit,
     today,
     week_start: week_start_iso(),
+    report_type: "daily",
+    report_date: today,
+    report_markdown: "",
+    report_title: "日报预览",
+    report_filename: "",
   }
 }
 
@@ -75,6 +91,10 @@ priv enum Msg {
   Delete(String)
   ShowMore
   ExternalChanged
+  SetReportType(String)
+  SetReportDate(String)
+  GenerateReport
+  DownloadReport
 }
 
 ///|
@@ -126,6 +146,40 @@ fn delete_record(model : ViewModel, id : String) -> ViewModel {
 }
 
 ///|
+fn generate_report(model : ViewModel) -> ViewModel {
+  guard model.ok else { return model }
+  let raw = read_local(storage_key)
+  let daily = model.report_type == "daily"
+  let result = if daily {
+    @study.daily_report_from_storage(raw, model.report_date)
+  } else {
+    let start = week_start_for_iso(model.report_date)
+    let end = week_end_for_iso(model.report_date, model.today)
+    @study.report_from_storage(raw, start, end)
+  }
+  if !result.ok {
+    show_notice(result.message)
+    return model
+  }
+  show_notice("")
+  let filename = if daily {
+    "moonstudy-daily-\{model.report_date}.md"
+  } else {
+    "moonstudy-weekly-\{week_start_for_iso(model.report_date)}.md"
+  }
+  {
+    ..model,
+    report_markdown: result.markdown,
+    report_title: if daily {
+      "日报预览"
+    } else {
+      "周报预览"
+    },
+    report_filename: filename,
+  }
+}
+
+///|
 fn update(
   model : ViewModel,
   msg : Msg,
@@ -136,6 +190,21 @@ fn update(
     Delete(id) => delete_record(model, id)
     ShowMore => { ..model, history_limit: model.history_limit + page_size, }
     ExternalChanged => load_with_limit(model.history_limit)
+    SetReportType(value) =>
+      { ..model, report_type: value, report_markdown: "", report_filename: "", }
+    SetReportDate(value) =>
+      { ..model, report_date: value, report_markdown: "", report_filename: "", }
+    GenerateReport => generate_report(model)
+    DownloadReport => {
+      if model.report_filename.length() > 0 {
+        download_text(
+          model.report_markdown,
+          model.report_filename,
+          "text/markdown;charset=utf-8",
+        )
+      }
+      model
+    }
   }
   (next, @rabbita.none)
 }
@@ -300,6 +369,87 @@ fn summary_view(model : ViewModel) -> @html.Html {
 }
 
 ///|
+fn signed(value : Int, suffix : String) -> String {
+  if value > 0 {
+    "+\{value}\{suffix}"
+  } else {
+    "\{value}\{suffix}"
+  }
+}
+
+///|
+fn comparison_view(model : ViewModel) -> @html.Html {
+  let comparison = @study.compare_weeks(
+    read_local(storage_key),
+    model.week_start,
+    model.today,
+  )
+  let minutes_delta = if comparison.has_baseline {
+    "\{signed(comparison.delta.minutes, " 分钟")}（\{signed(comparison.delta.minutes_percent, "%")}）"
+  } else {
+    "无对比基线"
+  }
+  let count_delta = if comparison.has_baseline {
+    "\{signed(comparison.delta.count, " 条")}（\{signed(comparison.delta.count_percent, "%")}）"
+  } else {
+    "无对比基线"
+  }
+  let rate_delta = if comparison.has_baseline {
+    signed(comparison.delta.completion_rate_points, " 个百分点")
+  } else {
+    "无对比基线"
+  }
+  section(class="card", [
+    div(class="card-heading", [
+      h2(id="comparison-title", "本周与上周同进度"),
+      span(
+        class="muted",
+        "\{comparison.previous.start} 至 \{comparison.previous.end}",
+      ),
+    ]),
+    div(class="metrics", [
+      div(class="metric", [
+        span("上周学习"),
+        strong(
+          id="previous-week-minutes",
+          comparison.previous.minutes.to_string(),
+        ),
+        small(minutes_delta),
+      ]),
+      div(class="metric", [
+        span("上周记录"),
+        strong(id="previous-week-count", comparison.previous.count.to_string()),
+        small(count_delta),
+      ]),
+      div(class="metric", [
+        span("上周完成率"),
+        strong(
+          id="previous-week-rate",
+          "\{comparison.previous.completion_rate}%",
+        ),
+        small(rate_delta),
+      ]),
+      div(class="metric metric-topic", [
+        span("上周投入最多"),
+        strong(
+          id="previous-week-topic",
+          title=comparison.previous.top_topic,
+          comparison.previous.top_topic,
+        ),
+        small(
+          id="week-comparison-status",
+          if comparison.has_baseline {
+            "同进度环比"
+          } else {
+            "无对比基线"
+          },
+        ),
+      ]),
+    ]),
+  ])
+}
+
+///|
 fn bar_chart(
   model : ViewModel,
   days : Map[String, @study.DayStat],
@@ -412,6 +562,80 @@ fn trends_view(model : ViewModel) -> @html.Html {
 }
 
 ///|
+fn report_view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
+  let daily = model.report_type == "daily"
+  section(class="card", [
+    div(class="card-heading", [
+      h2(id="report-title", "学习报告"),
+      span(class="muted", "日报或任意周周报 · Markdown 文本"),
+    ]),
+    p(
+      class="report-help",
+      "选择报告类型和日期后生成内容，可复制到笔记，也可下载为 .md 文件。",
+    ),
+    div(class="report-controls", [
+      label([
+        span("报告类型"),
+        select(
+          id="report-type",
+          on_change=value => emit(SetReportType(value)),
+          [
+            option(value="daily", selected=daily, "日报"),
+            option(value="weekly", selected=!daily, "周报"),
+          ],
+        ),
+      ]),
+      label(id="report-date-label", [
+        span(if daily { "日报日期" } else { "选择周内任意日期" }),
+        input(
+          id="report-date",
+          input_type=@html.Date,
+          value=model.report_date,
+          on_change=value => emit(SetReportDate(value)),
+        ),
+      ]),
+    ]),
+    div(class="actions", [
+      button(
+        id="generate-report",
+        class="secondary",
+        type_="button",
+        disabled=!model.ok,
+        on_click=emit(GenerateReport),
+        if daily {
+          "生成日报"
+        } else {
+          "生成周报"
+        },
+      ),
+      button(
+        id="download-report",
+        class="secondary",
+        type_="button",
+        hidden=model.report_markdown.length() == 0,
+        on_click=emit(DownloadReport),
+        "下载 .md",
+      ),
+    ]),
+    label(
+      id="report-label",
+      class="report-label",
+      hidden=model.report_markdown.length() == 0,
+      [
+        span(id="report-preview-title", model.report_title),
+        textarea(
+          id="report-output",
+          read_only=true,
+          rows=12,
+          value=model.report_markdown,
+          "",
+        ),
+      ],
+    ),
+  ])
+}
+
+///|
 fn history_items(
   model : ViewModel,
   emit : @rabbita.Emit[Msg],
@@ -509,8 +733,10 @@ fn view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
     ),
     form_view(model, emit),
     summary_view(model),
+    comparison_view(model),
     trends_view(model),
     records_view(model, emit),
+    report_view(model, emit),
   ])
 }
 
@@ -521,7 +747,46 @@ fn study_app() -> @rabbita.Val[@html.Html] {
 }
 
 ///|
+priv enum ThemeMsg {
+  ChangeTheme(String)
+}
+
+///|
+fn theme_app() -> @rabbita.Val[@html.Html] {
+  let (theme, emit) = @rabbita.create_pure_state(read_theme(), update=fn(
+    _current,
+    message,
+  ) {
+    match message {
+      ChangeTheme(value) => {
+        apply_theme(value)
+        if !write_theme(value) {
+          show_notice(
+            "主题已经切换，但浏览器没有保存这项偏好。",
+          )
+        }
+        value
+      }
+    }
+  })
+  theme.map(value => {
+    label(class="theme-picker", [
+      span("界面颜色"),
+      select(id="theme-select", on_change=next => emit(ChangeTheme(next)), [
+        option(value="system", selected=value == "system", "跟随系统"),
+        option(value="light", selected=value == "light", "亮色"),
+        option(value="dark", selected=value == "dark", "暗色"),
+      ]),
+    ])
+  })
+}
+
+///|
 fn main {
+  let preference = read_theme()
+  apply_theme(preference)
+  watch_system_theme()
+  @rabbita.new(theme_app).mount("theme-root")
   @rabbita.new(study_app).mount("app-main")
   notify_ready()
 }

@@ -23,6 +23,12 @@ extern "js" fn today_iso() -> String = "() => { const d = new Date(); const y = 
 extern "js" fn week_start_iso() -> String = "() => { const d = new Date(); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); const y = d.getFullYear(); const m = String(d.getMonth() + 1).padStart(2, '0'); const day = String(d.getDate()).padStart(2, '0'); return `${y}-${m}-${day}`; }"
 
 ///|
+extern "js" fn week_start_for_iso(date : String) -> String = "(date) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() - ((value.getDay() + 6) % 7)); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); return `${yy}-${mm}-${dd}`; }"
+
+///|
+extern "js" fn week_end_for_iso(date : String, today : String) -> String = "(date, today) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() - ((value.getDay() + 6) % 7) + 6); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); const end = `${yy}-${mm}-${dd}`; return end > today ? today : end; }"
+
+///|
 extern "js" fn shift_date_iso(date : String, offset : Int) -> String = "(date, offset) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() + offset); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); return `${yy}-${mm}-${dd}`; }"
 
 ///|
@@ -51,6 +57,25 @@ extern "js" fn form_note() -> String = "() => document.getElementById('note')?.v
 
 ///|
 extern "js" fn reset_form(date : String) -> Unit = "(date) => { const form = document.getElementById('study-form'); if (form !== null) form.reset(); const input = document.getElementById('date'); if (input !== null) input.value = date; }"
+
+///|
+extern "js" fn download_text(
+  text : String,
+  filename : String,
+  mime : String,
+) -> Unit = "(text, filename, mime) => { const blob = new Blob([text], { type: mime }); const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = filename; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000); }"
+
+///|
+extern "js" fn read_theme() -> String = "() => { try { const value = localStorage.getItem('moonstudy.theme.v1'); return ['light', 'dark', 'system'].includes(value) ? value : 'system'; } catch (_) { return 'system'; } }"
+
+///|
+extern "js" fn apply_theme(preference : String) -> Unit = "(preference) => { const dark = matchMedia('(prefers-color-scheme: dark)').matches; const resolved = preference === 'system' ? (dark ? 'dark' : 'light') : preference; document.documentElement.dataset.theme = resolved; const meta = document.querySelector('meta[name=\"theme-color\"]'); if (meta !== null) meta.content = resolved === 'dark' ? '#111915' : '#faf7f0'; }"
+
+///|
+extern "js" fn write_theme(preference : String) -> Bool = "(preference) => { try { localStorage.setItem('moonstudy.theme.v1', preference); return true; } catch (_) { return false; } }"
+
+///|
+extern "js" fn watch_system_theme() -> Unit = "() => { const media = matchMedia('(prefers-color-scheme: dark)'); media.addEventListener('change', () => { let preference = 'system'; try { preference = localStorage.getItem('moonstudy.theme.v1') ?? 'system'; } catch (_) {} if (preference === 'system') { document.documentElement.dataset.theme = media.matches ? 'dark' : 'light'; } }); }"
 
 ///|
 /// Second confirmation before deleting a record, keeping the v003 wording.
