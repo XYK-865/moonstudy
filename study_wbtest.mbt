@@ -4,6 +4,7 @@ fn sample_records() -> Array[StudyRecord] {
     {
       id: "1",
       date: "2026-09-07",
+      category: "学习",
       topic: "MoonBit",
       minutes: 40,
       completed: true,
@@ -12,6 +13,7 @@ fn sample_records() -> Array[StudyRecord] {
     {
       id: "2",
       date: "2026-09-09",
+      category: "学习",
       topic: "英语",
       minutes: 30,
       completed: true,
@@ -20,6 +22,7 @@ fn sample_records() -> Array[StudyRecord] {
     {
       id: "3",
       date: "2026-09-10",
+      category: "学习",
       topic: "MoonBit",
       minutes: 50,
       completed: false,
@@ -50,10 +53,11 @@ test "empty history has a useful summary" {
 
 ///|
 test "records outside this week only affect all-time totals" {
-  let records = [
+  let records : Array[StudyRecord] = [
     {
       id: "old",
       date: "2026-09-01",
+      category: "学习",
       topic: "数学",
       minutes: 25,
       completed: true,
@@ -68,9 +72,10 @@ test "records outside this week only affect all-time totals" {
 
 ///|
 test "invalid records are rejected" {
-  let invalid = {
+  let invalid : StudyRecord = {
     id: "bad",
     date: "2026/09/10",
+    category: "",
     topic: "",
     minutes: 0,
     completed: false,
@@ -139,6 +144,40 @@ test "topic statistics include minutes and session counts" {
   assert_eq(topics[0].record_count, 2)
   assert_eq(topics[1].topic, "英语")
   assert_eq(topics[1].minutes, 40)
+}
+
+///|
+test "category and detailed content are summarized independently" {
+  let records = [
+    make_record_with_category(
+      "a", "2026-09-14", "工作", "写方案", 60, true, "",
+    ),
+    make_record_with_category(
+      "b", "2026-09-15", "工作", "开会", 20, true, "",
+    ),
+    make_record_with_category(
+      "c", "2026-09-16", "运动", "跑步", 70, true, "",
+    ),
+  ]
+  let summary = summarize(records, "2026-09-16", "2026-09-14")
+  assert_eq(summary.top_category, "工作")
+  assert_eq(summary.top_topic, "跑步")
+}
+
+///|
+test "category validation trims values and rejects blanks" {
+  let valid = make_record_with_category(
+    "a", "2026-09-14", " 运动 ", " 跑步 ", 30, true, "",
+  )
+  assert_eq(valid.category, "运动")
+  assert_eq(valid.topic, "跑步")
+  assert_true(validate_record(valid) is None)
+  assert_true(
+    validate_record(
+      make_record_with_category("b", "2026-09-14", " ", "跑步", 30, true, ""),
+    )
+    is Some(_),
+  )
 }
 
 ///|

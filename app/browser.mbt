@@ -31,9 +31,6 @@ extern "js" fn week_start_iso() -> String = "() => { const d = new Date(); d.set
 extern "js" fn week_start_for_iso(date : String) -> String = "(date) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() - ((value.getDay() + 6) % 7)); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); return `${yy}-${mm}-${dd}`; }"
 
 ///|
-extern "js" fn week_end_for_iso(date : String, today : String) -> String = "(date, today) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() - ((value.getDay() + 6) % 7) + 6); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); const end = `${yy}-${mm}-${dd}`; return end > today ? today : end; }"
-
-///|
 extern "js" fn shift_date_iso(date : String, offset : Int) -> String = "(date, offset) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() + offset); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); return `${yy}-${mm}-${dd}`; }"
 
 ///|
@@ -47,6 +44,9 @@ extern "js" fn random_uuid() -> String = "() => crypto.randomUUID()"
 
 ///|
 extern "js" fn form_date() -> String = "() => document.getElementById('date')?.value ?? ''"
+
+///|
+extern "js" fn form_category() -> String = "() => { const choice = document.getElementById('category-choice')?.value ?? ''; return choice === 'custom' ? (document.getElementById('custom-category')?.value ?? '') : choice; }"
 
 ///|
 extern "js" fn form_topic() -> String = "() => document.getElementById('topic')?.value ?? ''"
@@ -91,7 +91,16 @@ extern "js" fn clear_restore_read() -> Unit = "() => { window.__moonstudyRestore
 extern "js" fn confirm_restore(count : Int) -> Bool = "(count) => window.confirm(`备份包含 ${count} 条记录。恢复会替换当前学习记录，是否继续？`)"
 
 ///|
-extern "js" fn limit_date_inputs(today : String) -> Unit = "(today) => { setTimeout(() => { for (const id of ['date', 'report-date']) { const node = document.getElementById(id); if (node !== null) node.max = today; } }, 32); }"
+extern "js" fn limit_date_inputs(today : String) -> Unit = "(today) => { setTimeout(() => { for (const id of ['date', 'report-date']) { const node = document.getElementById(id); if (node !== null && node.type === 'date') node.max = today; } }, 32); }"
+
+///|
+extern "js" fn week_value_for_iso(date : String) -> String = "(date) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(Date.UTC(y, m - 1, d)); const day = value.getUTCDay() || 7; value.setUTCDate(value.getUTCDate() + 4 - day); const yearStart = new Date(Date.UTC(value.getUTCFullYear(), 0, 1)); const week = Math.ceil((((value - yearStart) / 86400000) + 1) / 7); return `${value.getUTCFullYear()}-W${String(week).padStart(2, '0')}`; }"
+
+///|
+extern "js" fn week_start_for_value(value : String) -> String = "(value) => { const parts = value.split('-W'); if (parts.length !== 2) return ''; const year = Number(parts[0]); const week = Number(parts[1]); if (!Number.isInteger(year) || !Number.isInteger(week) || week < 1 || week > 53) return ''; const jan4 = new Date(Date.UTC(year, 0, 4)); const monday = new Date(jan4); monday.setUTCDate(jan4.getUTCDate() - ((jan4.getUTCDay() + 6) % 7) + (week - 1) * 7); return `${monday.getUTCFullYear()}-${String(monday.getUTCMonth() + 1).padStart(2, '0')}-${String(monday.getUTCDate()).padStart(2, '0')}`; }"
+
+///|
+extern "js" fn week_full_end_for_iso(date : String) -> String = "(date) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() - ((value.getDay() + 6) % 7) + 6); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); return `${yy}-${mm}-${dd}`; }"
 
 ///|
 extern "js" fn read_theme() -> String = "() => { try { const value = localStorage.getItem('moonstudy.theme.v1'); return ['light', 'dark', 'system'].includes(value) ? value : 'system'; } catch (_) { return 'system'; } }"

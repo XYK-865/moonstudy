@@ -24,6 +24,29 @@ test "one learning activity survives storage round-trip and changes totals" {
 }
 
 ///|
+test "legacy schema v1 records without category migrate to learning" {
+  let legacy = "{\"schema_version\":1,\"records\":[{\"id\":\"old\",\"date\":\"2026-09-15\",\"topic\":\"MoonBit\",\"minutes\":40,\"completed\":true,\"note\":\"\"}]}"
+  let loaded = load_storage(legacy)
+  assert_true(loaded.ok)
+  assert_eq(loaded.records.length(), 1)
+  assert_eq(loaded.records[0].category, "学习")
+  let restored = restore_storage(legacy)
+  assert_true(restored.ok)
+  assert_true(restored.storage_json.contains("\"category\":\"学习\""))
+}
+
+///|
+test "category-aware storage keeps custom category" {
+  let result = add_to_storage_with_category(
+    "", "sport-1", "2026-09-15", "运动", "跑步", 35, true, "", "2026-09-15",
+  )
+  assert_true(result.ok)
+  let loaded = load_storage(result.storage_json)
+  assert_eq(loaded.records[0].category, "运动")
+  assert_eq(loaded.records[0].topic, "跑步")
+}
+
+///|
 test "damaged or incompatible storage is not overwritten" {
   let damaged = "{not-json"
   let result = add_to_storage(

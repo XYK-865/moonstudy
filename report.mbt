@@ -53,6 +53,7 @@ pub fn weekly_markdown(
   }
   let topics = topic_stats(weekly)
   let top_topic = if topics.length() == 0 { "暂无" } else { topics[0].topic }
+  let top_category = summarize(weekly, today, week_start).top_category
   let buf = StringBuilder()
   buf.write_string("# 学习周报\n\n")
   buf.write_string("- 周期：")
@@ -65,7 +66,9 @@ pub fn weekly_markdown(
   buf.write_string(count.to_string())
   buf.write_string(" 条\n- 完成率：")
   buf.write_string(completion_rate.to_string())
-  buf.write_string("%（仅本周记录）\n- 投入最多：")
+  buf.write_string("%（仅本周记录）\n- 投入最多主题：")
+  buf.write_string(safe_markdown(top_category))
+  buf.write_string("\n- 投入最多内容：")
   buf.write_string(safe_markdown(top_topic))
   buf.write_string("\n\n## 本周记录\n\n")
   if count == 0 {
@@ -76,6 +79,8 @@ pub fn weekly_markdown(
       buf.write_string(if record.completed { "x" } else { " " })
       buf.write_string("] ")
       buf.write_string(record.date)
+      buf.write_string(" · ")
+      buf.write_string(safe_markdown(record.category))
       buf.write_string(" · ")
       buf.write_string(safe_markdown(record.topic))
       buf.write_string(" · ")
@@ -111,6 +116,7 @@ pub fn daily_markdown(records : Array[StudyRecord], date : String) -> String {
   }
   let topics = topic_stats(daily)
   let top_topic = if topics.length() == 0 { "暂无" } else { topics[0].topic }
+  let top_category = summarize(daily, date, date).top_category
   let buf = StringBuilder()
   buf.write_string("# 学习日报\n\n")
   buf.write_string("- 日期：")
@@ -121,7 +127,9 @@ pub fn daily_markdown(records : Array[StudyRecord], date : String) -> String {
   buf.write_string(count.to_string())
   buf.write_string(" 条\n- 完成率：")
   buf.write_string(completion_rate.to_string())
-  buf.write_string("%（仅当日记录）\n- 投入最多：")
+  buf.write_string("%（仅当日记录）\n- 投入最多主题：")
+  buf.write_string(safe_markdown(top_category))
+  buf.write_string("\n- 投入最多内容：")
   buf.write_string(safe_markdown(top_topic))
   buf.write_string("\n\n## 当日记录\n\n")
   if count == 0 {
@@ -131,6 +139,8 @@ pub fn daily_markdown(records : Array[StudyRecord], date : String) -> String {
       buf.write_string("- [")
       buf.write_string(if record.completed { "x" } else { " " })
       buf.write_string("] ")
+      buf.write_string(safe_markdown(record.category))
+      buf.write_string(" · ")
       buf.write_string(safe_markdown(record.topic))
       buf.write_string(" · ")
       buf.write_string(record.minutes.to_string())

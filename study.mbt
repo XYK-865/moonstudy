@@ -3,11 +3,12 @@
 pub struct StudyRecord {
   id : String
   date : String
+  category : String
   topic : String
   minutes : Int
   completed : Bool
   note : String
-} derive(Eq, Debug, ToJson, FromJson)
+} derive(Eq, Debug, ToJson)
 
 ///|
 pub extend StudyRecord with Eq::{equal, not_equal}
@@ -19,9 +20,6 @@ pub extend StudyRecord with @moonbitlang/core/debug.Debug::{to_repr}
 pub extend StudyRecord with ToJson::{to_json}
 
 ///|
-pub extend StudyRecord with @moonbitlang/core/json.FromJson::{from_json}
-
-///|
 /// Values displayed on the dashboard.
 pub struct StudySummary {
   today_minutes : Int
@@ -30,6 +28,7 @@ pub struct StudySummary {
   record_count : Int
   completed_count : Int
   completion_rate : Int
+  top_category : String
   top_topic : String
 } derive(Eq, Debug, ToJson)
 
@@ -95,9 +94,25 @@ pub fn make_record(
   completed : Bool,
   note : String,
 ) -> StudyRecord {
+  make_record_with_category(id, date, "学习", topic, minutes, completed, note)
+}
+
+///|
+/// Construct a record with a user-selected category. The original constructor
+/// remains available and defaults old callers to “学习”.
+pub fn make_record_with_category(
+  id : String,
+  date : String,
+  category : String,
+  topic : String,
+  minutes : Int,
+  completed : Bool,
+  note : String,
+) -> StudyRecord {
   {
     id,
     date,
+    category: category.trim().to_owned(),
     topic: topic.trim().to_owned(),
     minutes,
     completed,
@@ -153,6 +168,10 @@ pub fn validate_record(record : StudyRecord) -> String? {
     Some("记录编号不能为空")
   } else if !valid_iso_date(record.date) {
     Some("日期必须是真实的 YYYY-MM-DD 日期")
+  } else if record.category.trim().to_owned().length() == 0 {
+    Some("请选择或填写主题")
+  } else if record.category.length() > 30 {
+    Some("主题不能超过 30 个字符")
   } else if record.topic.trim().to_owned().length() == 0 {
     Some("请填写学习内容")
   } else if record.topic.length() > 100 {
@@ -285,6 +304,8 @@ pub fn summarize(
   let mut completed_count = 0
   let topic_totals : Array[TopicTotal] = []
   let topic_positions : Map[String, Int] = Map([])
+  let category_totals : Array[TopicTotal] = []
+  let category_positions : Map[String, Int] = Map([])
   for record in records {
     total_minutes = total_minutes + record.minutes
     if record.date == today {
@@ -302,6 +323,12 @@ pub fn summarize(
       record.topic,
       record.minutes,
     )
+    add_topic_minutes(
+      category_totals,
+      category_positions,
+      record.category,
+      record.minutes,
+    )
   }
   let count = records.length()
   let completion_rate = if count == 0 {
@@ -316,6 +343,7 @@ pub fn summarize(
     record_count: count,
     completed_count,
     completion_rate,
+    top_category: find_top_topic(category_totals),
     top_topic: find_top_topic(topic_totals),
   }
 }

@@ -34,6 +34,7 @@ pub struct ViewModel {
   history_limit : Int
   today : String
   week_start : String
+  category_choice : String
   report_type : String
   report_date : String
   report_markdown : String
@@ -66,6 +67,7 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
       history_limit,
       today,
       week_start,
+      category_choice: "学习",
       report_type: "daily",
       report_date: today,
       report_markdown: "",
@@ -88,6 +90,7 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
       history_limit,
       today,
       week_start,
+      category_choice: "学习",
       report_type: "daily",
       report_date: today,
       report_markdown: "",
@@ -104,6 +107,7 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
     history_limit,
     today,
     week_start,
+    category_choice: "学习",
     report_type: "daily",
     report_date: today,
     report_markdown: "",
@@ -118,6 +122,7 @@ priv enum Msg {
   Delete(String)
   ShowMore
   ExternalChanged
+  SetCategoryChoice(String)
   SetReportType(String)
   SetReportDate(String)
   GenerateReport
@@ -132,10 +137,11 @@ priv enum Msg {
 ///|
 fn save_record(model : ViewModel) -> ViewModel {
   guard model.ok else { return model }
-  let result = @study.add_to_storage(
+  let result = @study.add_to_storage_with_category(
     read_local(storage_key),
     random_uuid(),
     form_date(),
+    form_category(),
     form_topic(),
     form_minutes(),
     form_completed(),
@@ -256,7 +262,7 @@ fn generate_report(model : ViewModel) -> ViewModel {
     @study.daily_report_from_storage(raw, model.report_date)
   } else {
     let start = week_start_for_iso(model.report_date)
-    let end = week_end_for_iso(model.report_date, model.today)
+    let end = week_full_end_for_iso(model.report_date)
     @study.report_from_storage(raw, start, end)
   }
   if !result.ok {
@@ -292,6 +298,7 @@ fn update(
     Delete(id) => delete_record(model, id)
     ShowMore => { ..model, history_limit: model.history_limit + page_size, }
     ExternalChanged => load_with_limit(model.history_limit)
+    SetCategoryChoice(value) => { ..model, category_choice: value, }
     SetReportType(value) =>
       { ..model, report_type: value, report_markdown: "", report_filename: "", }
     SetReportDate(value) =>
@@ -327,6 +334,8 @@ fn update(
 ///|
 fn record_subtitle(record : @study.StudyRecord) -> String {
   let buf = StringBuilder()
+  buf.write_string(record.category)
+  buf.write_string(" · ")
   buf.write_string(record.date)
   buf.write_string(" · ")
   buf.write_string(if record.completed { "已完成" } else { "未完成" })
@@ -402,13 +411,60 @@ fn form_view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
           ),
         ]),
       ]),
+      div(class="grid", [
+        label([
+          span("主题"),
+          select(
+            id="category-choice",
+            name="category-choice",
+            on_change=value => emit(SetCategoryChoice(value)),
+            [
+              option(
+                value="学习",
+                selected=model.category_choice == "学习",
+                "学习",
+              ),
+              option(
+                value="运动",
+                selected=model.category_choice == "运动",
+                "运动",
+              ),
+              option(
+                value="工作",
+                selected=model.category_choice == "工作",
+                "工作",
+              ),
+              option(
+                value="生活",
+                selected=model.category_choice == "生活",
+                "生活",
+              ),
+              option(
+                value="custom",
+                selected=model.category_choice == "custom",
+                "自定义",
+              ),
+            ],
+          ),
+        ]),
+        label(hidden=model.category_choice != "custom", [
+          span("自定义主题"),
+          input(
+            id="custom-category",
+            name="custom-category",
+            maxlength=30,
+            placeholder="例如：阅读",
+            required=model.category_choice == "custom",
+          ),
+        ]),
+      ]),
       label([
-        span("学习内容"),
+        span("学习内容 / 具体事项"),
         input(
           id="topic",
           name="topic",
           maxlength=100,
-          placeholder="例如：MoonBit 基础",
+          placeholder="例如：MoonBit 基础、慢跑 5 公里",
           required=true,
         ),
       ]),
@@ -475,7 +531,16 @@ fn summary_view(model : ViewModel) -> @html.Html {
         small("全部记录"),
       ]),
       div(class="metric metric-topic", [
-        span("投入最多"),
+        span("投入最多主题"),
+        strong(
+          id="top-category",
+          title=summary.top_category,
+          summary.top_category,
+        ),
+        small("按累计分钟"),
+      ]),
+      div(class="metric metric-topic", [
+        span("投入最多内容"),
         strong(id="top-topic", title=summary.top_topic, summary.top_topic),
         small("按累计分钟"),
       ]),
@@ -679,6 +744,8 @@ fn trends_view(model : ViewModel) -> @html.Html {
 ///|
 fn report_view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
   let daily = model.report_type == "daily"
+  let week_start = week_start_for_iso(model.report_date)
+  let week_end = week_full_end_for_iso(model.report_date)
   section(class="card", [
     div(class="card-heading", [
       h2(id="report-title", "学习报告"),
@@ -701,15 +768,41 @@ fn report_view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
         ),
       ]),
       label(id="report-date-label", [
-        span(if daily { "日报日期" } else { "选择周内任意日期" }),
+        span(
+          if daily {
+            "日报日期"
+          } else {
+            "选择自然周（周一至周日）"
+          },
+        ),
         input(
           id="report-date",
-          input_type=@html.Date,
-          value=model.report_date,
-          on_change=value => emit(SetReportDate(value)),
+          input_type=if daily { @html.Date } else { @html.Week },
+          value=if daily {
+            model.report_date
+          } else {
+            week_value_for_iso(model.report_date)
+          },
+          on_change=value => {
+            emit(
+              SetReportDate(
+                if daily {
+                  value
+                } else {
+                  week_start_for_value(value)
+                },
+              ),
+            )
+          },
         ),
       ]),
     ]),
+    p(
+      id="report-range",
+      class="muted",
+      hidden=daily,
+      "本周范围：\{week_start} 至 \{week_end}",
+    ),
     div(class="actions", [
       button(
         id="generate-report",
@@ -796,14 +889,14 @@ fn records_view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
   fragment([
     section(class="card", [
       div(class="card-heading", [
-        h2(id="topics-title", "学习主题"),
+        h2(id="topics-title", "学习内容"),
         span(class="muted", "按累计分钟排序"),
       ]),
       p(
         id="empty-topics",
         class="empty",
         hidden=model.topics.length() > 0,
-        "保存记录后，这里会显示每个主题的投入时间。",
+        "保存记录后，这里会显示每项具体内容的投入时间。",
       ),
       ul(id="topics", class="topic-list", topics),
     ]),

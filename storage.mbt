@@ -3,16 +3,32 @@
 pub struct StorageEnvelope {
   schema_version : Int
   records : Array[StudyRecord]
-} derive(FromJson, ToJson, Debug)
-
-///|
-pub extend StorageEnvelope with @moonbitlang/core/json.FromJson::{from_json}
+} derive(ToJson, Debug)
 
 ///|
 pub extend StorageEnvelope with ToJson::{to_json}
 
 ///|
 pub extend StorageEnvelope with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
+/// Read model for schema v1. Optional category keeps backups and localStorage
+/// written by v003/v004 readable; missing values migrate to “学习” in memory.
+priv struct StoredRecordV1 {
+  id : String
+  date : String
+  category : String?
+  topic : String
+  minutes : Int
+  completed : Bool
+  note : String
+} derive(FromJson)
+
+///|
+priv struct StoredEnvelopeV1 {
+  schema_version : Int
+  records : Array[StoredRecordV1]
+} derive(FromJson)
 
 ///|
 pub struct StorageLoad {
@@ -67,7 +83,7 @@ pub extend ActivityResult with @moonbitlang/core/debug.Debug::{to_repr}
 
 ///|
 pub fn encode_storage(records : Array[StudyRecord]) -> String {
-  let envelope = { schema_version: 1, records, }
+  let envelope : StorageEnvelope = { schema_version: 1, records, }
   ToJson::to_json(envelope).stringify()
 }
 
@@ -78,7 +94,7 @@ pub fn load_storage(raw : String) -> StorageLoad {
     return { ok: true, message: "", records: [], }
   }
   try {
-    let envelope : StorageEnvelope = @json.from_json(@json.parse(raw))
+    let envelope : StoredEnvelopeV1 = @json.from_json(@json.parse(raw))
     if envelope.schema_version != 1 {
       return {
         ok: false,
@@ -93,8 +109,19 @@ pub fn load_storage(raw : String) -> StorageLoad {
         records: [],
       }
     }
+    let records : Array[StudyRecord] = envelope.records.map(stored => {
+      make_record_with_category(
+        stored.id,
+        stored.date,
+        stored.category.unwrap_or("学习"),
+        stored.topic,
+        stored.minutes,
+        stored.completed,
+        stored.note,
+      )
+    })
     let seen : Map[String, Bool] = Map([])
-    for record in envelope.records {
+    for record in records {
       if validate_record(record) is Some(_) {
         return {
           ok: false,
@@ -111,7 +138,7 @@ pub fn load_storage(raw : String) -> StorageLoad {
       }
       seen.set(record.id, true)
     }
-    { ok: true, message: "", records: envelope.records, }
+    { ok: true, message: "", records, }
   } catch {
     _ =>
       {
@@ -134,11 +161,32 @@ pub fn add_to_storage(
   note : String,
   today : String,
 ) -> StorageAction {
+  add_to_storage_with_category(
+    raw, id, date, "学习", topic, minutes, completed, note, today,
+  )
+}
+
+///|
+/// Category-aware write used by the v004 Rabbita UI. The original API stays
+/// unchanged for the ten frozen browser exports and existing integrations.
+pub fn add_to_storage_with_category(
+  raw : String,
+  id : String,
+  date : String,
+  category : String,
+  topic : String,
+  minutes : Int,
+  completed : Bool,
+  note : String,
+  today : String,
+) -> StorageAction {
   let loaded = load_storage(raw)
   if !loaded.ok {
     return { ok: false, message: loaded.message, storage_json: raw, }
   }
-  let record = make_record(id, date, topic, minutes, completed, note)
+  let record = make_record_with_category(
+    id, date, category, topic, minutes, completed, note,
+  )
   if validate_record(record) is Some(message) {
     return { ok: false, message, storage_json: raw, }
   }
