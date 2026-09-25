@@ -57,6 +57,23 @@ pub extend WeekComparison with @moonbitlang/core/debug.Debug::{to_repr}
 pub extend WeekComparison with ToJson::{to_json}
 
 ///|
+/// A completed-record total for one calendar period.
+pub struct CompletionPeriod {
+  start : String
+  end : String
+  completed_count : Int
+} derive(Eq, Debug, ToJson)
+
+///|
+pub extend CompletionPeriod with Eq::{equal, not_equal}
+
+///|
+pub extend CompletionPeriod with @moonbitlang/core/debug.Debug::{to_repr}
+
+///|
+pub extend CompletionPeriod with ToJson::{to_json}
+
+///|
 fn days_from_iso(date : String) -> Int {
   let mut year = date_part(date, 0, 4)
   let month = date_part(date, 5, 7)
@@ -107,6 +124,114 @@ fn iso_from_days(serial : Int) -> String {
 ///|
 fn shift_iso(date : String, offset : Int) -> String {
   iso_from_days(days_from_iso(date) + offset)
+}
+
+///|
+pub fn year_from_iso(date : String) -> Int {
+  date_part(date, 0, 4)
+}
+
+///|
+pub fn shift_iso_date(date : String, offset : Int) -> String {
+  shift_iso(date, offset)
+}
+
+///|
+pub fn weekday_sunday_zero(date : String) -> Int {
+  (days_from_iso(date) + 3) % 7
+}
+
+///|
+pub fn days_in_calendar_year(year : Int) -> Int {
+  if year % 400 == 0 || (year % 4 == 0 && year % 100 != 0) {
+    366
+  } else {
+    365
+  }
+}
+
+///|
+pub fn date_for_year_day(year : Int, day_index : Int) -> String {
+  shift_iso("\{year}-01-01", day_index)
+}
+
+///|
+fn completed_in_range(
+  records : Array[StudyRecord],
+  year_start : String,
+  year_end : String,
+  start : String,
+  end : String,
+) -> Int {
+  let mut completed = 0
+  for record in records {
+    if record.completed &&
+      record.date >= year_start &&
+      record.date <= year_end &&
+      record.date >= start &&
+      record.date <= end {
+      completed = completed + 1
+    }
+  }
+  completed
+}
+
+///|
+/// Natural Monday-to-Sunday buckets intersecting the selected calendar year.
+/// Records outside the selected year are excluded even from boundary weeks.
+pub fn weekly_completion_stats(
+  records : Array[StudyRecord],
+  year : Int,
+) -> Array[CompletionPeriod] {
+  let year_start = "\{year}-01-01"
+  let year_end = "\{year}-12-31"
+  let monday_offset = (weekday_sunday_zero(year_start) + 6) % 7
+  let first_monday = shift_iso(year_start, -monday_offset)
+  let result : Array[CompletionPeriod] = []
+  let mut start = first_monday
+  while start <= year_end {
+    let end = shift_iso(start, 6)
+    result.push({
+      start,
+      end,
+      completed_count: completed_in_range(
+        records, year_start, year_end, start, end,
+      ),
+    })
+    start = shift_iso(start, 7)
+  }
+  result
+}
+
+///|
+/// Twelve calendar-month buckets whose values are cumulative completed-record
+/// totals from January through the end of each month.
+pub fn monthly_cumulative_completion_stats(
+  records : Array[StudyRecord],
+  year : Int,
+) -> Array[CompletionPeriod] {
+  let year_start = "\{year}-01-01"
+  let result : Array[CompletionPeriod] = []
+  let month_starts = [
+    "01-01", "02-01", "03-01", "04-01", "05-01", "06-01", "07-01", "08-01", "09-01",
+    "10-01", "11-01", "12-01", "01-01",
+  ]
+  for month = 0; month < 12; month = month + 1 {
+    let next_start = if month == 11 {
+      "\{year + 1}-\{month_starts[12]}"
+    } else {
+      "\{year}-\{month_starts[month + 1]}"
+    }
+    let month_end = shift_iso(next_start, -1)
+    result.push({
+      start: "\{year}-\{month_starts[month]}",
+      end: month_end,
+      completed_count: completed_in_range(
+        records, year_start, month_end, year_start, month_end,
+      ),
+    })
+  }
+  result
 }
 
 ///|

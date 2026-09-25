@@ -37,9 +37,6 @@ extern "js" fn shift_date_iso(date : String, offset : Int) -> String = "(date, o
 extern "js" fn short_date_iso(date : String) -> String = "(date) => date.slice(5)"
 
 ///|
-extern "js" fn activity_end_iso() -> String = "() => { const d = new Date(); d.setDate(d.getDate() + (6 - d.getDay())); const y = d.getFullYear(); const m = String(d.getMonth() + 1).padStart(2, '0'); const day = String(d.getDate()).padStart(2, '0'); return `${y}-${m}-${day}`; }"
-
-///|
 extern "js" fn random_uuid() -> String = "() => crypto.randomUUID()"
 
 ///|

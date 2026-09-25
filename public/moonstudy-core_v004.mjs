@@ -675,42 +675,42 @@ const _M0FPC28internal7strconv12checked__mulN6constrS1163 = 0n;
 const _M0FPC14json17int__pow10__table = [1n, 10n, 100n, 1000n, 10000n, 100000n, 1000000n, 10000000n, 100000000n, 1000000000n, 10000000000n, 100000000000n, 1000000000000n, 10000000000000n, 100000000000000n, 1000000000000000n];
 const _M0FPC14json12pow10__table = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000, 10000000000, 100000000000, 1e+012, 1e+013, 1e+014, 1e+015, 1e+016, 1e+017, 1e+018, 1e+019, 1e+020, 1e+021, 1e+022, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const _M0FPC14json12checked__mulN6constrS1890 = 0n;
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS566 = "\\";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS567 = "\\\\";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS568 = "\r";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS569 = " ";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS570 = "\n";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS571 = " ";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS572 = "&";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS573 = "&amp;";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS574 = "<";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS575 = "&lt;";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS576 = ">";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS577 = "&gt;";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS578 = "*";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS579 = "\\*";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS580 = "_";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS581 = "\\_";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS582 = "[";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS583 = "\\[";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS584 = "]";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS585 = "\\]";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS608 = "\\";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS609 = "\\\\";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS610 = "\r";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS611 = " ";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS612 = "\n";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS613 = " ";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS614 = "&";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS615 = "&amp;";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS616 = "<";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS617 = "&lt;";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS618 = ">";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS619 = "&gt;";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS620 = "*";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS621 = "\\*";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS622 = "_";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS623 = "\\_";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS624 = "[";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS625 = "\\[";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS626 = "]";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS627 = "\\]";
 const _M0FPB4seed = _M0FPB12random__seed();
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS635 = "记录编号不能为空";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS636 = "日期必须是真实的 YYYY-MM-DD 日期";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS637 = "请选择或填写主题";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS638 = "主题不能超过 30 个字符";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS639 = "请填写学习内容";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS640 = "学习内容不能超过 100 个字符";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS641 = "备注不能超过 500 个字符";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS642 = "学习时长必须大于 0 分钟";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS643 = "单条学习时长不能超过 1440 分钟";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS693 = "记录编号不能为空";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS694 = "日期必须是真实的 YYYY-MM-DD 日期";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS695 = "请选择或填写主题";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS696 = "主题不能超过 30 个字符";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS697 = "请填写学习内容";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS698 = "学习内容不能超过 100 个字符";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS699 = "备注不能超过 500 个字符";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS700 = "学习时长必须大于 0 分钟";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS701 = "单条学习时长不能超过 1440 分钟";
 const _M0FPC28internal7strconv17check__underscoreN25_2atransition__table__222S230 = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 0, 1, 2, 5];
 const _M0FPC28internal7strconv15parse__inf__nanN25_2atransition__table__304S312 = [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 3, 4, 14, 14, 14, 14, 14, 14, 14, 7, 14, 14, 14, 14, 5, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 14, 14, 14, 0, 14, 14, 14, 14, 14, 14, 14, 14, 14, 8, 14, 14, 14, 14, 14, 1, 14, 14, 9, 14, 14, 14, 14, 14, 14, 14, 14, 10, 14, 14, 14, 14, 14, 14, 11, 14, 14, 14, 14, 14, 14, 14, 14, 14, 12, 14, 14, 14, 14, 14, 14, 14, 14, 13, 14, 1, 14, 14, 14, 14, 14, 14, 14];
 const _M0MPC16string10StringView4findN6constrS9919 = 0;
-const _M0FP29moonstudy9moonstudy21report__from__storageN6recordS645 = new _M0TP29moonstudy9moonstudy12ReportResult(false, "周报日期范围无效", "");
-const _M0FP29moonstudy9moonstudy28daily__report__from__storageN6recordS646 = new _M0TP29moonstudy9moonstudy12ReportResult(false, "日报日期无效", "");
-const _M0FP29moonstudy9moonstudy16restore__storageN6recordS644 = new _M0TP29moonstudy9moonstudy13StorageAction(false, "备份文件为空", "");
+const _M0FP29moonstudy9moonstudy21report__from__storageN6recordS703 = new _M0TP29moonstudy9moonstudy12ReportResult(false, "周报日期范围无效", "");
+const _M0FP29moonstudy9moonstudy28daily__report__from__storageN6recordS704 = new _M0TP29moonstudy9moonstudy12ReportResult(false, "日报日期无效", "");
+const _M0FP29moonstudy9moonstudy16restore__storageN6recordS702 = new _M0TP29moonstudy9moonstudy13StorageAction(false, "备份文件为空", "");
 const _M0FP29moonstudy9moonstudy14compare__weeksN12empty__deltaS9 = new _M0TP29moonstudy9moonstudy9WeekDelta(0, 0, 0, 0, 0);
 function _M0FPB13consume4__acc(acc, input) {
   const _p = (acc >>> 0) + ((Math.imul(input, -1028477379) | 0) >>> 0) | 0;
@@ -6307,70 +6307,70 @@ function _M0IPC15array5ArrayPC14json8FromJson10from__jsonGRP29moonstudy9moonstud
     return _M0FPC14json13decode__errorGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE(path, "Array::from_json: expected array");
   }
 }
-function _M0IP29moonstudy9moonstudy15StorageEnvelopePB6ToJson8to__json(_x_374) {
+function _M0IP29moonstudy9moonstudy15StorageEnvelopePB6ToJson8to__json(_x_414) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "schema_version", _M0IPC13int3IntPB6ToJson8to__json(_x_374.schema_version));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "records", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy11StudyRecordE(_x_374.records));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "schema_version", _M0IPC13int3IntPB6ToJson8to__json(_x_414.schema_version));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "records", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy11StudyRecordE(_x_414.records));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy13StorageActionPB6ToJson8to__json(_x_369) {
+function _M0IP29moonstudy9moonstudy13StorageActionPB6ToJson8to__json(_x_409) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_369.ok));
-  const _p = _x_369.message;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_409.ok));
+  const _p = _x_409.message;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "message", new _M0DTPB4Json6String(_p));
-  const _p$2 = _x_369.storage_json;
+  const _p$2 = _x_409.storage_json;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "storage_json", new _M0DTPB4Json6String(_p$2));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy11StudyRecordPB6ToJson8to__json(_x_358) {
+function _M0IP29moonstudy9moonstudy11StudyRecordPB6ToJson8to__json(_x_398) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  const _p = _x_358.id;
+  const _p = _x_398.id;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "id", new _M0DTPB4Json6String(_p));
-  const _p$2 = _x_358.date;
+  const _p$2 = _x_398.date;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "date", new _M0DTPB4Json6String(_p$2));
-  const _p$3 = _x_358.category;
+  const _p$3 = _x_398.category;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "category", new _M0DTPB4Json6String(_p$3));
-  const _p$4 = _x_358.topic;
+  const _p$4 = _x_398.topic;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "topic", new _M0DTPB4Json6String(_p$4));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_358.minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "completed", _M0IPC14bool4BoolPB6ToJson8to__json(_x_358.completed));
-  const _p$5 = _x_358.note;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_398.minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "completed", _M0IPC14bool4BoolPB6ToJson8to__json(_x_398.completed));
+  const _p$5 = _x_398.note;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "note", new _M0DTPB4Json6String(_p$5));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy9WeekSlicePB6ToJson8to__json(_x_349) {
+function _M0IP29moonstudy9moonstudy9WeekSlicePB6ToJson8to__json(_x_380) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  const _p = _x_349.label;
+  const _p = _x_380.label;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "label", new _M0DTPB4Json6String(_p));
-  const _p$2 = _x_349.start;
+  const _p$2 = _x_380.start;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "start", new _M0DTPB4Json6String(_p$2));
-  const _p$3 = _x_349.end;
+  const _p$3 = _x_380.end;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "end", new _M0DTPB4Json6String(_p$3));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_349.minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "count", _M0IPC13int3IntPB6ToJson8to__json(_x_349.count));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "completion_rate", _M0IPC13int3IntPB6ToJson8to__json(_x_349.completion_rate));
-  const _p$4 = _x_349.top_topic;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_380.minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "count", _M0IPC13int3IntPB6ToJson8to__json(_x_380.count));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "completion_rate", _M0IPC13int3IntPB6ToJson8to__json(_x_380.completion_rate));
+  const _p$4 = _x_380.top_topic;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "top_topic", new _M0DTPB4Json6String(_p$4));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy14ActivityResultPB6ToJson8to__json(_x_346) {
+function _M0IP29moonstudy9moonstudy14ActivityResultPB6ToJson8to__json(_x_377) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_346.ok));
-  const _p = _x_346.message;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_377.ok));
+  const _p = _x_377.message;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "message", new _M0DTPB4Json6String(_p));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "days", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy7DayStatE(_x_346.days));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "days", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy7DayStatE(_x_377.days));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__json(_x_329, _x_330) {
-  let _de_schema_version_332 = undefined;
-  let _de_records_331 = _M0DTPC16option6OptionGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE4None__;
-  if (_x_329.$tag === 6) {
-    const _Object = _x_329;
+function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__json(_x_360, _x_361) {
+  let _de_schema_version_363 = undefined;
+  let _de_records_362 = _M0DTPC16option6OptionGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE4None__;
+  if (_x_360.$tag === 6) {
+    const _Object = _x_360;
     const __map = _Object._0;
     const _bind = _M0MPB3Map3getGsRPB4JsonE(__map, "schema_version");
     if (_bind === undefined) {
@@ -6378,7 +6378,7 @@ function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__js
       const _Some = _bind;
       const __v = _Some;
       const _p = "schema_version";
-      const _bind$2 = _M0IPC13int3IntPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_330, _p));
+      const _bind$2 = _M0IPC13int3IntPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_361, _p));
       let _tmp;
       if (_bind$2.$tag === 1) {
         const _ok = _bind$2;
@@ -6386,7 +6386,7 @@ function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__js
       } else {
         return _bind$2;
       }
-      _de_schema_version_332 = _tmp;
+      _de_schema_version_363 = _tmp;
     }
     const _bind$2 = _M0MPB3Map3getGsRPB4JsonE(__map, "records");
     if (_bind$2 === undefined) {
@@ -6394,7 +6394,7 @@ function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__js
       const _Some = _bind$2;
       const __v = _Some;
       const _p = "records";
-      const _bind$3 = _M0IPC15array5ArrayPC14json8FromJson10from__jsonGRP29moonstudy9moonstudy14StoredRecordV1E(__v, new _M0DTPC14json8JsonPath3Key(_x_330, _p));
+      const _bind$3 = _M0IPC15array5ArrayPC14json8FromJson10from__jsonGRP29moonstudy9moonstudy14StoredRecordV1E(__v, new _M0DTPC14json8JsonPath3Key(_x_361, _p));
       let _tmp;
       if (_bind$3.$tag === 1) {
         const _ok = _bind$3;
@@ -6402,106 +6402,106 @@ function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__js
       } else {
         return _bind$3;
       }
-      _de_records_331 = new _M0DTPC16option6OptionGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE4Some(_tmp);
+      _de_records_362 = new _M0DTPC16option6OptionGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE4Some(_tmp);
     }
   } else {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_330, _1: "Expected object to deserialize StoredEnvelopeV1" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_361, _1: "Expected object to deserialize StoredEnvelopeV1" }));
   }
-  const _bind = _de_schema_version_332;
-  let _de_schema_version_332$2;
+  const _bind = _de_schema_version_363;
+  let _de_schema_version_363$2;
   if (_bind === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_330, _1: "Missing field schema_version" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_361, _1: "Missing field schema_version" }));
   } else {
     const _Some = _bind;
-    _de_schema_version_332$2 = _Some;
+    _de_schema_version_363$2 = _Some;
   }
-  const _bind$2 = _de_records_331;
-  let _de_records_331$2;
+  const _bind$2 = _de_records_362;
+  let _de_records_362$2;
   if (_bind$2.$tag === 1) {
     const _Some = _bind$2;
-    _de_records_331$2 = _Some._0;
+    _de_records_362$2 = _Some._0;
   } else {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_330, _1: "Missing field records" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_361, _1: "Missing field records" }));
   }
-  return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE2Ok(new _M0TP29moonstudy9moonstudy16StoredEnvelopeV1(_de_schema_version_332$2, _de_records_331$2));
+  return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE2Ok(new _M0TP29moonstudy9moonstudy16StoredEnvelopeV1(_de_schema_version_363$2, _de_records_362$2));
 }
-function _M0IP29moonstudy9moonstudy9ViewStatePB6ToJson8to__json(_x_326) {
+function _M0IP29moonstudy9moonstudy9ViewStatePB6ToJson8to__json(_x_357) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_326.ok));
-  const _p = _x_326.message;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_357.ok));
+  const _p = _x_357.message;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "message", new _M0DTPB4Json6String(_p));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "records", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy11StudyRecordE(_x_326.records));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "summary", _M0IP29moonstudy9moonstudy12StudySummaryPB6ToJson8to__json(_x_326.summary));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "topics", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy9TopicStatE(_x_326.topics));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "records", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy11StudyRecordE(_x_357.records));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "summary", _M0IP29moonstudy9moonstudy12StudySummaryPB6ToJson8to__json(_x_357.summary));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "topics", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy9TopicStatE(_x_357.topics));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy9TopicStatPB6ToJson8to__json(_x_315) {
+function _M0IP29moonstudy9moonstudy9TopicStatPB6ToJson8to__json(_x_346) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  const _p = _x_315.topic;
+  const _p = _x_346.topic;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "topic", new _M0DTPB4Json6String(_p));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_315.minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "record_count", _M0IPC13int3IntPB6ToJson8to__json(_x_315.record_count));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_346.minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "record_count", _M0IPC13int3IntPB6ToJson8to__json(_x_346.record_count));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy7DayStatPB6ToJson8to__json(_x_306) {
+function _M0IP29moonstudy9moonstudy7DayStatPB6ToJson8to__json(_x_337) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  const _p = _x_306.date;
+  const _p = _x_337.date;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "date", new _M0DTPB4Json6String(_p));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_306.minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "record_count", _M0IPC13int3IntPB6ToJson8to__json(_x_306.record_count));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "completed_count", _M0IPC13int3IntPB6ToJson8to__json(_x_306.completed_count));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_337.minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "record_count", _M0IPC13int3IntPB6ToJson8to__json(_x_337.record_count));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "completed_count", _M0IPC13int3IntPB6ToJson8to__json(_x_337.completed_count));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy12StudySummaryPB6ToJson8to__json(_x_295) {
+function _M0IP29moonstudy9moonstudy12StudySummaryPB6ToJson8to__json(_x_326) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "today_minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_295.today_minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "week_minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_295.week_minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "total_minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_295.total_minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "record_count", _M0IPC13int3IntPB6ToJson8to__json(_x_295.record_count));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "completed_count", _M0IPC13int3IntPB6ToJson8to__json(_x_295.completed_count));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "completion_rate", _M0IPC13int3IntPB6ToJson8to__json(_x_295.completion_rate));
-  const _p = _x_295.top_category;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "today_minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_326.today_minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "week_minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_326.week_minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "total_minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_326.total_minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "record_count", _M0IPC13int3IntPB6ToJson8to__json(_x_326.record_count));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "completed_count", _M0IPC13int3IntPB6ToJson8to__json(_x_326.completed_count));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "completion_rate", _M0IPC13int3IntPB6ToJson8to__json(_x_326.completion_rate));
+  const _p = _x_326.top_category;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "top_category", new _M0DTPB4Json6String(_p));
-  const _p$2 = _x_295.top_topic;
+  const _p$2 = _x_326.top_topic;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "top_topic", new _M0DTPB4Json6String(_p$2));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy14WeekComparisonPB6ToJson8to__json(_x_286) {
+function _M0IP29moonstudy9moonstudy14WeekComparisonPB6ToJson8to__json(_x_317) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_286.ok));
-  const _p = _x_286.message;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_317.ok));
+  const _p = _x_317.message;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "message", new _M0DTPB4Json6String(_p));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "current", _M0IP29moonstudy9moonstudy9WeekSlicePB6ToJson8to__json(_x_286.current));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "previous", _M0IP29moonstudy9moonstudy9WeekSlicePB6ToJson8to__json(_x_286.previous));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "has_baseline", _M0IPC14bool4BoolPB6ToJson8to__json(_x_286.has_baseline));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "delta", _M0IP29moonstudy9moonstudy9WeekDeltaPB6ToJson8to__json(_x_286.delta));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "current", _M0IP29moonstudy9moonstudy9WeekSlicePB6ToJson8to__json(_x_317.current));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "previous", _M0IP29moonstudy9moonstudy9WeekSlicePB6ToJson8to__json(_x_317.previous));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "has_baseline", _M0IPC14bool4BoolPB6ToJson8to__json(_x_317.has_baseline));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "delta", _M0IP29moonstudy9moonstudy9WeekDeltaPB6ToJson8to__json(_x_317.delta));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy9WeekDeltaPB6ToJson8to__json(_x_277) {
+function _M0IP29moonstudy9moonstudy9WeekDeltaPB6ToJson8to__json(_x_308) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_277.minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes_percent", _M0IPC13int3IntPB6ToJson8to__json(_x_277.minutes_percent));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "count", _M0IPC13int3IntPB6ToJson8to__json(_x_277.count));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "count_percent", _M0IPC13int3IntPB6ToJson8to__json(_x_277.count_percent));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "completion_rate_points", _M0IPC13int3IntPB6ToJson8to__json(_x_277.completion_rate_points));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_308.minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes_percent", _M0IPC13int3IntPB6ToJson8to__json(_x_308.minutes_percent));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "count", _M0IPC13int3IntPB6ToJson8to__json(_x_308.count));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "count_percent", _M0IPC13int3IntPB6ToJson8to__json(_x_308.count_percent));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "completion_rate_points", _M0IPC13int3IntPB6ToJson8to__json(_x_308.completion_rate_points));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json(_x_237, _x_238) {
-  let _de_topic_245 = undefined;
-  let _de_note_244 = undefined;
-  let _de_minutes_243 = undefined;
-  let _de_id_242 = undefined;
-  let _de_date_241 = undefined;
-  let _de_completed_240 = -1;
-  let _de_category_239 = _M0DTPC16option6OptionGOsE4None__;
-  if (_x_237.$tag === 6) {
-    const _Object = _x_237;
+function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json(_x_268, _x_269) {
+  let _de_topic_276 = undefined;
+  let _de_note_275 = undefined;
+  let _de_minutes_274 = undefined;
+  let _de_id_273 = undefined;
+  let _de_date_272 = undefined;
+  let _de_completed_271 = -1;
+  let _de_category_270 = _M0DTPC16option6OptionGOsE4None__;
+  if (_x_268.$tag === 6) {
+    const _Object = _x_268;
     const __map = _Object._0;
     const _bind = _M0MPB3Map3getGsRPB4JsonE(__map, "id");
     if (_bind === undefined) {
@@ -6509,7 +6509,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind;
       const __v = _Some;
       const _p = "id";
-      const _bind$2 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$2 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp;
       if (_bind$2.$tag === 1) {
         const _ok = _bind$2;
@@ -6517,7 +6517,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$2;
       }
-      _de_id_242 = _tmp;
+      _de_id_273 = _tmp;
     }
     const _bind$2 = _M0MPB3Map3getGsRPB4JsonE(__map, "date");
     if (_bind$2 === undefined) {
@@ -6525,7 +6525,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$2;
       const __v = _Some;
       const _p = "date";
-      const _bind$3 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$3 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp;
       if (_bind$3.$tag === 1) {
         const _ok = _bind$3;
@@ -6533,7 +6533,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$3;
       }
-      _de_date_241 = _tmp;
+      _de_date_272 = _tmp;
     }
     const _bind$3 = _M0MPB3Map3getGsRPB4JsonE(__map, "category");
     if (_bind$3 === undefined) {
@@ -6541,7 +6541,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$3;
       const __v = _Some;
       const _p = "category";
-      const _bind$4 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$4 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp;
       if (_bind$4.$tag === 1) {
         const _ok = _bind$4;
@@ -6549,7 +6549,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$4;
       }
-      _de_category_239 = new _M0DTPC16option6OptionGOsE4Some(_tmp);
+      _de_category_270 = new _M0DTPC16option6OptionGOsE4Some(_tmp);
     }
     const _bind$4 = _M0MPB3Map3getGsRPB4JsonE(__map, "topic");
     if (_bind$4 === undefined) {
@@ -6557,7 +6557,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$4;
       const __v = _Some;
       const _p = "topic";
-      const _bind$5 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$5 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp;
       if (_bind$5.$tag === 1) {
         const _ok = _bind$5;
@@ -6565,7 +6565,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$5;
       }
-      _de_topic_245 = _tmp;
+      _de_topic_276 = _tmp;
     }
     const _bind$5 = _M0MPB3Map3getGsRPB4JsonE(__map, "minutes");
     if (_bind$5 === undefined) {
@@ -6573,7 +6573,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$5;
       const __v = _Some;
       const _p = "minutes";
-      const _bind$6 = _M0IPC13int3IntPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$6 = _M0IPC13int3IntPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp;
       if (_bind$6.$tag === 1) {
         const _ok = _bind$6;
@@ -6581,7 +6581,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$6;
       }
-      _de_minutes_243 = _tmp;
+      _de_minutes_274 = _tmp;
     }
     const _bind$6 = _M0MPB3Map3getGsRPB4JsonE(__map, "completed");
     if (_bind$6 === undefined) {
@@ -6589,7 +6589,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$6;
       const __v = _Some;
       const _p = "completed";
-      const _bind$7 = _M0IPC14bool4BoolPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$7 = _M0IPC14bool4BoolPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp;
       if (_bind$7.$tag === 1) {
         const _ok = _bind$7;
@@ -6597,7 +6597,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$7;
       }
-      _de_completed_240 = _tmp;
+      _de_completed_271 = _tmp;
     }
     const _bind$7 = _M0MPB3Map3getGsRPB4JsonE(__map, "note");
     if (_bind$7 === undefined) {
@@ -6605,7 +6605,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$7;
       const __v = _Some;
       const _p = "note";
-      const _bind$8 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$8 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp;
       if (_bind$8.$tag === 1) {
         const _ok = _bind$8;
@@ -6613,75 +6613,75 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$8;
       }
-      _de_note_244 = _tmp;
+      _de_note_275 = _tmp;
     }
   } else {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Expected object to deserialize StoredRecordV1" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Expected object to deserialize StoredRecordV1" }));
   }
-  const _bind = _de_topic_245;
-  let _de_topic_245$2;
+  const _bind = _de_topic_276;
+  let _de_topic_276$2;
   if (_bind === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field topic" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field topic" }));
   } else {
     const _Some = _bind;
-    _de_topic_245$2 = _Some;
+    _de_topic_276$2 = _Some;
   }
-  const _bind$2 = _de_note_244;
-  let _de_note_244$2;
+  const _bind$2 = _de_note_275;
+  let _de_note_275$2;
   if (_bind$2 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field note" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field note" }));
   } else {
     const _Some = _bind$2;
-    _de_note_244$2 = _Some;
+    _de_note_275$2 = _Some;
   }
-  const _bind$3 = _de_minutes_243;
-  let _de_minutes_243$2;
+  const _bind$3 = _de_minutes_274;
+  let _de_minutes_274$2;
   if (_bind$3 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field minutes" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field minutes" }));
   } else {
     const _Some = _bind$3;
-    _de_minutes_243$2 = _Some;
+    _de_minutes_274$2 = _Some;
   }
-  const _bind$4 = _de_id_242;
-  let _de_id_242$2;
+  const _bind$4 = _de_id_273;
+  let _de_id_273$2;
   if (_bind$4 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field id" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field id" }));
   } else {
     const _Some = _bind$4;
-    _de_id_242$2 = _Some;
+    _de_id_273$2 = _Some;
   }
-  const _bind$5 = _de_date_241;
-  let _de_date_241$2;
+  const _bind$5 = _de_date_272;
+  let _de_date_272$2;
   if (_bind$5 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field date" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field date" }));
   } else {
     const _Some = _bind$5;
-    _de_date_241$2 = _Some;
+    _de_date_272$2 = _Some;
   }
-  const _bind$6 = _de_completed_240;
-  let _de_completed_240$2;
+  const _bind$6 = _de_completed_271;
+  let _de_completed_271$2;
   if (_bind$6 === -1) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field completed" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field completed" }));
   } else {
-    _de_completed_240$2 = _bind$6;
+    _de_completed_271$2 = _bind$6;
   }
-  const _bind$7 = _de_category_239;
-  let _de_category_239$2;
+  const _bind$7 = _de_category_270;
+  let _de_category_270$2;
   if (_bind$7.$tag === 1) {
     const _Some = _bind$7;
-    _de_category_239$2 = _Some._0;
+    _de_category_270$2 = _Some._0;
   } else {
-    _de_category_239$2 = undefined;
+    _de_category_270$2 = undefined;
   }
-  return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE2Ok(new _M0TP29moonstudy9moonstudy14StoredRecordV1(_de_id_242$2, _de_date_241$2, _de_category_239$2, _de_topic_245$2, _de_minutes_243$2, _de_completed_240$2, _de_note_244$2));
+  return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE2Ok(new _M0TP29moonstudy9moonstudy14StoredRecordV1(_de_id_273$2, _de_date_272$2, _de_category_270$2, _de_topic_276$2, _de_minutes_274$2, _de_completed_271$2, _de_note_275$2));
 }
-function _M0IP29moonstudy9moonstudy12ReportResultPB6ToJson8to__json(_x_234) {
+function _M0IP29moonstudy9moonstudy12ReportResultPB6ToJson8to__json(_x_265) {
   const _bind = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_234.ok));
-  const _p = _x_234.message;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "ok", _M0IPC14bool4BoolPB6ToJson8to__json(_x_265.ok));
+  const _p = _x_265.message;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "message", new _M0DTPB4Json6String(_p));
-  const _p$2 = _x_234.markdown;
+  const _p$2 = _x_265.markdown;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "markdown", new _M0DTPB4Json6String(_p$2));
   return new _M0DTPB4Json6Object($36$map);
 }
@@ -6776,7 +6776,7 @@ function _M0FP29moonstudy9moonstudy16valid__iso__date(date) {
   return day <= days_in_month;
 }
 function _M0FP29moonstudy9moonstudy16validate__record(record) {
-  return record.id.length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS635 : !_M0FP29moonstudy9moonstudy16valid__iso__date(record.date) ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS636 : _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(record.category, undefined)).length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS637 : record.category.length > 30 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS638 : _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(record.topic, undefined)).length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS639 : record.topic.length > 100 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS640 : record.note.length > 500 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS641 : record.minutes <= 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS642 : record.minutes > 1440 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS643 : undefined;
+  return record.id.length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS693 : !_M0FP29moonstudy9moonstudy16valid__iso__date(record.date) ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS694 : _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(record.category, undefined)).length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS695 : record.category.length > 30 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS696 : _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(record.topic, undefined)).length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS697 : record.topic.length > 100 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS698 : record.note.length > 500 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS699 : record.minutes <= 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS700 : record.minutes > 1440 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS701 : undefined;
 }
 function _M0FP29moonstudy9moonstudy19add__topic__minutes(totals, positions, topic, minutes) {
   const _bind = _M0MPB3Map3getGsiE(positions, topic);
@@ -7108,7 +7108,7 @@ function _M0FP29moonstudy9moonstudy15export__storage(raw) {
 }
 function _M0FP29moonstudy9moonstudy16restore__storage(candidate) {
   if (_M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(candidate, undefined)).length === 0) {
-    return _M0FP29moonstudy9moonstudy16restore__storageN6recordS644;
+    return _M0FP29moonstudy9moonstudy16restore__storageN6recordS702;
   }
   const loaded = _M0FP29moonstudy9moonstudy13load__storage(candidate);
   if (!loaded.ok) {
@@ -7123,7 +7123,7 @@ function _M0FP29moonstudy9moonstudy22restore__storage__json(candidate) {
   return _M0MPC14json4Json17stringify_2einner(_M0IP29moonstudy9moonstudy13StorageActionPB6ToJson8to__json(_M0FP29moonstudy9moonstudy16restore__storage(candidate)), false, 0, undefined);
 }
 function _M0FP29moonstudy9moonstudy14safe__markdown(value) {
-  return _M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(value, new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS566, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS566.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS567, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS567.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS568, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS568.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS569, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS569.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS570, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS570.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS571, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS571.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS572, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS572.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS573, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS573.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS574, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS574.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS575, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS575.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS576, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS576.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS577, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS577.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS578, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS578.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS579, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS579.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS580, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS580.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS581, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS581.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS582, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS582.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS583, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS583.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS584, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS584.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS585, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS585.length));
+  return _M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(value, new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS608, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS608.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS609, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS609.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS610, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS610.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS611, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS611.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS612, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS612.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS613, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS613.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS614, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS614.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS615, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS615.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS616, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS616.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS617, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS617.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS618, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS618.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS619, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS619.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS620, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS620.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS621, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS621.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS622, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS622.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS623, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS623.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS624, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS624.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS625, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS625.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS626, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS626.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS627, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS627.length));
 }
 function _M0FP29moonstudy9moonstudy16weekly__markdown(records, week_start, today) {
   const _p = [];
@@ -7312,7 +7312,7 @@ function _M0FP29moonstudy9moonstudy21report__from__storage(raw, week_start, toda
     return new _M0TP29moonstudy9moonstudy12ReportResult(false, loaded.message, "");
   }
   if (!_M0FP29moonstudy9moonstudy16valid__iso__date(week_start) || (!_M0FP29moonstudy9moonstudy16valid__iso__date(today) || _M0IP016_24default__implPB7Compare6op__gtGsE(week_start, today))) {
-    return _M0FP29moonstudy9moonstudy21report__from__storageN6recordS645;
+    return _M0FP29moonstudy9moonstudy21report__from__storageN6recordS703;
   }
   return new _M0TP29moonstudy9moonstudy12ReportResult(true, "周报已生成", _M0FP29moonstudy9moonstudy16weekly__markdown(loaded.records, week_start, today));
 }
@@ -7325,7 +7325,7 @@ function _M0FP29moonstudy9moonstudy28daily__report__from__storage(raw, date) {
     return new _M0TP29moonstudy9moonstudy12ReportResult(false, loaded.message, "");
   }
   if (!_M0FP29moonstudy9moonstudy16valid__iso__date(date)) {
-    return _M0FP29moonstudy9moonstudy28daily__report__from__storageN6recordS646;
+    return _M0FP29moonstudy9moonstudy28daily__report__from__storageN6recordS704;
   }
   return new _M0TP29moonstudy9moonstudy12ReportResult(true, "日报已生成", _M0FP29moonstudy9moonstudy15daily__markdown(loaded.records, date));
 }

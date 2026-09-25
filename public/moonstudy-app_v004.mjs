@@ -75,6 +75,60 @@ function _M0TP319moonbit_2dcommunity7rabbita3cmd2Op(param0, param1, param2, para
   this.identify = param3;
   this.debug = param4;
 }
+function _M0DTP39moonstudy9moonstudy3app3Msg4Save() {}
+_M0DTP39moonstudy9moonstudy3app3Msg4Save.prototype.$tag = 0;
+const _M0DTP39moonstudy9moonstudy3app3Msg4Save__ = new _M0DTP39moonstudy9moonstudy3app3Msg4Save();
+function _M0DTP39moonstudy9moonstudy3app3Msg6Delete(param0) {
+  this._0 = param0;
+}
+_M0DTP39moonstudy9moonstudy3app3Msg6Delete.prototype.$tag = 1;
+function _M0DTP39moonstudy9moonstudy3app3Msg8ShowMore() {}
+_M0DTP39moonstudy9moonstudy3app3Msg8ShowMore.prototype.$tag = 2;
+const _M0DTP39moonstudy9moonstudy3app3Msg8ShowMore__ = new _M0DTP39moonstudy9moonstudy3app3Msg8ShowMore();
+function _M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged() {}
+_M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged.prototype.$tag = 3;
+const _M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged__ = new _M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged();
+function _M0DTP39moonstudy9moonstudy3app3Msg17SetCategoryChoice(param0) {
+  this._0 = param0;
+}
+_M0DTP39moonstudy9moonstudy3app3Msg17SetCategoryChoice.prototype.$tag = 4;
+function _M0DTP39moonstudy9moonstudy3app3Msg15SetActivityMode(param0) {
+  this._0 = param0;
+}
+_M0DTP39moonstudy9moonstudy3app3Msg15SetActivityMode.prototype.$tag = 5;
+function _M0DTP39moonstudy9moonstudy3app3Msg15SetActivityYear(param0) {
+  this._0 = param0;
+}
+_M0DTP39moonstudy9moonstudy3app3Msg15SetActivityYear.prototype.$tag = 6;
+function _M0DTP39moonstudy9moonstudy3app3Msg13SetReportType(param0) {
+  this._0 = param0;
+}
+_M0DTP39moonstudy9moonstudy3app3Msg13SetReportType.prototype.$tag = 7;
+function _M0DTP39moonstudy9moonstudy3app3Msg13SetReportDate(param0) {
+  this._0 = param0;
+}
+_M0DTP39moonstudy9moonstudy3app3Msg13SetReportDate.prototype.$tag = 8;
+function _M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport() {}
+_M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport.prototype.$tag = 9;
+const _M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport__ = new _M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport();
+function _M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport() {}
+_M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport.prototype.$tag = 10;
+const _M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport__ = new _M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport();
+function _M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup() {}
+_M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup.prototype.$tag = 11;
+const _M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup__ = new _M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup();
+function _M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw() {}
+_M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw.prototype.$tag = 12;
+const _M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw__ = new _M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw();
+function _M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore() {}
+_M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore.prototype.$tag = 13;
+const _M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore__ = new _M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore();
+function _M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged() {}
+_M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged.prototype.$tag = 14;
+const _M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged__ = new _M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged();
+function _M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady() {}
+_M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady.prototype.$tag = 15;
+const _M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady__ = new _M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady();
 function _M0TP29moonstudy9moonstudy9WeekDelta(param0, param1, param2, param3, param4) {
   this.minutes = param0;
   this.minutes_percent = param1;
@@ -1289,6 +1343,11 @@ function _M0TPB9ArrayViewGUsbEE(param0, param1, param2) {
   this.start = param1;
   this.end = param2;
 }
+function _M0TP29moonstudy9moonstudy16CompletionPeriod(param0, param1, param2) {
+  this.start = param0;
+  this.end = param1;
+  this.completed_count = param2;
+}
 function _M0TP29moonstudy9moonstudy9WeekSlice(param0, param1, param2, param3, param4, param5, param6) {
   this.label = param0;
   this.start = param1;
@@ -1311,7 +1370,7 @@ const _M0FP39moonstudy9moonstudy3app12show__notice = (message) => { const node =
 const _M0FP39moonstudy9moonstudy3app17storage__readable = (key) => { try { window.localStorage.getItem(key); return true; } catch (_) { return false; } };
 const _M0FP39moonstudy9moonstudy3app10today__iso = () => { const d = new Date(); const y = d.getFullYear(); const m = String(d.getMonth() + 1).padStart(2, '0'); const day = String(d.getDate()).padStart(2, '0'); return `${y}-${m}-${day}`; };
 const _M0FP39moonstudy9moonstudy3app16week__start__iso = () => { const d = new Date(); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); const y = d.getFullYear(); const m = String(d.getMonth() + 1).padStart(2, '0'); const day = String(d.getDate()).padStart(2, '0'); return `${y}-${m}-${day}`; };
-function _M0TP39moonstudy9moonstudy3app9ViewModel(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13) {
+function _M0TP39moonstudy9moonstudy3app9ViewModel(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15) {
   this.ok = param0;
   this.storage_available = param1;
   this.message = param2;
@@ -1321,11 +1380,13 @@ function _M0TP39moonstudy9moonstudy3app9ViewModel(param0, param1, param2, param3
   this.today = param6;
   this.week_start = param7;
   this.category_choice = param8;
-  this.report_type = param9;
-  this.report_date = param10;
-  this.report_markdown = param11;
-  this.report_title = param12;
-  this.report_filename = param13;
+  this.activity_mode = param9;
+  this.activity_year = param10;
+  this.report_type = param11;
+  this.report_date = param12;
+  this.report_markdown = param13;
+  this.report_title = param14;
+  this.report_filename = param15;
 }
 const _M0FP39moonstudy9moonstudy3app14form__category = () => { const choice = document.getElementById('category-choice')?.value ?? ''; return choice === 'custom' ? (document.getElementById('custom-category')?.value ?? '') : choice; };
 const _M0FP39moonstudy9moonstudy3app15form__completed = () => document.getElementById('completed')?.value === 'true';
@@ -1346,7 +1407,6 @@ const _M0FP39moonstudy9moonstudy3app25week__full__end__for__iso = (date) => { co
 const _M0FP39moonstudy9moonstudy3app21week__start__for__iso = (date) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() - ((value.getDay() + 6) % 7)); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); return `${yy}-${mm}-${dd}`; };
 const _M0FP39moonstudy9moonstudy3app20begin__restore__read = () => { const input = document.getElementById('restore-file'); const file = input?.files?.[0]; window.__moonstudyRestoreStatus = 'none'; window.__moonstudyRestoreText = ''; if (!file) return; if (file.size > 5 * 1024 * 1024) { window.__moonstudyRestoreStatus = 'too-large'; input.value = ''; document.getElementById('restore-ready')?.click(); return; } file.text().then((text) => { window.__moonstudyRestoreStatus = 'ok'; window.__moonstudyRestoreText = text; }).catch(() => { window.__moonstudyRestoreStatus = 'read-error'; }).finally(() => { input.value = ''; document.getElementById('restore-ready')?.click(); }); };
 const _M0FP39moonstudy9moonstudy3app21choose__restore__file = () => document.getElementById('restore-file')?.click();
-const _M0FP39moonstudy9moonstudy3app18activity__end__iso = () => { const d = new Date(); d.setDate(d.getDate() + (6 - d.getDay())); const y = d.getFullYear(); const m = String(d.getMonth() + 1).padStart(2, '0'); const day = String(d.getDate()).padStart(2, '0'); return `${y}-${m}-${day}`; };
 const _M0FP39moonstudy9moonstudy3app16shift__date__iso = (date, offset) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(y, m - 1, d); value.setDate(value.getDate() + offset); const yy = value.getFullYear(); const mm = String(value.getMonth() + 1).padStart(2, '0'); const dd = String(value.getDate()).padStart(2, '0'); return `${yy}-${mm}-${dd}`; };
 function _M0TPB9ArrayViewGUsRP29moonstudy9moonstudy7DayStatEE(param0, param1, param2) {
   this.buf = param0;
@@ -1360,52 +1420,6 @@ function _M0DTPC16option6OptionGRPB5ArrayGsEE4Some(param0) {
   this._0 = param0;
 }
 _M0DTPC16option6OptionGRPB5ArrayGsEE4Some.prototype.$tag = 1;
-function _M0DTP39moonstudy9moonstudy3app3Msg4Save() {}
-_M0DTP39moonstudy9moonstudy3app3Msg4Save.prototype.$tag = 0;
-const _M0DTP39moonstudy9moonstudy3app3Msg4Save__ = new _M0DTP39moonstudy9moonstudy3app3Msg4Save();
-function _M0DTP39moonstudy9moonstudy3app3Msg6Delete(param0) {
-  this._0 = param0;
-}
-_M0DTP39moonstudy9moonstudy3app3Msg6Delete.prototype.$tag = 1;
-function _M0DTP39moonstudy9moonstudy3app3Msg8ShowMore() {}
-_M0DTP39moonstudy9moonstudy3app3Msg8ShowMore.prototype.$tag = 2;
-const _M0DTP39moonstudy9moonstudy3app3Msg8ShowMore__ = new _M0DTP39moonstudy9moonstudy3app3Msg8ShowMore();
-function _M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged() {}
-_M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged.prototype.$tag = 3;
-const _M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged__ = new _M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged();
-function _M0DTP39moonstudy9moonstudy3app3Msg17SetCategoryChoice(param0) {
-  this._0 = param0;
-}
-_M0DTP39moonstudy9moonstudy3app3Msg17SetCategoryChoice.prototype.$tag = 4;
-function _M0DTP39moonstudy9moonstudy3app3Msg13SetReportType(param0) {
-  this._0 = param0;
-}
-_M0DTP39moonstudy9moonstudy3app3Msg13SetReportType.prototype.$tag = 5;
-function _M0DTP39moonstudy9moonstudy3app3Msg13SetReportDate(param0) {
-  this._0 = param0;
-}
-_M0DTP39moonstudy9moonstudy3app3Msg13SetReportDate.prototype.$tag = 6;
-function _M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport() {}
-_M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport.prototype.$tag = 7;
-const _M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport__ = new _M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport();
-function _M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport() {}
-_M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport.prototype.$tag = 8;
-const _M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport__ = new _M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport();
-function _M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup() {}
-_M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup.prototype.$tag = 9;
-const _M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup__ = new _M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup();
-function _M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw() {}
-_M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw.prototype.$tag = 10;
-const _M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw__ = new _M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw();
-function _M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore() {}
-_M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore.prototype.$tag = 11;
-const _M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore__ = new _M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore();
-function _M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged() {}
-_M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged.prototype.$tag = 12;
-const _M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged__ = new _M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged();
-function _M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady() {}
-_M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady.prototype.$tag = 13;
-const _M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady__ = new _M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady();
 const _M0FP39moonstudy9moonstudy3app16short__date__iso = (date) => date.slice(5);
 const _M0FP39moonstudy9moonstudy3app23week__start__for__value = (value) => { const parts = value.split('-W'); if (parts.length !== 2) return ''; const year = Number(parts[0]); const week = Number(parts[1]); if (!Number.isInteger(year) || !Number.isInteger(week) || week < 1 || week > 53) return ''; const jan4 = new Date(Date.UTC(year, 0, 4)); const monday = new Date(jan4); monday.setUTCDate(jan4.getUTCDate() - ((jan4.getUTCDay() + 6) % 7) + (week - 1) * 7); return `${monday.getUTCFullYear()}-${String(monday.getUTCMonth() + 1).padStart(2, '0')}-${String(monday.getUTCDate()).padStart(2, '0')}`; };
 const _M0FP39moonstudy9moonstudy3app21week__value__for__iso = (date) => { const [y, m, d] = date.split('-').map(Number); const value = new Date(Date.UTC(y, m - 1, d)); const day = value.getUTCDay() || 7; value.setUTCDate(value.getUTCDate() + 4 - day); const yearStart = new Date(Date.UTC(value.getUTCFullYear(), 0, 1)); const week = Math.ceil((((value - yearStart) / 86400000) + 1) / 7); return `${value.getUTCFullYear()}-W${String(week).padStart(2, '0')}`; };
@@ -1577,28 +1591,28 @@ const _M0FPC14json12checked__mulN6constrS1890 = 0n;
 const _M0FP419moonbit_2dcommunity7rabbita8internal3key3key = undefined;
 const _M0FP319moonbit_2dcommunity7rabbita3cmd4none = new _M0DTP319moonbit_2dcommunity7rabbita3cmd3Cmd5Batch([]);
 const _M0FP319moonbit_2dcommunity7rabbita4html11push__styleN7_2abindS2131 = ";";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS566 = "\\";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS567 = "\\\\";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS568 = "\r";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS569 = " ";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS570 = "\n";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS571 = " ";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS572 = "&";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS573 = "&amp;";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS574 = "<";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS575 = "&lt;";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS576 = ">";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS577 = "&gt;";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS578 = "*";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS579 = "\\*";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS580 = "_";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS581 = "\\_";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS582 = "[";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS583 = "\\[";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS584 = "]";
-const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS585 = "\\]";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS608 = "\\";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS609 = "\\\\";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS610 = "\r";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS611 = " ";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS612 = "\n";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS613 = " ";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS614 = "&";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS615 = "&amp;";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS616 = "<";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS617 = "&lt;";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS618 = ">";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS619 = "&gt;";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS620 = "*";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS621 = "\\*";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS622 = "_";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS623 = "\\_";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS624 = "[";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS625 = "\\[";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS626 = "]";
+const _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS627 = "\\]";
 const _M0FP39moonstudy9moonstudy3app12storage__key = "moonstudy.records.v1";
-const _M0FP39moonstudy9moonstudy3app17load__with__limitN7messageS146 = "浏览器存储不可用，暂时不能保存记录。";
+const _M0FP39moonstudy9moonstudy3app17load__with__limitN7messageS182 = "浏览器存储不可用，暂时不能保存记录。";
 const _M0FP419moonbit_2dcommunity7rabbita8internal6duplix14global__scopes = _M0MP419moonbit_2dcommunity7rabbita8internal7slotmap7SlotMap7SlotMapGRP419moonbit_2dcommunity7rabbita8internal7runtime5StoreE();
 const _M0FPB4seed = _M0FPB12random__seed();
 const _M0FP419moonbit_2dcommunity7rabbita8internal6duplix12dummy__scope = _M0MP419moonbit_2dcommunity7rabbita8internal7slotmap7SlotMap14allocate__withGRP419moonbit_2dcommunity7rabbita8internal6duplix5ScopeE(_M0FP419moonbit_2dcommunity7rabbita8internal6duplix14global__scopes, (id) => {
@@ -1615,205 +1629,227 @@ const _M0FP411moonbitlang5async8internal9coroutine9scheduler = new _M0TP411moonb
 const _M0FP419moonbit_2dcommunity7rabbita8internal7runtime13ambient__host = _M0MPC13ref3Ref3RefGRP419moonbit_2dcommunity7rabbita8internal7runtime4HostE({ self: new _M0TP419moonbit_2dcommunity7rabbita8internal7runtime9DummyHost(_M0MP419moonbit_2dcommunity7rabbita8internal7slotmap7SlotMap7SlotMapGRP419moonbit_2dcommunity7rabbita8internal7runtime5StoreE()), method_table: _M0FP0130moonbit_2dcommunity_2frabbita_2finternal_2fruntime_2fDummyHost_24as_24_40moonbit_2dcommunity_2frabbita_2finternal_2fruntime_2eHost });
 const _M0FP319moonbit_2dcommunity7rabbita3cmd16default__handler = new _M0TP319moonbit_2dcommunity7rabbita3cmd2Op(_M0FP319moonbit_2dcommunity7rabbita3cmd16default__handlerN7_2abindS108, _M0FP319moonbit_2dcommunity7rabbita3cmd16default__handlerN7_2abindS101, _M0FP319moonbit_2dcommunity7rabbita3cmd16default__handlerN7_2abindS98, _M0FP319moonbit_2dcommunity7rabbita3cmd16default__handlerN7_2abindS103, _M0FP319moonbit_2dcommunity7rabbita3cmd16default__handlerN7_2abindS105);
 const _M0FP419moonbit_2dcommunity7rabbita8internal7runtime2op = _M0MP319moonbit_2dcommunity7rabbita3cmd2Op2Op();
-const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS432 = "theme-picker";
-const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS433 = "theme-select";
-const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS434 = "system";
-const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS435 = "light";
-const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS436 = "dark";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS635 = "记录编号不能为空";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS636 = "日期必须是真实的 YYYY-MM-DD 日期";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS637 = "请选择或填写主题";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS638 = "主题不能超过 30 个字符";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS639 = "请填写学习内容";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS640 = "学习内容不能超过 100 个字符";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS641 = "备注不能超过 500 个字符";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS642 = "学习时长必须大于 0 分钟";
-const _M0FP29moonstudy9moonstudy16validate__recordN6constrS643 = "单条学习时长不能超过 1440 分钟";
+const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS533 = "theme-picker";
+const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS534 = "theme-select";
+const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS535 = "system";
+const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS536 = "light";
+const _M0FP39moonstudy9moonstudy3app10theme__appN6constrS537 = "dark";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS693 = "记录编号不能为空";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS694 = "日期必须是真实的 YYYY-MM-DD 日期";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS695 = "请选择或填写主题";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS696 = "主题不能超过 30 个字符";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS697 = "请填写学习内容";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS698 = "学习内容不能超过 100 个字符";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS699 = "备注不能超过 500 个字符";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS700 = "学习时长必须大于 0 分钟";
+const _M0FP29moonstudy9moonstudy16validate__recordN6constrS701 = "单条学习时长不能超过 1440 分钟";
 const _M0FPC28internal7strconv17check__underscoreN25_2atransition__table__222S230 = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 0, 1, 2, 5];
 const _M0FPC28internal7strconv15parse__inf__nanN25_2atransition__table__304S312 = [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 3, 4, 14, 14, 14, 14, 14, 14, 14, 7, 14, 14, 14, 14, 5, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 14, 14, 14, 0, 14, 14, 14, 14, 14, 14, 14, 14, 14, 8, 14, 14, 14, 14, 14, 1, 14, 14, 9, 14, 14, 14, 14, 14, 14, 14, 14, 10, 14, 14, 14, 14, 14, 14, 11, 14, 14, 14, 14, 14, 14, 14, 14, 14, 12, 14, 14, 14, 14, 14, 14, 14, 14, 13, 14, 1, 14, 14, 14, 14, 14, 14, 14];
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS302 = "card";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS303 = "card-heading";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS304 = "summary-title";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS305 = "record-count";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS306 = "muted";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS307 = "metrics";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS308 = "metric";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS309 = "today-minutes";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS310 = "metric";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS311 = "week-minutes";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS312 = "metric";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS313 = "total-minutes";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS314 = "metric";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS315 = "completion-rate";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS316 = "metric metric-topic";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS317 = "top-category";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS318 = "metric metric-topic";
-const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS319 = "top-topic";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS338 = "trend-block";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS339 = "subheading";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS340 = "muted";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS341 = "heatmap-scroll";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS342 = "heatmap-frame";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS343 = "heatmap-corner";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS344 = "heatmap-months";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS345 = "heatmap-months";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS346 = "heatmap-weekdays";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS347 = "heatmap";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS348 = "heatmap";
-const _M0FP39moonstudy9moonstudy3app7heatmapN6constrS349 = "heatmap-legend";
-const _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS334 = "bar-column";
-const _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS335 = "bar-track";
-const _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS336 = "bar-chart";
-const _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS337 = "bar-chart";
-const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS350 = "card";
-const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS351 = "card-heading";
-const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS352 = "trend-title";
-const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS353 = "muted";
-const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS354 = "trend-block";
-const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS355 = "subheading";
-const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS356 = "muted";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS357 = "card";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS358 = "card-heading";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS359 = "report-title";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS360 = "muted";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS361 = "report-help";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS362 = "report-controls";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS363 = "report-type";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS364 = "daily";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS365 = "weekly";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS366 = "report-date-label";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS367 = "report-date";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS368 = "report-range";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS369 = "muted";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS370 = "actions";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS371 = "generate-report";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS372 = "secondary";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS373 = "button";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS374 = "download-report";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS375 = "secondary";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS376 = "button";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS377 = "report-label";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS378 = "report-label";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS379 = "report-preview-title";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS380 = "report-output";
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS381 = 12;
-const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS382 = true;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS254 = "card";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS255 = "card-heading";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS256 = "form-title";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS257 = "pill";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS258 = "study-form";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS259 = "grid";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS260 = 3;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS261 = "date";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS262 = "date";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS263 = true;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS264 = 10;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS265 = "minutes";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS266 = "40";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS267 = 1440;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS268 = 1;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS269 = 1;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS270 = "minutes";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS271 = true;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS272 = "grid";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS273 = "category-choice";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS274 = "category-choice";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS275 = "学习";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS276 = "运动";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS277 = "工作";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS278 = "生活";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS279 = "custom";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS280 = "custom-category";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS281 = "例如：阅读";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS282 = 30;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS283 = "custom-category";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS284 = "topic";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS285 = "例如：MoonBit 基础、慢跑 5 公里";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS286 = 100;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS287 = "topic";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS288 = true;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS289 = "grid";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS290 = "completed";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS291 = "completed";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS292 = "true";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS293 = true;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS294 = "false";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS295 = "note";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS296 = "学习了变量和函数";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS297 = 500;
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS298 = "note";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS299 = "save";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS300 = "primary";
-const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS301 = "submit";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS407 = "backup-raw";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS408 = "backup";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS409 = "button";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS410 = "card";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS411 = "card-heading";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS412 = "data-title";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS413 = "muted";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS414 = "report-help";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS415 = "actions";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS416 = "export-data";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS417 = "secondary";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS418 = "button";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS419 = "choose-restore";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS420 = "secondary";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS421 = "button";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS422 = 6;
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS423 = "application/json,.json";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS424 = "restore-file";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS425 = true;
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS426 = "restore-ready";
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS427 = true;
-const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS428 = "button";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS381 = "card";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS382 = "card-heading";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS383 = "summary-title";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS384 = "record-count";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS385 = "muted";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS386 = "metrics";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS387 = "metric";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS388 = "today-minutes";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS389 = "metric";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS390 = "week-minutes";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS391 = "metric";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS392 = "total-minutes";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS393 = "metric";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS394 = "completion-rate";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS395 = "metric metric-topic";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS396 = "top-category";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS397 = "metric metric-topic";
+const _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS398 = "top-topic";
+const _M0FP39moonstudy9moonstudy3app16activity__legendN6constrS417 = "heatmap-legend";
+const _M0FP39moonstudy9moonstudy3app20cumulative__activityN6constrS432 = "cumulative-item";
+const _M0FP39moonstudy9moonstudy3app20cumulative__activityN6constrS433 = "activity-body";
+const _M0FP39moonstudy9moonstudy3app20cumulative__activityN6constrS434 = "cumulative-activity";
+const _M0FP39moonstudy9moonstudy3app20cumulative__activityN6constrS435 = "cumulative-activity";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS418 = "activity-blank";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS419 = "activity-body";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS420 = "heatmap-scroll";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS421 = "heatmap-frame";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS422 = "heatmap-corner";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS423 = "heatmap-months";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS424 = "heatmap-months";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS425 = "heatmap-weekdays";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS426 = "heatmap";
+const _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS427 = "heatmap";
+const _M0FP39moonstudy9moonstudy3app16weekly__activityN6constrS428 = "activity-body";
+const _M0FP39moonstudy9moonstudy3app16weekly__activityN6constrS429 = "heatmap-scroll";
+const _M0FP39moonstudy9moonstudy3app16weekly__activityN6constrS430 = "weekly-activity";
+const _M0FP39moonstudy9moonstudy3app16weekly__activityN6constrS431 = "weekly-activity";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS436 = "trend-block activity-panel";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS437 = "activity-toolbar";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS438 = "activity-heading";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS439 = "activity-year";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS440 = "activity-tabs";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS441 = "activity-daily";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS442 = "button";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS443 = new _M0DTP39moonstudy9moonstudy3app3Msg15SetActivityMode("daily");
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS444 = "activity-weekly";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS445 = "button";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS446 = new _M0DTP39moonstudy9moonstudy3app3Msg15SetActivityMode("weekly");
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS447 = "activity-cumulative";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS448 = "button";
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS449 = new _M0DTP39moonstudy9moonstudy3app3Msg15SetActivityMode("cumulative");
+const _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS450 = "activity-note";
+const _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS413 = "bar-column";
+const _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS414 = "bar-track";
+const _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS415 = "bar-chart";
+const _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS416 = "bar-chart";
+const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS451 = "card";
+const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS452 = "card-heading";
+const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS453 = "trend-title";
+const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS454 = "muted";
+const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS455 = "trend-block";
+const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS456 = "subheading";
+const _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS457 = "muted";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS458 = "card";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS459 = "card-heading";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS460 = "report-title";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS461 = "muted";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS462 = "report-help";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS463 = "report-controls";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS464 = "report-type";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS465 = "daily";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS466 = "weekly";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS467 = "report-date-label";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS468 = "report-date";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS469 = "report-range";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS470 = "muted";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS471 = "actions";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS472 = "generate-report";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS473 = "secondary";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS474 = "button";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS475 = "download-report";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS476 = "secondary";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS477 = "button";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS478 = "report-label";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS479 = "report-label";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS480 = "report-preview-title";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS481 = "report-output";
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS482 = 12;
+const _M0FP39moonstudy9moonstudy3app12report__viewN6constrS483 = true;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS333 = "card";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS334 = "card-heading";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS335 = "form-title";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS336 = "pill";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS337 = "study-form";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS338 = "grid";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS339 = 3;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS340 = "date";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS341 = "date";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS342 = true;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS343 = 10;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS344 = "minutes";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS345 = "40";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS346 = 1440;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS347 = 1;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS348 = 1;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS349 = "minutes";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS350 = true;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS351 = "grid";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS352 = "category-choice";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS353 = "category-choice";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS354 = "学习";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS355 = "运动";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS356 = "工作";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS357 = "生活";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS358 = "custom";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS359 = "custom-category";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS360 = "例如：阅读";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS361 = 30;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS362 = "custom-category";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS363 = "topic";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS364 = "例如：MoonBit 基础、慢跑 5 公里";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS365 = 100;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS366 = "topic";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS367 = true;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS368 = "grid";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS369 = "completed";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS370 = "completed";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS371 = "true";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS372 = true;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS373 = "false";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS374 = "note";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS375 = "学习了变量和函数";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS376 = 500;
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS377 = "note";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS378 = "save";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS379 = "primary";
+const _M0FP39moonstudy9moonstudy3app10form__viewN6constrS380 = "submit";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS508 = "backup-raw";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS509 = "backup";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS510 = "button";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS511 = "card";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS512 = "card-heading";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS513 = "data-title";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS514 = "muted";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS515 = "report-help";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS516 = "actions";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS517 = "export-data";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS518 = "secondary";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS519 = "button";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS520 = "choose-restore";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS521 = "secondary";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS522 = "button";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS523 = 6;
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS524 = "application/json,.json";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS525 = "restore-file";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS526 = true;
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS527 = "restore-ready";
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS528 = true;
+const _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS529 = "button";
 const _M0FP29moonstudy9moonstudy14compare__weeksN12empty__deltaS9 = new _M0TP29moonstudy9moonstudy9WeekDelta(0, 0, 0, 0, 0);
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS320 = "card";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS321 = "card-heading";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS322 = "comparison-title";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS323 = "muted";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS324 = "metrics";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS325 = "metric";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS326 = "previous-week-minutes";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS327 = "metric";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS328 = "previous-week-count";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS329 = "metric";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS330 = "previous-week-rate";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS331 = "metric metric-topic";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS332 = "previous-week-topic";
-const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS333 = "week-comparison-status";
-const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS383 = "details";
-const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS384 = "row-actions";
-const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS385 = "duration";
-const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS386 = "danger";
-const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS387 = "button";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS388 = "card";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS389 = "card-heading";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS390 = "topics-title";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS391 = "muted";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS392 = "empty-topics";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS393 = "empty";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS394 = "topics";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS395 = "topic-list";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS396 = "card";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS397 = "card-heading";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS398 = "history-title";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS399 = "muted";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS400 = "empty-history";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS401 = "empty";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS402 = "history";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS403 = "history";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS404 = "more-history";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS405 = "secondary";
-const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS406 = "button";
-const _M0FP39moonstudy9moonstudy3app4viewN6constrS429 = "app-refresh";
-const _M0FP39moonstudy9moonstudy3app4viewN6constrS430 = true;
-const _M0FP39moonstudy9moonstudy3app4viewN6constrS431 = "button";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS399 = "card";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS400 = "card-heading";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS401 = "comparison-title";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS402 = "muted";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS403 = "metrics";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS404 = "metric";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS405 = "previous-week-minutes";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS406 = "metric";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS407 = "previous-week-count";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS408 = "metric";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS409 = "previous-week-rate";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS410 = "metric metric-topic";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS411 = "previous-week-topic";
+const _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS412 = "week-comparison-status";
+const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS484 = "details";
+const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS485 = "row-actions";
+const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS486 = "duration";
+const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS487 = "danger";
+const _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS488 = "button";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS489 = "card";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS490 = "card-heading";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS491 = "topics-title";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS492 = "muted";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS493 = "empty-topics";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS494 = "empty";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS495 = "topics";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS496 = "topic-list";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS497 = "card";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS498 = "card-heading";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS499 = "history-title";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS500 = "muted";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS501 = "empty-history";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS502 = "empty";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS503 = "history";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS504 = "history";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS505 = "more-history";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS506 = "secondary";
+const _M0FP39moonstudy9moonstudy3app13records__viewN6constrS507 = "button";
+const _M0FP39moonstudy9moonstudy3app4viewN6constrS530 = "app-refresh";
+const _M0FP39moonstudy9moonstudy3app4viewN6constrS531 = true;
+const _M0FP39moonstudy9moonstudy3app4viewN6constrS532 = "button";
 const _M0MPC16string10StringView4findN6constrS9919 = 0;
-const _M0FP29moonstudy9moonstudy28daily__report__from__storageN6recordS646 = new _M0TP29moonstudy9moonstudy12ReportResult(false, "日报日期无效", "");
-const _M0FP29moonstudy9moonstudy21report__from__storageN6recordS645 = new _M0TP29moonstudy9moonstudy12ReportResult(false, "周报日期范围无效", "");
-const _M0FP29moonstudy9moonstudy16restore__storageN6recordS644 = new _M0TP29moonstudy9moonstudy13StorageAction(false, "备份文件为空", "");
+const _M0FP29moonstudy9moonstudy28daily__report__from__storageN6recordS704 = new _M0TP29moonstudy9moonstudy12ReportResult(false, "日报日期无效", "");
+const _M0FP29moonstudy9moonstudy21report__from__storageN6recordS703 = new _M0TP29moonstudy9moonstudy12ReportResult(false, "周报日期范围无效", "");
+const _M0FP29moonstudy9moonstudy16restore__storageN6recordS702 = new _M0TP29moonstudy9moonstudy13StorageAction(false, "备份文件为空", "");
 function _M0MPB6Logger13write__objectGRPC14json8JsonPathE(self, obj) {
   _M0IPC14json8JsonPathPB4Show6output(obj, self);
 }
@@ -5616,6 +5652,10 @@ function _M0MPC15array5Array2atGORP419moonbit_2dcommunity7rabbita8internal6dupli
   return index >= 0 && index < len ? self[index] : $panic();
 }
 function _M0MPC15array5Array2atGRP29moonstudy9moonstudy10TopicTotalE(self, index) {
+  const len = self.length;
+  return index >= 0 && index < len ? self[index] : $panic();
+}
+function _M0MPC15array5Array2atGiE(self, index) {
   const len = self.length;
   return index >= 0 && index < len ? self[index] : $panic();
 }
@@ -15164,38 +15204,38 @@ function _M0FP219moonbit_2dcommunity7rabbita19create__pure__stateGsRP39moonstudy
   const _emit = _bind$3._1;
   return { _0: _node, _1: _emit };
 }
-function _M0IP29moonstudy9moonstudy15StorageEnvelopePB6ToJson8to__json(_x_374) {
+function _M0IP29moonstudy9moonstudy15StorageEnvelopePB6ToJson8to__json(_x_414) {
   const _bind$3 = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind$3, 0, 0), undefined);
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "schema_version", _M0IPC13int3IntPB6ToJson8to__json(_x_374.schema_version));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "records", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy11StudyRecordE(_x_374.records));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "schema_version", _M0IPC13int3IntPB6ToJson8to__json(_x_414.schema_version));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "records", _M0IPC15array5ArrayPB6ToJson8to__jsonGRP29moonstudy9moonstudy11StudyRecordE(_x_414.records));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy11StudyRecordPB2Eq5equal(_x_363, _x_364) {
-  return _x_363.id === _x_364.id && _x_363.date === _x_364.date && _x_363.category === _x_364.category && _x_363.topic === _x_364.topic && _x_363.minutes === _x_364.minutes && _x_363.completed === _x_364.completed && _x_363.note === _x_364.note;
+function _M0IP29moonstudy9moonstudy11StudyRecordPB2Eq5equal(_x_403, _x_404) {
+  return _x_403.id === _x_404.id && _x_403.date === _x_404.date && _x_403.category === _x_404.category && _x_403.topic === _x_404.topic && _x_403.minutes === _x_404.minutes && _x_403.completed === _x_404.completed && _x_403.note === _x_404.note;
 }
-function _M0IP29moonstudy9moonstudy11StudyRecordPB6ToJson8to__json(_x_358) {
+function _M0IP29moonstudy9moonstudy11StudyRecordPB6ToJson8to__json(_x_398) {
   const _bind$3 = [];
   const $36$map = _M0MPB3Map3MapGsRPB4JsonE(new _M0TPB9ArrayViewGUsRPB4JsonEE(_bind$3, 0, 0), undefined);
-  const _p = _x_358.id;
+  const _p = _x_398.id;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "id", new _M0DTPB4Json6String(_p));
-  const _p$2 = _x_358.date;
+  const _p$2 = _x_398.date;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "date", new _M0DTPB4Json6String(_p$2));
-  const _p$3 = _x_358.category;
+  const _p$3 = _x_398.category;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "category", new _M0DTPB4Json6String(_p$3));
-  const _p$4 = _x_358.topic;
+  const _p$4 = _x_398.topic;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "topic", new _M0DTPB4Json6String(_p$4));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_358.minutes));
-  _M0MPB3Map3setGsRPB4JsonE($36$map, "completed", _M0IPC14bool4BoolPB6ToJson8to__json(_x_358.completed));
-  const _p$5 = _x_358.note;
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "minutes", _M0IPC13int3IntPB6ToJson8to__json(_x_398.minutes));
+  _M0MPB3Map3setGsRPB4JsonE($36$map, "completed", _M0IPC14bool4BoolPB6ToJson8to__json(_x_398.completed));
+  const _p$5 = _x_398.note;
   _M0MPB3Map3setGsRPB4JsonE($36$map, "note", new _M0DTPB4Json6String(_p$5));
   return new _M0DTPB4Json6Object($36$map);
 }
-function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__json(_x_329, _x_330) {
-  let _de_schema_version_332 = undefined;
-  let _de_records_331 = _M0DTPC16option6OptionGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE4None__;
-  if (_x_329.$tag === 6) {
-    const _Object = _x_329;
+function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__json(_x_360, _x_361) {
+  let _de_schema_version_363 = undefined;
+  let _de_records_362 = _M0DTPC16option6OptionGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE4None__;
+  if (_x_360.$tag === 6) {
+    const _Object = _x_360;
     const __map = _Object._0;
     const _bind$3 = _M0MPB3Map3getGsRPB4JsonE(__map, "schema_version");
     if (_bind$3 === undefined) {
@@ -15203,7 +15243,7 @@ function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__js
       const _Some = _bind$3;
       const __v = _Some;
       const _p = "schema_version";
-      const _bind$4 = _M0IPC13int3IntPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_330, _p));
+      const _bind$4 = _M0IPC13int3IntPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_361, _p));
       let _tmp$2;
       if (_bind$4.$tag === 1) {
         const _ok = _bind$4;
@@ -15211,7 +15251,7 @@ function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__js
       } else {
         return _bind$4;
       }
-      _de_schema_version_332 = _tmp$2;
+      _de_schema_version_363 = _tmp$2;
     }
     const _bind$4 = _M0MPB3Map3getGsRPB4JsonE(__map, "records");
     if (_bind$4 === undefined) {
@@ -15219,7 +15259,7 @@ function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__js
       const _Some = _bind$4;
       const __v = _Some;
       const _p = "records";
-      const _bind$5 = _M0IPC15array5ArrayPC14json8FromJson10from__jsonGRP29moonstudy9moonstudy14StoredRecordV1E(__v, new _M0DTPC14json8JsonPath3Key(_x_330, _p));
+      const _bind$5 = _M0IPC15array5ArrayPC14json8FromJson10from__jsonGRP29moonstudy9moonstudy14StoredRecordV1E(__v, new _M0DTPC14json8JsonPath3Key(_x_361, _p));
       let _tmp$2;
       if (_bind$5.$tag === 1) {
         const _ok = _bind$5;
@@ -15227,39 +15267,39 @@ function _M0IP29moonstudy9moonstudy16StoredEnvelopeV1PC14json8FromJson10from__js
       } else {
         return _bind$5;
       }
-      _de_records_331 = new _M0DTPC16option6OptionGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE4Some(_tmp$2);
+      _de_records_362 = new _M0DTPC16option6OptionGRPB5ArrayGRP29moonstudy9moonstudy14StoredRecordV1EE4Some(_tmp$2);
     }
   } else {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_330, _1: "Expected object to deserialize StoredEnvelopeV1" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_361, _1: "Expected object to deserialize StoredEnvelopeV1" }));
   }
-  const _bind$3 = _de_schema_version_332;
-  let _de_schema_version_332$2;
+  const _bind$3 = _de_schema_version_363;
+  let _de_schema_version_363$2;
   if (_bind$3 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_330, _1: "Missing field schema_version" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_361, _1: "Missing field schema_version" }));
   } else {
     const _Some = _bind$3;
-    _de_schema_version_332$2 = _Some;
+    _de_schema_version_363$2 = _Some;
   }
-  const _bind$4 = _de_records_331;
-  let _de_records_331$2;
+  const _bind$4 = _de_records_362;
+  let _de_records_362$2;
   if (_bind$4.$tag === 1) {
     const _Some = _bind$4;
-    _de_records_331$2 = _Some._0;
+    _de_records_362$2 = _Some._0;
   } else {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_330, _1: "Missing field records" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_361, _1: "Missing field records" }));
   }
-  return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE2Ok(new _M0TP29moonstudy9moonstudy16StoredEnvelopeV1(_de_schema_version_332$2, _de_records_331$2));
+  return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy16StoredEnvelopeV1RPC14json15JsonDecodeErrorE2Ok(new _M0TP29moonstudy9moonstudy16StoredEnvelopeV1(_de_schema_version_363$2, _de_records_362$2));
 }
-function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json(_x_237, _x_238) {
-  let _de_topic_245 = undefined;
-  let _de_note_244 = undefined;
-  let _de_minutes_243 = undefined;
-  let _de_id_242 = undefined;
-  let _de_date_241 = undefined;
-  let _de_completed_240 = -1;
-  let _de_category_239 = _M0DTPC16option6OptionGOsE4None__;
-  if (_x_237.$tag === 6) {
-    const _Object = _x_237;
+function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json(_x_268, _x_269) {
+  let _de_topic_276 = undefined;
+  let _de_note_275 = undefined;
+  let _de_minutes_274 = undefined;
+  let _de_id_273 = undefined;
+  let _de_date_272 = undefined;
+  let _de_completed_271 = -1;
+  let _de_category_270 = _M0DTPC16option6OptionGOsE4None__;
+  if (_x_268.$tag === 6) {
+    const _Object = _x_268;
     const __map = _Object._0;
     const _bind$3 = _M0MPB3Map3getGsRPB4JsonE(__map, "id");
     if (_bind$3 === undefined) {
@@ -15267,7 +15307,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$3;
       const __v = _Some;
       const _p = "id";
-      const _bind$4 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$4 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp$2;
       if (_bind$4.$tag === 1) {
         const _ok = _bind$4;
@@ -15275,7 +15315,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$4;
       }
-      _de_id_242 = _tmp$2;
+      _de_id_273 = _tmp$2;
     }
     const _bind$4 = _M0MPB3Map3getGsRPB4JsonE(__map, "date");
     if (_bind$4 === undefined) {
@@ -15283,7 +15323,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$4;
       const __v = _Some;
       const _p = "date";
-      const _bind$5 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$5 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp$2;
       if (_bind$5.$tag === 1) {
         const _ok = _bind$5;
@@ -15291,7 +15331,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$5;
       }
-      _de_date_241 = _tmp$2;
+      _de_date_272 = _tmp$2;
     }
     const _bind$5 = _M0MPB3Map3getGsRPB4JsonE(__map, "category");
     if (_bind$5 === undefined) {
@@ -15299,7 +15339,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$5;
       const __v = _Some;
       const _p = "category";
-      const _bind$6 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$6 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp$2;
       if (_bind$6.$tag === 1) {
         const _ok = _bind$6;
@@ -15307,7 +15347,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$6;
       }
-      _de_category_239 = new _M0DTPC16option6OptionGOsE4Some(_tmp$2);
+      _de_category_270 = new _M0DTPC16option6OptionGOsE4Some(_tmp$2);
     }
     const _bind$6 = _M0MPB3Map3getGsRPB4JsonE(__map, "topic");
     if (_bind$6 === undefined) {
@@ -15315,7 +15355,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$6;
       const __v = _Some;
       const _p = "topic";
-      const _bind$7 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$7 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp$2;
       if (_bind$7.$tag === 1) {
         const _ok = _bind$7;
@@ -15323,7 +15363,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$7;
       }
-      _de_topic_245 = _tmp$2;
+      _de_topic_276 = _tmp$2;
     }
     const _bind$7 = _M0MPB3Map3getGsRPB4JsonE(__map, "minutes");
     if (_bind$7 === undefined) {
@@ -15331,7 +15371,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$7;
       const __v = _Some;
       const _p = "minutes";
-      const _bind$8 = _M0IPC13int3IntPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$8 = _M0IPC13int3IntPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp$2;
       if (_bind$8.$tag === 1) {
         const _ok = _bind$8;
@@ -15339,7 +15379,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$8;
       }
-      _de_minutes_243 = _tmp$2;
+      _de_minutes_274 = _tmp$2;
     }
     const _bind$8 = _M0MPB3Map3getGsRPB4JsonE(__map, "completed");
     if (_bind$8 === undefined) {
@@ -15347,7 +15387,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$8;
       const __v = _Some;
       const _p = "completed";
-      const _bind$9 = _M0IPC14bool4BoolPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$9 = _M0IPC14bool4BoolPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp$2;
       if (_bind$9.$tag === 1) {
         const _ok = _bind$9;
@@ -15355,7 +15395,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$9;
       }
-      _de_completed_240 = _tmp$2;
+      _de_completed_271 = _tmp$2;
     }
     const _bind$9 = _M0MPB3Map3getGsRPB4JsonE(__map, "note");
     if (_bind$9 === undefined) {
@@ -15363,7 +15403,7 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       const _Some = _bind$9;
       const __v = _Some;
       const _p = "note";
-      const _bind$10 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_238, _p));
+      const _bind$10 = _M0IPC16string6StringPC14json8FromJson10from__json(__v, new _M0DTPC14json8JsonPath3Key(_x_269, _p));
       let _tmp$2;
       if (_bind$10.$tag === 1) {
         const _ok = _bind$10;
@@ -15371,67 +15411,67 @@ function _M0IP29moonstudy9moonstudy14StoredRecordV1PC14json8FromJson10from__json
       } else {
         return _bind$10;
       }
-      _de_note_244 = _tmp$2;
+      _de_note_275 = _tmp$2;
     }
   } else {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Expected object to deserialize StoredRecordV1" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Expected object to deserialize StoredRecordV1" }));
   }
-  const _bind$3 = _de_topic_245;
-  let _de_topic_245$2;
+  const _bind$3 = _de_topic_276;
+  let _de_topic_276$2;
   if (_bind$3 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field topic" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field topic" }));
   } else {
     const _Some = _bind$3;
-    _de_topic_245$2 = _Some;
+    _de_topic_276$2 = _Some;
   }
-  const _bind$4 = _de_note_244;
-  let _de_note_244$2;
+  const _bind$4 = _de_note_275;
+  let _de_note_275$2;
   if (_bind$4 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field note" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field note" }));
   } else {
     const _Some = _bind$4;
-    _de_note_244$2 = _Some;
+    _de_note_275$2 = _Some;
   }
-  const _bind$5 = _de_minutes_243;
-  let _de_minutes_243$2;
+  const _bind$5 = _de_minutes_274;
+  let _de_minutes_274$2;
   if (_bind$5 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field minutes" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field minutes" }));
   } else {
     const _Some = _bind$5;
-    _de_minutes_243$2 = _Some;
+    _de_minutes_274$2 = _Some;
   }
-  const _bind$6 = _de_id_242;
-  let _de_id_242$2;
+  const _bind$6 = _de_id_273;
+  let _de_id_273$2;
   if (_bind$6 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field id" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field id" }));
   } else {
     const _Some = _bind$6;
-    _de_id_242$2 = _Some;
+    _de_id_273$2 = _Some;
   }
-  const _bind$7 = _de_date_241;
-  let _de_date_241$2;
+  const _bind$7 = _de_date_272;
+  let _de_date_272$2;
   if (_bind$7 === undefined) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field date" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field date" }));
   } else {
     const _Some = _bind$7;
-    _de_date_241$2 = _Some;
+    _de_date_272$2 = _Some;
   }
-  const _bind$8 = _de_completed_240;
-  let _de_completed_240$2;
+  const _bind$8 = _de_completed_271;
+  let _de_completed_271$2;
   if (_bind$8 === -1) {
-    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_238, _1: "Missing field completed" }));
+    return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE3Err(new _M0DTPC15error5Error61moonbitlang_2fcore_2fjson_2eJsonDecodeError_2eJsonDecodeError({ _0: _x_269, _1: "Missing field completed" }));
   } else {
-    _de_completed_240$2 = _bind$8;
+    _de_completed_271$2 = _bind$8;
   }
-  const _bind$9 = _de_category_239;
-  let _de_category_239$2;
+  const _bind$9 = _de_category_270;
+  let _de_category_270$2;
   if (_bind$9.$tag === 1) {
     const _Some = _bind$9;
-    _de_category_239$2 = _Some._0;
+    _de_category_270$2 = _Some._0;
   } else {
-    _de_category_239$2 = undefined;
+    _de_category_270$2 = undefined;
   }
-  return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE2Ok(new _M0TP29moonstudy9moonstudy14StoredRecordV1(_de_id_242$2, _de_date_241$2, _de_category_239$2, _de_topic_245$2, _de_minutes_243$2, _de_completed_240$2, _de_note_244$2));
+  return new _M0DTPC16result6ResultGRP29moonstudy9moonstudy14StoredRecordV1RPC14json15JsonDecodeErrorE2Ok(new _M0TP29moonstudy9moonstudy14StoredRecordV1(_de_id_273$2, _de_date_272$2, _de_category_270$2, _de_topic_276$2, _de_minutes_274$2, _de_completed_271$2, _de_note_275$2));
 }
 function _M0FP29moonstudy9moonstudy28make__record__with__category(id, date, category, topic, minutes, completed, note) {
   return new _M0TP29moonstudy9moonstudy11StudyRecord(id, date, _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(category, undefined)), _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(topic, undefined)), minutes, completed, _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(note, undefined)));
@@ -15524,7 +15564,7 @@ function _M0FP29moonstudy9moonstudy16valid__iso__date(date) {
   return day <= days_in_month;
 }
 function _M0FP29moonstudy9moonstudy16validate__record(record) {
-  return record.id.length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS635 : !_M0FP29moonstudy9moonstudy16valid__iso__date(record.date) ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS636 : _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(record.category, undefined)).length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS637 : record.category.length > 30 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS638 : _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(record.topic, undefined)).length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS639 : record.topic.length > 100 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS640 : record.note.length > 500 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS641 : record.minutes <= 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS642 : record.minutes > 1440 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS643 : undefined;
+  return record.id.length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS693 : !_M0FP29moonstudy9moonstudy16valid__iso__date(record.date) ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS694 : _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(record.category, undefined)).length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS695 : record.category.length > 30 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS696 : _M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(record.topic, undefined)).length === 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS697 : record.topic.length > 100 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS698 : record.note.length > 500 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS699 : record.minutes <= 0 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS700 : record.minutes > 1440 ? _M0FP29moonstudy9moonstudy16validate__recordN6constrS701 : undefined;
 }
 function _M0FP29moonstudy9moonstudy19add__topic__minutes(totals, positions, topic, minutes) {
   const _bind$3 = _M0MPB3Map3getGsiE(positions, topic);
@@ -15827,7 +15867,7 @@ function _M0FP29moonstudy9moonstudy15export__storage(raw) {
 }
 function _M0FP29moonstudy9moonstudy16restore__storage(candidate) {
   if (_M0MPC16string10StringView9to__owned(_M0MPC16string6String4trim(candidate, undefined)).length === 0) {
-    return _M0FP29moonstudy9moonstudy16restore__storageN6recordS644;
+    return _M0FP29moonstudy9moonstudy16restore__storageN6recordS702;
   }
   const loaded = _M0FP29moonstudy9moonstudy13load__storage(candidate);
   if (!loaded.ok) {
@@ -15836,7 +15876,7 @@ function _M0FP29moonstudy9moonstudy16restore__storage(candidate) {
   return new _M0TP29moonstudy9moonstudy13StorageAction(true, "备份验证通过", _M0FP29moonstudy9moonstudy15encode__storage(loaded.records));
 }
 function _M0FP29moonstudy9moonstudy14safe__markdown(value) {
-  return _M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(value, new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS566, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS566.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS567, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS567.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS568, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS568.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS569, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS569.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS570, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS570.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS571, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS571.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS572, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS572.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS573, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS573.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS574, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS574.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS575, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS575.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS576, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS576.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS577, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS577.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS578, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS578.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS579, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS579.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS580, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS580.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS581, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS581.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS582, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS582.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS583, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS583.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS584, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS584.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS585, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS585.length));
+  return _M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(_M0MPC16string6String12replace__all(value, new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS608, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS608.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS609, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS609.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS610, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS610.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS611, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS611.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS612, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS612.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS613, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS613.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS614, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS614.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS615, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS615.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS616, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS616.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS617, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS617.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS618, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS618.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS619, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS619.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS620, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS620.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS621, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS621.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS622, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS622.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS623, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS623.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS624, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS624.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS625, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS625.length)), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS626, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS626.length), new _M0TPC16string10StringView(_M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS627, 0, _M0FP29moonstudy9moonstudy14safe__markdownN7_2abindS627.length));
 }
 function _M0FP29moonstudy9moonstudy16weekly__markdown(records, week_start, today) {
   const _p = [];
@@ -16025,7 +16065,7 @@ function _M0FP29moonstudy9moonstudy21report__from__storage(raw, week_start, toda
     return new _M0TP29moonstudy9moonstudy12ReportResult(false, loaded.message, "");
   }
   if (!_M0FP29moonstudy9moonstudy16valid__iso__date(week_start) || (!_M0FP29moonstudy9moonstudy16valid__iso__date(today) || _M0IP016_24default__implPB7Compare6op__gtGsE(week_start, today))) {
-    return _M0FP29moonstudy9moonstudy21report__from__storageN6recordS645;
+    return _M0FP29moonstudy9moonstudy21report__from__storageN6recordS703;
   }
   return new _M0TP29moonstudy9moonstudy12ReportResult(true, "周报已生成", _M0FP29moonstudy9moonstudy16weekly__markdown(loaded.records, week_start, today));
 }
@@ -16035,7 +16075,7 @@ function _M0FP29moonstudy9moonstudy28daily__report__from__storage(raw, date) {
     return new _M0TP29moonstudy9moonstudy12ReportResult(false, loaded.message, "");
   }
   if (!_M0FP29moonstudy9moonstudy16valid__iso__date(date)) {
-    return _M0FP29moonstudy9moonstudy28daily__report__from__storageN6recordS646;
+    return _M0FP29moonstudy9moonstudy28daily__report__from__storageN6recordS704;
   }
   return new _M0TP29moonstudy9moonstudy12ReportResult(true, "日报已生成", _M0FP29moonstudy9moonstudy15daily__markdown(loaded.records, date));
 }
@@ -16084,6 +16124,104 @@ function _M0FP29moonstudy9moonstudy15iso__from__days(serial) {
 }
 function _M0FP29moonstudy9moonstudy10shift__iso(date, offset) {
   return _M0FP29moonstudy9moonstudy15iso__from__days(_M0FP29moonstudy9moonstudy15days__from__iso(date) + offset | 0);
+}
+function _M0FP29moonstudy9moonstudy15year__from__iso(date) {
+  return _M0FP29moonstudy9moonstudy10date__part(date, 0, 4);
+}
+function _M0FP29moonstudy9moonstudy21weekday__sunday__zero(date) {
+  return (_M0FP29moonstudy9moonstudy15days__from__iso(date) + 3 | 0) % 7 | 0;
+}
+function _M0FP29moonstudy9moonstudy24days__in__calendar__year(year) {
+  return (year % 400 | 0) === 0 || (year % 4 | 0) === 0 && (year % 100 | 0) !== 0 ? 366 : 365;
+}
+function _M0FP29moonstudy9moonstudy20date__for__year__day(year, day_index) {
+  const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(6);
+  _M0MPB13StringBuilder13write__objectGiE(_string_builder, year);
+  _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, "-01-01");
+  return _M0FP29moonstudy9moonstudy10shift__iso(_string_builder.val, day_index);
+}
+function _M0FP29moonstudy9moonstudy20completed__in__range(records, year_start, year_end, start, end) {
+  let completed = 0;
+  const _bind$3 = records.length;
+  let _tmp$2 = 0;
+  while (true) {
+    const _ = _tmp$2;
+    if (_ < _bind$3) {
+      const record = records[_];
+      if (record.completed && (_M0IP016_24default__implPB7Compare6op__geGsE(record.date, year_start) && (_M0IP016_24default__implPB7Compare6op__leGsE(record.date, year_end) && (_M0IP016_24default__implPB7Compare6op__geGsE(record.date, start) && _M0IP016_24default__implPB7Compare6op__leGsE(record.date, end))))) {
+        completed = completed + 1 | 0;
+      }
+      _tmp$2 = _ + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  return completed;
+}
+function _M0FP29moonstudy9moonstudy25weekly__completion__stats(records, year) {
+  const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(6);
+  _M0MPB13StringBuilder13write__objectGiE(_string_builder, year);
+  _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, "-01-01");
+  const year_start = _string_builder.val;
+  const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(6);
+  _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, year);
+  _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "-12-31");
+  const year_end = _string_builder$2.val;
+  const monday_offset = (_M0FP29moonstudy9moonstudy21weekday__sunday__zero(year_start) + 6 | 0) % 7 | 0;
+  const first_monday = _M0FP29moonstudy9moonstudy10shift__iso(year_start, -monday_offset | 0);
+  const result = [];
+  let start = first_monday;
+  while (true) {
+    if (_M0IP016_24default__implPB7Compare6op__leGsE(start, year_end)) {
+      const end = _M0FP29moonstudy9moonstudy10shift__iso(start, 6);
+      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(result, new _M0TP29moonstudy9moonstudy16CompletionPeriod(start, end, _M0FP29moonstudy9moonstudy20completed__in__range(records, year_start, year_end, start, end)));
+      start = _M0FP29moonstudy9moonstudy10shift__iso(start, 7);
+      continue;
+    } else {
+      break;
+    }
+  }
+  return result;
+}
+function _M0FP29moonstudy9moonstudy38monthly__cumulative__completion__stats(records, year) {
+  const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(6);
+  _M0MPB13StringBuilder13write__objectGiE(_string_builder, year);
+  _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, "-01-01");
+  const year_start = _string_builder.val;
+  const result = [];
+  const month_starts = ["01-01", "02-01", "03-01", "04-01", "05-01", "06-01", "07-01", "08-01", "09-01", "10-01", "11-01", "12-01", "01-01"];
+  let _tmp$2 = 0;
+  while (true) {
+    const month = _tmp$2;
+    if (month < 12) {
+      let next_start;
+      if (month === 11) {
+        const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(1);
+        _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, year + 1 | 0);
+        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "-");
+        _M0MPB13StringBuilder13write__objectGsE(_string_builder$2, _M0MPC15array5Array2atGRP29moonstudy9moonstudy10TopicTotalE(month_starts, 12));
+        next_start = _string_builder$2.val;
+      } else {
+        const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(1);
+        _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, year);
+        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "-");
+        _M0MPB13StringBuilder13write__objectGsE(_string_builder$2, _M0MPC15array5Array2atGRP29moonstudy9moonstudy10TopicTotalE(month_starts, month + 1 | 0));
+        next_start = _string_builder$2.val;
+      }
+      const month_end = _M0FP29moonstudy9moonstudy10shift__iso(next_start, -1);
+      const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(1);
+      _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, year);
+      _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "-");
+      _M0MPB13StringBuilder13write__objectGsE(_string_builder$2, _M0MPC15array5Array2atGRP29moonstudy9moonstudy10TopicTotalE(month_starts, month));
+      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(result, new _M0TP29moonstudy9moonstudy16CompletionPeriod(_string_builder$2.val, month_end, _M0FP29moonstudy9moonstudy20completed__in__range(records, year_start, month_end, year_start, month_end)));
+      _tmp$2 = month + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  return result;
 }
 function _M0FP29moonstudy9moonstudy18empty__week__slice(label) {
   return new _M0TP29moonstudy9moonstudy9WeekSlice(label, "", "", 0, 0, 0, "暂无");
@@ -16151,22 +16289,26 @@ function _M0FP29moonstudy9moonstudy14compare__weeks(raw, week_start, today) {
   const delta = has_baseline ? new _M0TP29moonstudy9moonstudy9WeekDelta(current.minutes - previous.minutes | 0, (Math.imul(current.minutes - previous.minutes | 0, 100) | 0) / previous.minutes | 0, current.count - previous.count | 0, (Math.imul(current.count - previous.count | 0, 100) | 0) / previous.count | 0, current.completion_rate - previous.completion_rate | 0) : _M0FP29moonstudy9moonstudy14compare__weeksN12empty__deltaS9;
   return new _M0TP29moonstudy9moonstudy14WeekComparison(true, has_baseline ? "周环比已计算" : "无对比基线", current, previous, has_baseline, delta);
 }
-function _M0IP39moonstudy9moonstudy3app9ViewModelPB2Eq5equal(_x_148, _x_149) {
-  return _x_148.ok === _x_149.ok && _x_148.storage_available === _x_149.storage_available && _x_148.message === _x_149.message && _M0IPC15array5ArrayPB2Eq5equalGRP29moonstudy9moonstudy11StudyRecordE(_x_148.records, _x_149.records) && _M0IPC15array5ArrayPB2Eq5equalGRP29moonstudy9moonstudy9TopicStatE(_x_148.topics, _x_149.topics) && _x_148.history_limit === _x_149.history_limit && _x_148.today === _x_149.today && _x_148.week_start === _x_149.week_start && _x_148.category_choice === _x_149.category_choice && _x_148.report_type === _x_149.report_type && _x_148.report_date === _x_149.report_date && _x_148.report_markdown === _x_149.report_markdown && _x_148.report_title === _x_149.report_title && _x_148.report_filename === _x_149.report_filename;
+function _M0IP39moonstudy9moonstudy3app9ViewModelPB2Eq5equal(_x_184, _x_185) {
+  return _x_184.ok === _x_185.ok && _x_184.storage_available === _x_185.storage_available && _x_184.message === _x_185.message && _M0IPC15array5ArrayPB2Eq5equalGRP29moonstudy9moonstudy11StudyRecordE(_x_184.records, _x_185.records) && _M0IPC15array5ArrayPB2Eq5equalGRP29moonstudy9moonstudy9TopicStatE(_x_184.topics, _x_185.topics) && _x_184.history_limit === _x_185.history_limit && _x_184.today === _x_185.today && _x_184.week_start === _x_185.week_start && _x_184.category_choice === _x_185.category_choice && _x_184.activity_mode === _x_185.activity_mode && _x_184.activity_year === _x_185.activity_year && _x_184.report_type === _x_185.report_type && _x_184.report_date === _x_185.report_date && _x_184.report_markdown === _x_185.report_markdown && _x_184.report_title === _x_185.report_title && _x_184.report_filename === _x_185.report_filename;
 }
 function _M0FP39moonstudy9moonstudy3app17load__with__limit(history_limit) {
   const today = _M0FP39moonstudy9moonstudy3app10today__iso();
   const week_start = _M0FP39moonstudy9moonstudy3app16week__start__iso();
   if (!_M0FP39moonstudy9moonstudy3app17storage__readable(_M0FP39moonstudy9moonstudy3app12storage__key)) {
-    _M0FP39moonstudy9moonstudy3app12show__notice(_M0FP39moonstudy9moonstudy3app17load__with__limitN7messageS146);
-    return new _M0TP39moonstudy9moonstudy3app9ViewModel(false, false, _M0FP39moonstudy9moonstudy3app17load__with__limitN7messageS146, [], [], history_limit, today, week_start, "学习", "daily", today, "", "日报预览", "");
+    _M0FP39moonstudy9moonstudy3app12show__notice(_M0FP39moonstudy9moonstudy3app17load__with__limitN7messageS182);
+    return new _M0TP39moonstudy9moonstudy3app9ViewModel(false, false, _M0FP39moonstudy9moonstudy3app17load__with__limitN7messageS182, [], [], history_limit, today, week_start, "学习", "daily", _M0FP29moonstudy9moonstudy15year__from__iso(today), "daily", today, "", "日报预览", "");
   }
   const loaded = _M0FP29moonstudy9moonstudy13load__storage(_M0FP39moonstudy9moonstudy3app11read__local(_M0FP39moonstudy9moonstudy3app12storage__key));
   if (!loaded.ok) {
     _M0FP39moonstudy9moonstudy3app12show__notice(`${loaded.message}。请下载原始数据备份，当前页面不会覆盖它。`);
-    return new _M0TP39moonstudy9moonstudy3app9ViewModel(false, true, loaded.message, [], [], history_limit, today, week_start, "学习", "daily", today, "", "日报预览", "");
+    return new _M0TP39moonstudy9moonstudy3app9ViewModel(false, true, loaded.message, [], [], history_limit, today, week_start, "学习", "daily", _M0FP29moonstudy9moonstudy15year__from__iso(today), "daily", today, "", "日报预览", "");
   }
-  return new _M0TP39moonstudy9moonstudy3app9ViewModel(true, true, "", loaded.records, _M0FP29moonstudy9moonstudy12topic__stats(loaded.records), history_limit, today, week_start, "学习", "daily", today, "", "日报预览", "");
+  return new _M0TP39moonstudy9moonstudy3app9ViewModel(true, true, "", loaded.records, _M0FP29moonstudy9moonstudy12topic__stats(loaded.records), history_limit, today, week_start, "学习", "daily", _M0FP29moonstudy9moonstudy15year__from__iso(today), "daily", today, "", "日报预览", "");
+}
+function _M0FP39moonstudy9moonstudy3app25reload__with__preferences(model) {
+  const refreshed = _M0FP39moonstudy9moonstudy3app17load__with__limit(model.history_limit);
+  return new _M0TP39moonstudy9moonstudy3app9ViewModel(refreshed.ok, refreshed.storage_available, refreshed.message, refreshed.records, refreshed.topics, refreshed.history_limit, refreshed.today, refreshed.week_start, refreshed.category_choice, model.activity_mode, model.activity_year, refreshed.report_type, refreshed.report_date, refreshed.report_markdown, refreshed.report_title, refreshed.report_filename);
 }
 function _M0FP39moonstudy9moonstudy3app12save__record(model) {
   if (model.ok) {
@@ -16181,7 +16323,7 @@ function _M0FP39moonstudy9moonstudy3app12save__record(model) {
     }
     _M0FP39moonstudy9moonstudy3app11reset__form(model.today);
     _M0FP39moonstudy9moonstudy3app12show__notice("记录已保存。");
-    return _M0FP39moonstudy9moonstudy3app17load__with__limit(model.history_limit);
+    return _M0FP39moonstudy9moonstudy3app25reload__with__preferences(model);
   } else {
     return model;
   }
@@ -16200,7 +16342,7 @@ function _M0FP39moonstudy9moonstudy3app14delete__record(model, id) {
     return model;
   }
   _M0FP39moonstudy9moonstudy3app12show__notice("记录已删除。");
-  return _M0FP39moonstudy9moonstudy3app17load__with__limit(model.history_limit);
+  return _M0FP39moonstudy9moonstudy3app25reload__with__preferences(model);
 }
 function _M0FP39moonstudy9moonstudy3app14export__backup(model) {
   if (model.ok) {
@@ -16263,7 +16405,7 @@ function _M0FP39moonstudy9moonstudy3app15finish__restore(model) {
       _M0FP39moonstudy9moonstudy3app12show__notice("浏览器存储写入失败，备份没有恢复。");
       return model;
     }
-    const next = _M0FP39moonstudy9moonstudy3app17load__with__limit(model.history_limit);
+    const next = _M0FP39moonstudy9moonstudy3app25reload__with__preferences(model);
     const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(38);
     _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, "备份恢复完成，共 ");
     _M0MPB13StringBuilder13write__objectGiE(_string_builder, count);
@@ -16305,7 +16447,7 @@ function _M0FP39moonstudy9moonstudy3app16generate__report(model) {
       _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, ".md");
       filename = _string_builder.val;
     }
-    return new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, model.category_choice, model.report_type, model.report_date, result.markdown, daily ? "日报预览" : "周报预览", filename);
+    return new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, model.category_choice, model.activity_mode, model.activity_year, model.report_type, model.report_date, result.markdown, daily ? "日报预览" : "周报预览", filename);
   } else {
     return model;
   }
@@ -16324,36 +16466,49 @@ function _M0FP39moonstudy9moonstudy3app6update(model, msg, _emit) {
       break;
     }
     case 2: {
-      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit + 25 | 0, model.today, model.week_start, model.category_choice, model.report_type, model.report_date, model.report_markdown, model.report_title, model.report_filename);
+      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit + 25 | 0, model.today, model.week_start, model.category_choice, model.activity_mode, model.activity_year, model.report_type, model.report_date, model.report_markdown, model.report_title, model.report_filename);
       break;
     }
     case 3: {
-      next = _M0FP39moonstudy9moonstudy3app17load__with__limit(model.history_limit);
+      next = _M0FP39moonstudy9moonstudy3app25reload__with__preferences(model);
       break;
     }
     case 4: {
       const _SetCategoryChoice = msg;
       const _value = _SetCategoryChoice._0;
-      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, _value, model.report_type, model.report_date, model.report_markdown, model.report_title, model.report_filename);
+      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, _value, model.activity_mode, model.activity_year, model.report_type, model.report_date, model.report_markdown, model.report_title, model.report_filename);
       break;
     }
     case 5: {
-      const _SetReportType = msg;
-      const _value$2 = _SetReportType._0;
-      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, model.category_choice, _value$2, model.report_date, "", model.report_title, "");
+      const _SetActivityMode = msg;
+      const _value$2 = _SetActivityMode._0;
+      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, model.category_choice, _value$2, model.activity_year, model.report_type, model.report_date, model.report_markdown, model.report_title, model.report_filename);
       break;
     }
     case 6: {
-      const _SetReportDate = msg;
-      const _value$3 = _SetReportDate._0;
-      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, model.category_choice, model.report_type, _value$3, "", model.report_title, "");
+      const _SetActivityYear = msg;
+      const _value$3 = _SetActivityYear._0;
+      const year = _value$3.length === 4 ? ((((Math.imul((0 >>> 0 < _value$3.length ? _value$3.charCodeAt(0) : $oob()) - 48 | 0, 1000) | 0) + (Math.imul((1 >>> 0 < _value$3.length ? _value$3.charCodeAt(1) : $oob()) - 48 | 0, 100) | 0) | 0) + (Math.imul((2 >>> 0 < _value$3.length ? _value$3.charCodeAt(2) : $oob()) - 48 | 0, 10) | 0) | 0) + (3 >>> 0 < _value$3.length ? _value$3.charCodeAt(3) : $oob()) | 0) - 48 | 0 : model.activity_year;
+      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, model.category_choice, model.activity_mode, year, model.report_type, model.report_date, model.report_markdown, model.report_title, model.report_filename);
       break;
     }
     case 7: {
-      next = _M0FP39moonstudy9moonstudy3app16generate__report(model);
+      const _SetReportType = msg;
+      const _value$4 = _SetReportType._0;
+      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, model.category_choice, model.activity_mode, model.activity_year, _value$4, model.report_date, "", model.report_title, "");
       break;
     }
     case 8: {
+      const _SetReportDate = msg;
+      const _value$5 = _SetReportDate._0;
+      next = new _M0TP39moonstudy9moonstudy3app9ViewModel(model.ok, model.storage_available, model.message, model.records, model.topics, model.history_limit, model.today, model.week_start, model.category_choice, model.activity_mode, model.activity_year, model.report_type, _value$5, "", model.report_title, "");
+      break;
+    }
+    case 9: {
+      next = _M0FP39moonstudy9moonstudy3app16generate__report(model);
+      break;
+    }
+    case 10: {
       if (model.report_filename.length > 0) {
         if (!_M0FP39moonstudy9moonstudy3app14download__text(model.report_markdown, model.report_filename, "text/markdown;charset=utf-8")) {
           _M0FP39moonstudy9moonstudy3app12show__notice("报告下载失败，请检查浏览器下载权限。");
@@ -16362,20 +16517,20 @@ function _M0FP39moonstudy9moonstudy3app6update(model, msg, _emit) {
       next = model;
       break;
     }
-    case 9: {
+    case 11: {
       next = _M0FP39moonstudy9moonstudy3app14export__backup(model);
       break;
     }
-    case 10: {
+    case 12: {
       next = _M0FP39moonstudy9moonstudy3app22download__raw__storage(model);
       break;
     }
-    case 11: {
+    case 13: {
       _M0FP39moonstudy9moonstudy3app21choose__restore__file();
       next = model;
       break;
     }
-    case 12: {
+    case 14: {
       _M0FP39moonstudy9moonstudy3app20begin__restore__read();
       next = model;
       break;
@@ -16399,12 +16554,8 @@ function _M0FP39moonstudy9moonstudy3app16record__subtitle(record) {
   }
   return buf.val;
 }
-function _M0FP39moonstudy9moonstudy3app13month__number(date) {
-  return ((Math.imul((5 >>> 0 < date.length ? date.charCodeAt(5) : $oob()) - 48 | 0, 10) | 0) + (6 >>> 0 < date.length ? date.charCodeAt(6) : $oob()) | 0) - 48 | 0;
-}
 function _M0FP39moonstudy9moonstudy3app13activity__map(model) {
-  const end = _M0FP39moonstudy9moonstudy3app18activity__end__iso();
-  const start = _M0FP39moonstudy9moonstudy3app16shift__date__iso(end, -370);
+  const start = _M0FP39moonstudy9moonstudy3app16shift__date__iso(model.today, -6);
   const _bind$3 = [];
   const result = _M0MPB3Map3MapGsRP29moonstudy9moonstudy7DayStatE(new _M0TPB9ArrayViewGUsRP29moonstudy9moonstudy7DayStatEE(_bind$3, 0, 0), undefined);
   const _bind$4 = _M0FP29moonstudy9moonstudy15activity__stats(model.records, start, model.today);
@@ -16443,34 +16594,79 @@ function _M0FP39moonstudy9moonstudy3app14day__completed(days, date) {
     return _day.completed_count;
   }
 }
+function _M0FP39moonstudy9moonstudy3app15activity__level(value, maximum) {
+  if (value <= 0 || maximum <= 0) {
+    return 0;
+  } else {
+    const _p = 4;
+    const _p$2 = 1;
+    const _p$3 = (((Math.imul(value, 4) | 0) + maximum | 0) - 1 | 0) / maximum | 0;
+    const _p$4 = _p$2 > _p$3 ? _p$2 : _p$3;
+    return _p < _p$4 ? _p : _p$4;
+  }
+}
+function _M0FP39moonstudy9moonstudy3app15activity__years(model) {
+  const current = _M0FP29moonstudy9moonstudy15year__from__iso(model.today);
+  let earliest = current;
+  const _bind$3 = model.records;
+  const _bind$4 = _bind$3.length;
+  let _tmp$2 = 0;
+  while (true) {
+    const _ = _tmp$2;
+    if (_ < _bind$4) {
+      const record = _bind$3[_];
+      const year = _M0FP29moonstudy9moonstudy15year__from__iso(record.date);
+      if (year < earliest) {
+        earliest = year;
+      }
+      _tmp$2 = _ + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  const years = [];
+  let _tmp$3 = current;
+  while (true) {
+    const year = _tmp$3;
+    if (year >= earliest) {
+      _M0MPC15array5Array4pushGiE(years, year);
+      _tmp$3 = year - 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  return years;
+}
 function _M0FP39moonstudy9moonstudy3app10form__view(model, emit) {
-  const _tmp$2 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS255, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS256, undefined, undefined, -1, undefined, "记一次学习"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS257, undefined, -1, undefined, "v004 · MoonBit 应用")]);
+  const _tmp$2 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS334, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS335, undefined, undefined, -1, undefined, "记一次学习"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS336, undefined, -1, undefined, "v004 · MoonBit 应用")]);
   const _func = emit;
   const _tmp$3 = _func(_M0DTP39moonstudy9moonstudy3app3Msg4Save__);
-  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS259, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "日期"), _M0FP319moonbit_2dcommunity7rabbita4html5input(_M0FP39moonstudy9moonstudy3app10form__viewN6constrS260, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS261, model.today, -1, -1, -1, undefined, undefined, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS262, undefined, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS263, -1, undefined, undefined, undefined, undefined, undefined)]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "学习时长（分钟）"), _M0FP319moonbit_2dcommunity7rabbita4html5input(_M0FP39moonstudy9moonstudy3app10form__viewN6constrS264, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS265, undefined, -1, -1, -1, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS266, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS267, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS268, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS269, undefined, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS270, undefined, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS271, -1, undefined, undefined, undefined, undefined, undefined)])]);
-  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "主题"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS273, undefined, undefined, -1, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS274, -1, undefined, -1, -1, (value) => {
+  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS338, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "日期"), _M0FP319moonbit_2dcommunity7rabbita4html5input(_M0FP39moonstudy9moonstudy3app10form__viewN6constrS339, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS340, model.today, -1, -1, -1, undefined, undefined, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS341, undefined, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS342, -1, undefined, undefined, undefined, undefined, undefined)]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "学习时长（分钟）"), _M0FP319moonbit_2dcommunity7rabbita4html5input(_M0FP39moonstudy9moonstudy3app10form__viewN6constrS343, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS344, undefined, -1, -1, -1, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS345, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS346, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS347, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS348, undefined, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS349, undefined, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS350, -1, undefined, undefined, undefined, undefined, undefined)])]);
+  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "主题"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS352, undefined, undefined, -1, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS353, -1, undefined, -1, -1, (value) => {
     const _func$2 = emit;
     return _func$2(new _M0DTP39moonstudy9moonstudy3app3Msg17SetCategoryChoice(value));
-  }, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS275, model.category_choice === "学习", undefined, "学习"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS276, model.category_choice === "运动", undefined, "运动"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS277, model.category_choice === "工作", undefined, "工作"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS278, model.category_choice === "生活", undefined, "生活"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS279, model.category_choice === "custom", undefined, "自定义")])]);
+  }, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS354, model.category_choice === "学习", undefined, "学习"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS355, model.category_choice === "运动", undefined, "运动"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS356, model.category_choice === "工作", undefined, "工作"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS357, model.category_choice === "生活", undefined, "生活"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS358, model.category_choice === "custom", undefined, "自定义")])]);
   const _p = model.category_choice;
   const _p$2 = "custom";
-  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS254, undefined, -1, undefined, [_tmp$2, _M0FP319moonbit_2dcommunity7rabbita4html4formGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS258, undefined, undefined, -1, undefined, undefined, undefined, _tmp$3, undefined, [_tmp$4, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS272, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, !(_p === _p$2), undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "自定义主题"), _M0FP319moonbit_2dcommunity7rabbita4html5input(undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS280, undefined, -1, -1, -1, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS281, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS282, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS283, undefined, undefined, -1, model.category_choice === "custom", -1, undefined, undefined, undefined, undefined, undefined)])]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "学习内容 / 具体事项"), _M0FP319moonbit_2dcommunity7rabbita4html5input(undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS284, undefined, -1, -1, -1, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS285, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS286, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS287, undefined, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS288, -1, undefined, undefined, undefined, undefined, undefined)]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS289, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "完成情况"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS290, undefined, undefined, -1, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS291, -1, undefined, -1, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS292, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS293, undefined, "已完成"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS294, -1, undefined, "未完成")])]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "备注（可选）"), _M0FP319moonbit_2dcommunity7rabbita4html5input(undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS295, undefined, -1, -1, -1, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS296, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS297, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS298, undefined, undefined, -1, -1, -1, undefined, undefined, undefined, undefined, undefined)])]), _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS299, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS300, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS301, !model.ok, undefined, undefined, -1, undefined, undefined, "保存记录")])]);
+  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS333, undefined, -1, undefined, [_tmp$2, _M0FP319moonbit_2dcommunity7rabbita4html4formGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS337, undefined, undefined, -1, undefined, undefined, undefined, _tmp$3, undefined, [_tmp$4, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS351, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, !(_p === _p$2), undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "自定义主题"), _M0FP319moonbit_2dcommunity7rabbita4html5input(undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS359, undefined, -1, -1, -1, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS360, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS361, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS362, undefined, undefined, -1, model.category_choice === "custom", -1, undefined, undefined, undefined, undefined, undefined)])]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "学习内容 / 具体事项"), _M0FP319moonbit_2dcommunity7rabbita4html5input(undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS363, undefined, -1, -1, -1, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS364, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS365, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS366, undefined, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS367, -1, undefined, undefined, undefined, undefined, undefined)]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS368, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "完成情况"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS369, undefined, undefined, -1, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS370, -1, undefined, -1, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS371, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS372, undefined, "已完成"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS373, -1, undefined, "未完成")])]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "备注（可选）"), _M0FP319moonbit_2dcommunity7rabbita4html5input(undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS374, undefined, -1, -1, -1, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS375, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS376, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS377, undefined, undefined, -1, -1, -1, undefined, undefined, undefined, undefined, undefined)])]), _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS378, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS379, undefined, -1, _M0FP39moonstudy9moonstudy3app10form__viewN6constrS380, !model.ok, undefined, undefined, -1, undefined, undefined, "保存记录")])]);
 }
 function _M0FP39moonstudy9moonstudy3app13summary__view(model) {
   const summary = _M0FP29moonstudy9moonstudy9summarize(model.records, model.today, model.week_start);
-  const _tmp$2 = _M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS304, undefined, undefined, -1, undefined, "学习概览");
+  const _tmp$2 = _M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS383, undefined, undefined, -1, undefined, "学习概览");
   const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(10);
   _M0MPB13StringBuilder13write__objectGiE(_string_builder, summary.record_count);
   _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " 条记录");
-  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS303, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$2, _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS305, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS306, undefined, -1, undefined, _string_builder.val)]);
-  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS308, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "今日学习"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS309, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(summary.today_minutes, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "分钟")]);
-  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS310, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "本周学习"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS311, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(summary.week_minutes, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "分钟")]);
-  const _tmp$6 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS312, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "累计学习"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS313, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(summary.total_minutes, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "分钟")]);
+  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS382, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$2, _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS384, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS385, undefined, -1, undefined, _string_builder.val)]);
+  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS387, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "今日学习"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS388, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(summary.today_minutes, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "分钟")]);
+  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS389, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "本周学习"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS390, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(summary.week_minutes, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "分钟")]);
+  const _tmp$6 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS391, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "累计学习"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS392, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(summary.total_minutes, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "分钟")]);
   const _tmp$7 = _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "完成率");
   const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(1);
   _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, summary.completion_rate);
   _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "%");
-  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS302, undefined, -1, undefined, [_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS307, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$4, _tmp$5, _tmp$6, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS314, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$7, _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS315, undefined, undefined, -1, undefined, _string_builder$2.val), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "全部记录")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS316, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "投入最多主题"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS317, undefined, summary.top_category, -1, undefined, summary.top_category), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "按累计分钟")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS318, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "投入最多内容"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS319, undefined, summary.top_topic, -1, undefined, summary.top_topic), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "按累计分钟")])])]);
+  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS381, undefined, -1, undefined, [_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS386, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$4, _tmp$5, _tmp$6, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS393, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$7, _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS394, undefined, undefined, -1, undefined, _string_builder$2.val), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "全部记录")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS395, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "投入最多主题"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS396, undefined, summary.top_category, -1, undefined, summary.top_category), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "按累计分钟")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS397, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "投入最多内容"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13summary__viewN6constrS398, undefined, summary.top_topic, -1, undefined, summary.top_topic), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "按累计分钟")])])]);
 }
 function _M0FP39moonstudy9moonstudy3app6signed(value, suffix) {
   if (value > 0) {
@@ -16511,19 +16707,19 @@ function _M0FP39moonstudy9moonstudy3app16comparison__view(model) {
     count_delta = "无对比基线";
   }
   const rate_delta = comparison.has_baseline ? _M0FP39moonstudy9moonstudy3app6signed(comparison.delta.completion_rate_points, " 个百分点") : "无对比基线";
-  const _tmp$2 = _M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS322, undefined, undefined, -1, undefined, "本周与上周同进度");
+  const _tmp$2 = _M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS401, undefined, undefined, -1, undefined, "本周与上周同进度");
   const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(5);
   _M0MPB13StringBuilder13write__objectGsE(_string_builder, comparison.previous.start);
   _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " 至 ");
   _M0MPB13StringBuilder13write__objectGsE(_string_builder, comparison.previous.end);
-  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS321, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$2, _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS323, undefined, -1, undefined, _string_builder.val)]);
-  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS325, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "上周学习"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS326, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(comparison.previous.minutes, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, minutes_delta)]);
-  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS327, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "上周记录"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS328, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(comparison.previous.count, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, count_delta)]);
+  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS400, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$2, _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS402, undefined, -1, undefined, _string_builder.val)]);
+  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS404, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "上周学习"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS405, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(comparison.previous.minutes, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, minutes_delta)]);
+  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS406, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "上周记录"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS407, undefined, undefined, -1, undefined, _M0MPC13int3Int18to__string_2einner(comparison.previous.count, 10)), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, count_delta)]);
   const _tmp$6 = _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "上周完成率");
   const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(1);
   _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, comparison.previous.completion_rate);
   _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "%");
-  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS320, undefined, -1, undefined, [_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS324, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$4, _tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS329, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$6, _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS330, undefined, undefined, -1, undefined, _string_builder$2.val), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, rate_delta)]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS331, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "上周投入最多"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS332, undefined, comparison.previous.top_topic, -1, undefined, comparison.previous.top_topic), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS333, undefined, undefined, -1, undefined, comparison.has_baseline ? "同进度环比" : "无对比基线")])])]);
+  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS399, undefined, -1, undefined, [_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS403, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$4, _tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS408, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$6, _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS409, undefined, undefined, -1, undefined, _string_builder$2.val), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, rate_delta)]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS410, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "上周投入最多"), _M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS411, undefined, comparison.previous.top_topic, -1, undefined, comparison.previous.top_topic), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16comparison__viewN6constrS412, undefined, undefined, -1, undefined, comparison.has_baseline ? "同进度环比" : "无对比基线")])])]);
 }
 function _M0FP39moonstudy9moonstudy3app10bar__chart(model, days) {
   const values = [];
@@ -16572,7 +16768,7 @@ function _M0FP39moonstudy9moonstudy3app10bar__chart(model, days) {
       _M0IPB13StringBuilderPB6Logger13write__string(_p$9, "height: ");
       _M0MPB13StringBuilder13write__objectGiE(_p$9, _p$7);
       _M0IPB13StringBuilderPB6Logger13write__string(_p$9, "%");
-      _p[_p$3] = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS334, _tmp$4, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS335, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html9i_2einnerGsE([_p$9.val], undefined, undefined, undefined, -1, undefined, "")]), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, _M0FP39moonstudy9moonstudy3app16short__date__iso(_p$5))]);
+      _p[_p$3] = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS413, _tmp$4, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS414, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html9i_2einnerGsE([_p$9.val], undefined, undefined, undefined, -1, undefined, "")]), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, _M0FP39moonstudy9moonstudy3app16short__date__iso(_p$5))]);
       _tmp$3 = _p$3 + 1 | 0;
       continue;
     } else {
@@ -16580,92 +16776,252 @@ function _M0FP39moonstudy9moonstudy3app10bar__chart(model, days) {
     }
   }
   const columns = _p;
-  return _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS336, _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS337, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, columns);
+  return _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS415, _M0FP39moonstudy9moonstudy3app10bar__chartN6constrS416, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, columns);
 }
-function _M0FP39moonstudy9moonstudy3app7heatmap(model, days) {
-  const end = _M0FP39moonstudy9moonstudy3app18activity__end__iso();
-  const start = _M0FP39moonstudy9moonstudy3app16shift__date__iso(end, -370);
-  const month_labels = [];
-  let previous_month = 0;
+function _M0FP39moonstudy9moonstudy3app16activity__legend() {
+  return _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16activity__legendN6constrS417, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "少"), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "0"), ""), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "1"), ""), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "2"), ""), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "3"), ""), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "4"), ""), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "多")]);
+}
+function _M0FP39moonstudy9moonstudy3app15daily__activity(model) {
+  const year = model.activity_year;
+  const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(6);
+  _M0MPB13StringBuilder13write__objectGiE(_string_builder, year);
+  _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, "-01-01");
+  const year_start = _string_builder.val;
+  const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(6);
+  _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, year);
+  _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "-12-31");
+  const year_end = _string_builder$2.val;
+  const _bind$3 = [];
+  const days = _M0MPB3Map3MapGsRP29moonstudy9moonstudy7DayStatE(new _M0TPB9ArrayViewGUsRP29moonstudy9moonstudy7DayStatEE(_bind$3, 0, 0), undefined);
+  let maximum = 0;
+  const _bind$4 = _M0FP29moonstudy9moonstudy15activity__stats(model.records, year_start, year_end);
+  const _bind$5 = _bind$4.length;
   let _tmp$2 = 0;
   while (true) {
-    const week = _tmp$2;
-    if (week < 53) {
-      const marker = _M0FP39moonstudy9moonstudy3app16shift__date__iso(start, (Math.imul(week, 7) | 0) + 3 | 0);
-      const month = _M0FP39moonstudy9moonstudy3app13month__number(marker);
-      if (month !== previous_month) {
-        const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(13);
-        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, "grid-column: ");
-        _M0MPB13StringBuilder13write__objectGiE(_string_builder, week + 1 | 0);
-        const _tmp$3 = [_string_builder.val];
-        const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(3);
-        _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, month);
-        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "月");
-        _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(month_labels, _M0FP319moonbit_2dcommunity7rabbita4html12span_2einnerGsE(_tmp$3, undefined, undefined, undefined, -1, undefined, _string_builder$2.val));
-        previous_month = month;
+    const _ = _tmp$2;
+    if (_ < _bind$5) {
+      const day = _bind$4[_];
+      _M0MPB3Map3setGsRP29moonstudy9moonstudy7DayStatE(days, day.date, day);
+      if (day.completed_count > maximum) {
+        maximum = day.completed_count;
       }
-      _tmp$2 = week + 1 | 0;
+      _tmp$2 = _ + 1 | 0;
       continue;
     } else {
       break;
     }
   }
+  const leading = (_M0FP29moonstudy9moonstudy21weekday__sunday__zero(year_start) + 6 | 0) % 7 | 0;
   const cells = [];
   let _tmp$3 = 0;
   while (true) {
-    const offset = _tmp$3;
-    if (offset <= 370) {
-      const date = _M0FP39moonstudy9moonstudy3app16shift__date__iso(start, offset);
-      const future = _M0IP016_24default__implPB7Compare6op__gtGsE(date, model.today);
-      const completed = _M0FP39moonstudy9moonstudy3app14day__completed(days, date);
-      const minutes = _M0FP39moonstudy9moonstudy3app12day__minutes(days, date);
-      let level;
-      if (future) {
-        level = 0;
-      } else {
-        const _p = 4;
-        level = _p < completed ? _p : completed;
-      }
-      const attrs = _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", _M0MPC13int3Int18to__string_2einner(level, 10));
-      let title;
-      if (future) {
-        const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(16);
-        _M0MPB13StringBuilder13write__objectGsE(_string_builder, date);
-        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " · 尚未到达");
-        title = _string_builder.val;
-      } else {
-        const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(33);
-        _M0MPB13StringBuilder13write__objectGsE(_string_builder, date);
-        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " · 完成 ");
-        _M0MPB13StringBuilder13write__objectGiE(_string_builder, completed);
-        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " 条 · 学习 ");
-        _M0MPB13StringBuilder13write__objectGiE(_string_builder, minutes);
-        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " 分钟");
-        title = _string_builder.val;
-      }
-      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(cells, _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, future ? "future" : "", title, -1, attrs, ""));
-      _tmp$3 = offset + 1 | 0;
+    const blank = _tmp$3;
+    if (blank < leading) {
+      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(cells, _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS418, undefined, -1, undefined, ""));
+      _tmp$3 = blank + 1 | 0;
       continue;
     } else {
       break;
     }
   }
-  return _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS338, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS339, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h3GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "过去一年完成记录"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS340, undefined, -1, undefined, "颜色越深，完成记录越多")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS341, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS342, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS343, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, ""), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS344, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS345, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, month_labels), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS346, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "日"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, ""), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "二"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, ""), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "四"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, ""), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "六")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS347, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS348, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, cells)])]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app7heatmapN6constrS349, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "少"), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "0"), ""), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "1"), ""), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "2"), ""), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "3"), ""), _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", "4"), ""), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "多")])]);
+  const total_days = _M0FP29moonstudy9moonstudy24days__in__calendar__year(year);
+  let _tmp$4 = 0;
+  while (true) {
+    const offset = _tmp$4;
+    if (offset < total_days) {
+      const date = _M0FP29moonstudy9moonstudy20date__for__year__day(year, offset);
+      const completed = _M0FP39moonstudy9moonstudy3app14day__completed(days, date);
+      const minutes = _M0FP39moonstudy9moonstudy3app12day__minutes(days, date);
+      const future = _M0IP016_24default__implPB7Compare6op__gtGsE(date, model.today);
+      const attrs = _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", _M0MPC13int3Int18to__string_2einner(future ? 0 : _M0FP39moonstudy9moonstudy3app15activity__level(completed, maximum), 10)), "count", _M0MPC13int3Int18to__string_2einner(completed, 10));
+      const _tmp$5 = future ? "future" : "";
+      let _tmp$6;
+      if (future) {
+        const _string_builder$3 = _M0MPB13StringBuilder21StringBuilder_2einner(16);
+        _M0MPB13StringBuilder13write__objectGsE(_string_builder$3, date);
+        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$3, " · 尚未到达");
+        _tmp$6 = _string_builder$3.val;
+      } else {
+        const _string_builder$3 = _M0MPB13StringBuilder21StringBuilder_2einner(26);
+        _M0MPB13StringBuilder13write__objectGsE(_string_builder$3, date);
+        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$3, " · 完成 ");
+        _M0MPB13StringBuilder13write__objectGiE(_string_builder$3, completed);
+        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$3, " 条 · ");
+        _M0MPB13StringBuilder13write__objectGiE(_string_builder$3, minutes);
+        _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$3, " 分钟");
+        _tmp$6 = _string_builder$3.val;
+      }
+      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(cells, _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _tmp$5, _tmp$6, -1, attrs, ""));
+      _tmp$4 = offset + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  const month_days = [31, _M0FP29moonstudy9moonstudy24days__in__calendar__year(year) === 366 ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  const labels = [];
+  let elapsed = 0;
+  let _tmp$5 = 1;
+  while (true) {
+    const month = _tmp$5;
+    if (month <= 12) {
+      const column = ((leading + elapsed | 0) / 7 | 0) + 1 | 0;
+      const _string_builder$3 = _M0MPB13StringBuilder21StringBuilder_2einner(13);
+      _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$3, "grid-column: ");
+      _M0MPB13StringBuilder13write__objectGiE(_string_builder$3, column);
+      const _tmp$6 = [_string_builder$3.val];
+      const _string_builder$4 = _M0MPB13StringBuilder21StringBuilder_2einner(3);
+      _M0MPB13StringBuilder13write__objectGiE(_string_builder$4, month);
+      _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$4, "月");
+      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(labels, _M0FP319moonbit_2dcommunity7rabbita4html12span_2einnerGsE(_tmp$6, undefined, undefined, undefined, -1, undefined, _string_builder$4.val));
+      elapsed = elapsed + _M0MPC15array5Array2atGiE(month_days, month - 1 | 0) | 0;
+      _tmp$5 = month + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  return _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS419, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS420, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS421, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS422, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, ""), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS423, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS424, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, labels), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS425, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "一"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, ""), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "三"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, ""), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "五"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, ""), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "日")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS426, _M0FP39moonstudy9moonstudy3app15daily__activityN6constrS427, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, cells)])]), _M0FP39moonstudy9moonstudy3app16activity__legend()]);
 }
-function _M0FP39moonstudy9moonstudy3app12trends__view(model) {
+function _M0FP39moonstudy9moonstudy3app16weekly__activity(model) {
+  const weeks = _M0FP29moonstudy9moonstudy25weekly__completion__stats(model.records, model.activity_year);
+  const maximum = new _M0TPB8MutLocalGiE(0);
+  const _bind$3 = weeks.length;
+  let _tmp$2 = 0;
+  while (true) {
+    const _ = _tmp$2;
+    if (_ < _bind$3) {
+      const week = weeks[_];
+      if (week.completed_count > maximum.val) {
+        maximum.val = week.completed_count;
+      }
+      _tmp$2 = _ + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  const _p = new Array(weeks.length);
+  const _p$2 = weeks.length;
+  let _tmp$3 = 0;
+  while (true) {
+    const _p$3 = _tmp$3;
+    if (_p$3 < _p$2) {
+      const _p$4 = weeks[_p$3];
+      const _p$5 = _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", _M0MPC13int3Int18to__string_2einner(_M0FP39moonstudy9moonstudy3app15activity__level(_p$4.completed_count, maximum.val), 10)), "count", _M0MPC13int3Int18to__string_2einner(_p$4.completed_count, 10));
+      const _p$6 = _M0MPB13StringBuilder21StringBuilder_2einner(20);
+      _M0MPB13StringBuilder13write__objectGsE(_p$6, _p$4.start);
+      _M0IPB13StringBuilderPB6Logger13write__string(_p$6, " 至 ");
+      _M0MPB13StringBuilder13write__objectGsE(_p$6, _p$4.end);
+      _M0IPB13StringBuilderPB6Logger13write__string(_p$6, " · 完成 ");
+      _M0MPB13StringBuilder13write__objectGiE(_p$6, _p$4.completed_count);
+      _M0IPB13StringBuilderPB6Logger13write__string(_p$6, " 条");
+      _p[_p$3] = _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, _p$6.val, -1, _p$5, "");
+      _tmp$3 = _p$3 + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  const cells = _p;
+  return _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16weekly__activityN6constrS428, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app16weekly__activityN6constrS429, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app16weekly__activityN6constrS430, _M0FP39moonstudy9moonstudy3app16weekly__activityN6constrS431, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, cells)]), _M0FP39moonstudy9moonstudy3app16activity__legend()]);
+}
+function _M0FP39moonstudy9moonstudy3app20cumulative__activity(model) {
+  const months = _M0FP29moonstudy9moonstudy38monthly__cumulative__completion__stats(model.records, model.activity_year);
+  const maximum = months.length === 0 ? 0 : _M0MPC15array5Array2atGRP29moonstudy9moonstudy10TopicTotalE(months, months.length - 1 | 0).completed_count;
+  const cells = [];
+  let _tmp$2 = 0;
+  while (true) {
+    const month = _tmp$2;
+    if (month < 12) {
+      const count = _M0MPC15array5Array2atGRP29moonstudy9moonstudy10TopicTotalE(months, month).completed_count;
+      const attrs = _M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs9data__set(_M0MP319moonbit_2dcommunity7rabbita4html5Attrs5build(), "level", _M0MPC13int3Int18to__string_2einner(_M0FP39moonstudy9moonstudy3app15activity__level(count, maximum), 10)), "count", _M0MPC13int3Int18to__string_2einner(count, 10));
+      const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(28);
+      _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, "截至 ");
+      _M0MPB13StringBuilder13write__objectGiE(_string_builder, month + 1 | 0);
+      _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " 月累计完成 ");
+      _M0MPB13StringBuilder13write__objectGiE(_string_builder, count);
+      _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " 条");
+      const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html1iGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, _string_builder.val, -1, attrs, "");
+      const _string_builder$2 = _M0MPB13StringBuilder21StringBuilder_2einner(3);
+      _M0MPB13StringBuilder13write__objectGiE(_string_builder$2, month + 1 | 0);
+      _M0IPB13StringBuilderPB6Logger13write__string(_string_builder$2, "月");
+      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(cells, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app20cumulative__activityN6constrS432, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, _string_builder$2.val)]));
+      _tmp$2 = month + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  return _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app20cumulative__activityN6constrS433, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app20cumulative__activityN6constrS434, _M0FP39moonstudy9moonstudy3app20cumulative__activityN6constrS435, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, cells), _M0FP39moonstudy9moonstudy3app16activity__legend()]);
+}
+function _M0FP39moonstudy9moonstudy3app15activity__panel(model, emit) {
+  const _p = _M0FP39moonstudy9moonstudy3app15activity__years(model);
+  const _p$2 = new Array(_p.length);
+  const _p$3 = _p.length;
+  let _tmp$2 = 0;
+  while (true) {
+    const _p$4 = _tmp$2;
+    if (_p$4 < _p$3) {
+      const _p$5 = _p[_p$4];
+      const _tmp$3 = _M0MPC13int3Int18to__string_2einner(_p$5, 10);
+      const _tmp$4 = _p$5 === model.activity_year;
+      const _p$6 = _M0MPB13StringBuilder21StringBuilder_2einner(4);
+      _M0MPB13StringBuilder13write__objectGiE(_p$6, _p$5);
+      _M0IPB13StringBuilderPB6Logger13write__string(_p$6, " 年");
+      _p$2[_p$4] = _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _tmp$3, _tmp$4, undefined, _p$6.val);
+      _tmp$2 = _p$4 + 1 | 0;
+      continue;
+    } else {
+      break;
+    }
+  }
+  const years = _p$2;
+  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS438, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h3GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "活动记录"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS439, undefined, undefined, -1, -1, undefined, -1, undefined, -1, -1, (value) => {
+    const _func = emit;
+    return _func(new _M0DTP39moonstudy9moonstudy3app3Msg15SetActivityYear(value));
+  }, undefined, years)]);
+  const _tmp$4 = model.activity_mode === "daily" ? "activity-tab active" : "activity-tab";
+  const _func = emit;
+  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS441, _tmp$4, undefined, -1, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS442, -1, undefined, undefined, -1, _func(_M0FP39moonstudy9moonstudy3app15activity__panelN6constrS443), undefined, "每日");
+  const _tmp$6 = model.activity_mode === "weekly" ? "activity-tab active" : "activity-tab";
+  const _func$2 = emit;
+  const _tmp$7 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS444, _tmp$6, undefined, -1, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS445, -1, undefined, undefined, -1, _func$2(_M0FP39moonstudy9moonstudy3app15activity__panelN6constrS446), undefined, "每周");
+  const _tmp$8 = model.activity_mode === "cumulative" ? "activity-tab active" : "activity-tab";
+  const _func$3 = emit;
+  const _tmp$9 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS437, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS440, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$5, _tmp$7, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS447, _tmp$8, undefined, -1, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS448, -1, undefined, undefined, -1, _func$3(_M0FP39moonstudy9moonstudy3app15activity__panelN6constrS449), undefined, "累计")])]);
+  const _tmp$10 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS450, undefined, -1, undefined, "颜色越深，完成数量越多");
+  const _bind$3 = model.activity_mode;
+  let _tmp$11;
+  switch (_bind$3) {
+    case "weekly": {
+      _tmp$11 = _M0FP39moonstudy9moonstudy3app16weekly__activity(model);
+      break;
+    }
+    case "cumulative": {
+      _tmp$11 = _M0FP39moonstudy9moonstudy3app20cumulative__activity(model);
+      break;
+    }
+    default: {
+      _tmp$11 = _M0FP39moonstudy9moonstudy3app15daily__activity(model);
+    }
+  }
+  return _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app15activity__panelN6constrS436, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$9, _tmp$10, _tmp$11]);
+}
+function _M0FP39moonstudy9moonstudy3app12trends__view(model, emit) {
   const days = _M0FP39moonstudy9moonstudy3app13activity__map(model);
-  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS350, undefined, -1, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS351, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS352, undefined, undefined, -1, undefined, "学习趋势"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS353, undefined, -1, undefined, "统计由 MoonBit 计算")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS354, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS355, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h3GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "最近 7 天学习时长"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS356, undefined, -1, undefined, "单位：分钟")]), _M0FP39moonstudy9moonstudy3app10bar__chart(model, days)]), _M0FP39moonstudy9moonstudy3app7heatmap(model, days)]);
+  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS451, undefined, -1, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS452, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS453, undefined, undefined, -1, undefined, "学习趋势"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS454, undefined, -1, undefined, "统计由 MoonBit 计算")]), _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS455, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS456, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h3GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "最近 7 天学习时长"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12trends__viewN6constrS457, undefined, -1, undefined, "单位：分钟")]), _M0FP39moonstudy9moonstudy3app10bar__chart(model, days)]), _M0FP39moonstudy9moonstudy3app15activity__panel(model, emit)]);
 }
 function _M0FP39moonstudy9moonstudy3app12report__view(model, emit) {
   const daily = model.report_type === "daily";
   const week_start = _M0FP39moonstudy9moonstudy3app21week__start__for__iso(model.report_date);
   const week_end = _M0FP39moonstudy9moonstudy3app25week__full__end__for__iso(model.report_date);
-  const _tmp$2 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS358, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS359, undefined, undefined, -1, undefined, "学习报告"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS360, undefined, -1, undefined, "日报或任意周周报 · Markdown 文本")]);
-  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS361, undefined, -1, undefined, "选择报告类型和日期后生成内容，可复制到笔记，也可下载为 .md 文件。");
-  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS362, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "报告类型"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS363, undefined, undefined, -1, -1, undefined, -1, undefined, -1, -1, (value) => {
+  const _tmp$2 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS459, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS460, undefined, undefined, -1, undefined, "学习报告"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS461, undefined, -1, undefined, "日报或任意周周报 · Markdown 文本")]);
+  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS462, undefined, -1, undefined, "选择报告类型和日期后生成内容，可复制到笔记，也可下载为 .md 文件。");
+  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS463, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "报告类型"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS464, undefined, undefined, -1, -1, undefined, -1, undefined, -1, -1, (value) => {
     const _func = emit;
     return _func(new _M0DTP39moonstudy9moonstudy3app3Msg13SetReportType(value));
-  }, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS364, daily, undefined, "日报"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS365, !daily, undefined, "周报")])]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS366, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, daily ? "日报日期" : "选择自然周（周一至周日）"), _M0FP319moonbit_2dcommunity7rabbita4html5input(daily ? 3 : 21, undefined, daily ? model.report_date : _M0FP39moonstudy9moonstudy3app21week__value__for__iso(model.report_date), -1, -1, -1, undefined, undefined, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS367, undefined, undefined, -1, -1, -1, undefined, undefined, (value) => {
+  }, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS465, daily, undefined, "日报"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS466, !daily, undefined, "周报")])]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS467, undefined, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, daily ? "日报日期" : "选择自然周（周一至周日）"), _M0FP319moonbit_2dcommunity7rabbita4html5input(daily ? 3 : 21, undefined, daily ? model.report_date : _M0FP39moonstudy9moonstudy3app21week__value__for__iso(model.report_date), -1, -1, -1, undefined, undefined, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS468, undefined, undefined, -1, -1, -1, undefined, undefined, (value) => {
     const _func = emit;
     return _func(new _M0DTP39moonstudy9moonstudy3app3Msg13SetReportDate(daily ? value : _M0FP39moonstudy9moonstudy3app23week__start__for__value(value)));
   }, undefined, undefined)])]);
@@ -16674,13 +17030,13 @@ function _M0FP39moonstudy9moonstudy3app12report__view(model, emit) {
   _M0MPB13StringBuilder13write__objectGsE(_string_builder, week_start);
   _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " 至 ");
   _M0MPB13StringBuilder13write__objectGsE(_string_builder, week_end);
-  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS368, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS369, undefined, daily, undefined, _string_builder.val);
+  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS469, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS470, undefined, daily, undefined, _string_builder.val);
   const _tmp$6 = !model.ok;
   const _func = emit;
-  const _tmp$7 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS371, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS372, undefined, -1, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS373, _tmp$6, undefined, undefined, -1, _func(_M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport__), undefined, daily ? "生成日报" : "生成周报");
+  const _tmp$7 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS472, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS473, undefined, -1, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS474, _tmp$6, undefined, undefined, -1, _func(_M0DTP39moonstudy9moonstudy3app3Msg14GenerateReport__), undefined, daily ? "生成日报" : "生成周报");
   const _tmp$8 = model.report_markdown.length === 0;
   const _func$2 = emit;
-  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS357, undefined, -1, undefined, [_tmp$2, _tmp$3, _tmp$4, _tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS370, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$7, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS374, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS375, undefined, _tmp$8, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS376, -1, undefined, undefined, -1, _func$2(_M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport__), undefined, "下载 .md")]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS377, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS378, undefined, model.report_markdown.length === 0, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS379, undefined, undefined, -1, undefined, model.report_title), _M0FP319moonbit_2dcommunity7rabbita4html8textareaGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS380, undefined, undefined, -1, undefined, model.report_markdown, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS381, undefined, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS382, -1, undefined, undefined, -1, -1, undefined, undefined, undefined, undefined, "")])]);
+  return _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS458, undefined, -1, undefined, [_tmp$2, _tmp$3, _tmp$4, _tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS471, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$7, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS475, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS476, undefined, _tmp$8, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS477, -1, undefined, undefined, -1, _func$2(_M0DTP39moonstudy9moonstudy3app3Msg14DownloadReport__), undefined, "下载 .md")]), _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS478, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS479, undefined, model.report_markdown.length === 0, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS480, undefined, undefined, -1, undefined, model.report_title), _M0FP319moonbit_2dcommunity7rabbita4html8textareaGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS481, undefined, undefined, -1, undefined, model.report_markdown, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS482, undefined, undefined, _M0FP39moonstudy9moonstudy3app12report__viewN6constrS483, -1, undefined, undefined, -1, -1, undefined, undefined, undefined, undefined, "")])]);
 }
 function _M0FP39moonstudy9moonstudy3app14history__items(model, emit) {
   const items = [];
@@ -16691,13 +17047,13 @@ function _M0FP39moonstudy9moonstudy3app14history__items(model, emit) {
     const index = _tmp$2;
     if (index >= first) {
       const record = _M0MPC15array5Array2atGRP29moonstudy9moonstudy10TopicTotalE(model.records, index);
-      const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS383, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, record.topic), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, _M0FP39moonstudy9moonstudy3app16record__subtitle(record))]);
+      const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS484, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6strongGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, record.topic), _M0FP319moonbit_2dcommunity7rabbita4html5smallGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, _M0FP39moonstudy9moonstudy3app16record__subtitle(record))]);
       const _string_builder = _M0MPB13StringBuilder21StringBuilder_2einner(7);
       _M0MPB13StringBuilder13write__objectGiE(_string_builder, record.minutes);
       _M0IPB13StringBuilderPB6Logger13write__string(_string_builder, " 分钟");
-      const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS385, undefined, -1, undefined, _string_builder.val);
+      const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS486, undefined, -1, undefined, _string_builder.val);
       const _func = emit;
-      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(items, _M0FP319moonbit_2dcommunity7rabbita4html2liGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, undefined, -1, undefined, undefined, [_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS384, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$4, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS386, undefined, -1, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS387, -1, undefined, undefined, -1, _func(new _M0DTP39moonstudy9moonstudy3app3Msg6Delete(record.id)), undefined, "删除")])]));
+      _M0MPC15array5Array4pushGRP29moonstudy9moonstudy9TopicStatE(items, _M0FP319moonbit_2dcommunity7rabbita4html2liGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, undefined, -1, undefined, undefined, [_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS485, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$4, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS487, undefined, -1, _M0FP39moonstudy9moonstudy3app14history__itemsN6constrS488, -1, undefined, undefined, -1, _func(new _M0DTP39moonstudy9moonstudy3app3Msg6Delete(record.id)), undefined, "删除")])]));
       _tmp$2 = index - 1 | 0;
       continue;
     } else {
@@ -16729,36 +17085,36 @@ function _M0FP39moonstudy9moonstudy3app13records__view(model, emit) {
     }
   }
   const topics = _p$2;
-  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS388, undefined, -1, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS389, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS390, undefined, undefined, -1, undefined, "学习内容"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS391, undefined, -1, undefined, "按累计分钟排序")]), _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS392, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS393, undefined, model.topics.length > 0, undefined, "保存记录后，这里会显示每项具体内容的投入时间。"), _M0FP319moonbit_2dcommunity7rabbita4html2ulGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS394, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS395, undefined, -1, undefined, undefined, topics)]);
-  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS397, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS398, undefined, undefined, -1, undefined, "历史记录"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS399, undefined, -1, undefined, "发现写错的记录，可以删除后重新填写")]);
-  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS400, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS401, undefined, model.records.length > 0, undefined, "还没有记录，先写下今天学了什么吧。");
-  const _tmp$6 = _M0FP319moonbit_2dcommunity7rabbita4html2ulGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS402, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS403, undefined, -1, undefined, undefined, _M0FP39moonstudy9moonstudy3app14history__items(model, emit));
+  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS489, undefined, -1, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS490, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS491, undefined, undefined, -1, undefined, "学习内容"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS492, undefined, -1, undefined, "按累计分钟排序")]), _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS493, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS494, undefined, model.topics.length > 0, undefined, "保存记录后，这里会显示每项具体内容的投入时间。"), _M0FP319moonbit_2dcommunity7rabbita4html2ulGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS495, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS496, undefined, -1, undefined, undefined, topics)]);
+  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS498, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS499, undefined, undefined, -1, undefined, "历史记录"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS500, undefined, -1, undefined, "发现写错的记录，可以删除后重新填写")]);
+  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS501, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS502, undefined, model.records.length > 0, undefined, "还没有记录，先写下今天学了什么吧。");
+  const _tmp$6 = _M0FP319moonbit_2dcommunity7rabbita4html2ulGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS503, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS504, undefined, -1, undefined, undefined, _M0FP39moonstudy9moonstudy3app14history__items(model, emit));
   const _tmp$7 = model.records.length <= model.history_limit;
   const _func = emit;
-  return _M0FP319moonbit_2dcommunity7rabbita4html8fragment([_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS396, undefined, -1, undefined, [_tmp$4, _tmp$5, _tmp$6, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS404, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS405, undefined, _tmp$7, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS406, -1, undefined, undefined, -1, _func(_M0DTP39moonstudy9moonstudy3app3Msg8ShowMore__), undefined, "显示更多记录")])]);
+  return _M0FP319moonbit_2dcommunity7rabbita4html8fragment([_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS497, undefined, -1, undefined, [_tmp$4, _tmp$5, _tmp$6, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS505, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS506, undefined, _tmp$7, _M0FP39moonstudy9moonstudy3app13records__viewN6constrS507, -1, undefined, undefined, -1, _func(_M0DTP39moonstudy9moonstudy3app3Msg8ShowMore__), undefined, "显示更多记录")])]);
 }
 function _M0FP39moonstudy9moonstudy3app12backup__view(model, emit) {
   const _tmp$2 = model.ok || !model.storage_available;
   const _func = emit;
-  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS407, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS408, undefined, _tmp$2, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS409, -1, undefined, undefined, -1, _func(_M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw__), undefined, "下载无法读取的原始数据");
-  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS411, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS412, undefined, undefined, -1, undefined, "数据备份与恢复"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS413, undefined, -1, undefined, "完整 JSON · 只保存在你手中")]);
-  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS414, undefined, -1, undefined, "建议提交前和清理浏览器数据前下载备份。恢复时会先由 MoonBit 校验，不会导入损坏文件。");
+  const _tmp$3 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS508, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS509, undefined, _tmp$2, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS510, -1, undefined, undefined, -1, _func(_M0DTP39moonstudy9moonstudy3app3Msg11DownloadRaw__), undefined, "下载无法读取的原始数据");
+  const _tmp$4 = _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS512, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html2h2GsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS513, undefined, undefined, -1, undefined, "数据备份与恢复"), _M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS514, undefined, -1, undefined, "完整 JSON · 只保存在你手中")]);
+  const _tmp$5 = _M0FP319moonbit_2dcommunity7rabbita4html1pGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS515, undefined, -1, undefined, "建议提交前和清理浏览器数据前下载备份。恢复时会先由 MoonBit 校验，不会导入损坏文件。");
   const _tmp$6 = !model.ok;
   const _func$2 = emit;
-  const _tmp$7 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS416, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS417, undefined, -1, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS418, _tmp$6, undefined, undefined, -1, _func$2(_M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup__), undefined, "导出完整备份");
+  const _tmp$7 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS517, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS518, undefined, -1, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS519, _tmp$6, undefined, undefined, -1, _func$2(_M0DTP39moonstudy9moonstudy3app3Msg12ExportBackup__), undefined, "导出完整备份");
   const _tmp$8 = !model.storage_available;
   const _func$3 = emit;
-  const _tmp$9 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS419, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS420, undefined, -1, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS421, _tmp$8, undefined, undefined, -1, _func$3(_M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore__), undefined, "选择备份恢复");
-  const _tmp$10 = _M0FP319moonbit_2dcommunity7rabbita4html5input(_M0FP39moonstudy9moonstudy3app12backup__viewN6constrS422, undefined, undefined, -1, -1, -1, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS423, undefined, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS424, undefined, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS425, -1, -1, undefined, undefined, (_value) => {
+  const _tmp$9 = _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS520, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS521, undefined, -1, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS522, _tmp$8, undefined, undefined, -1, _func$3(_M0DTP39moonstudy9moonstudy3app3Msg13ChooseRestore__), undefined, "选择备份恢复");
+  const _tmp$10 = _M0FP319moonbit_2dcommunity7rabbita4html5input(_M0FP39moonstudy9moonstudy3app12backup__viewN6constrS523, undefined, undefined, -1, -1, -1, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS524, undefined, undefined, _M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS525, undefined, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS526, -1, -1, undefined, undefined, (_value) => {
     const _func$4 = emit;
     return _func$4(_M0DTP39moonstudy9moonstudy3app3Msg18RestoreFileChanged__);
   }, undefined, undefined);
   const _func$4 = emit;
-  return _M0FP319moonbit_2dcommunity7rabbita4html8fragment([_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS410, undefined, -1, undefined, [_tmp$4, _tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS415, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$7, _tmp$9, _tmp$10, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS426, undefined, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS427, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS428, -1, undefined, undefined, -1, _func$4(_M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady__), undefined, "")])])]);
+  return _M0FP319moonbit_2dcommunity7rabbita4html8fragment([_tmp$3, _M0FP319moonbit_2dcommunity7rabbita4html7sectionGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS511, undefined, -1, undefined, [_tmp$4, _tmp$5, _M0FP319moonbit_2dcommunity7rabbita4html3divGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS516, undefined, -1, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [_tmp$7, _tmp$9, _tmp$10, _M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS527, undefined, undefined, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS528, _M0FP39moonstudy9moonstudy3app12backup__viewN6constrS529, -1, undefined, undefined, -1, _func$4(_M0DTP39moonstudy9moonstudy3app3Msg12RestoreReady__), undefined, "")])])]);
 }
 function _M0FP39moonstudy9moonstudy3app4view(model, emit) {
   const _func = emit;
-  return _M0FP319moonbit_2dcommunity7rabbita4html8fragment([_M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app4viewN6constrS429, undefined, undefined, _M0FP39moonstudy9moonstudy3app4viewN6constrS430, _M0FP39moonstudy9moonstudy3app4viewN6constrS431, -1, undefined, undefined, -1, _func(_M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged__), undefined, ""), _M0FP39moonstudy9moonstudy3app10form__view(model, emit), _M0FP39moonstudy9moonstudy3app13summary__view(model), _M0FP39moonstudy9moonstudy3app16comparison__view(model), _M0FP39moonstudy9moonstudy3app12trends__view(model), _M0FP39moonstudy9moonstudy3app13records__view(model, emit), _M0FP39moonstudy9moonstudy3app12report__view(model, emit), _M0FP39moonstudy9moonstudy3app12backup__view(model, emit)]);
+  return _M0FP319moonbit_2dcommunity7rabbita4html8fragment([_M0FP319moonbit_2dcommunity7rabbita4html6buttonGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app4viewN6constrS530, undefined, undefined, _M0FP39moonstudy9moonstudy3app4viewN6constrS531, _M0FP39moonstudy9moonstudy3app4viewN6constrS532, -1, undefined, undefined, -1, _func(_M0DTP39moonstudy9moonstudy3app3Msg15ExternalChanged__), undefined, ""), _M0FP39moonstudy9moonstudy3app10form__view(model, emit), _M0FP39moonstudy9moonstudy3app13summary__view(model), _M0FP39moonstudy9moonstudy3app16comparison__view(model), _M0FP39moonstudy9moonstudy3app12trends__view(model, emit), _M0FP39moonstudy9moonstudy3app13records__view(model, emit), _M0FP39moonstudy9moonstudy3app12report__view(model, emit), _M0FP39moonstudy9moonstudy3app12backup__view(model, emit)]);
 }
 function _M0FP39moonstudy9moonstudy3app10study__app() {
   const _bind$3 = _M0FP219moonbit_2dcommunity7rabbita13create__stateGRP39moonstudy9moonstudy3app9ViewModelRP39moonstudy9moonstudy3app3MsgE(_M0FP39moonstudy9moonstudy3app17load__with__limit(25), _M0FP39moonstudy9moonstudy3app6update, undefined);
@@ -16778,10 +17134,10 @@ function _M0FP39moonstudy9moonstudy3app10theme__app() {
   });
   const _theme = _bind$3._0;
   const _emit = _bind$3._1;
-  return _M0MP219moonbit_2dcommunity7rabbita3Val3mapGsRP319moonbit_2dcommunity7rabbita4html4HtmlE(_theme, (value) => _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS432, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "界面颜色"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS433, undefined, undefined, -1, -1, undefined, -1, undefined, -1, -1, (next) => {
+  return _M0MP219moonbit_2dcommunity7rabbita3Val3mapGsRP319moonbit_2dcommunity7rabbita4html4HtmlE(_theme, (value) => _M0FP319moonbit_2dcommunity7rabbita4html5labelGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS533, undefined, -1, undefined, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html4spanGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, "界面颜色"), _M0FP319moonbit_2dcommunity7rabbita4html6selectGRPB5ArrayGRP319moonbit_2dcommunity7rabbita4html4HtmlEE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS534, undefined, undefined, -1, -1, undefined, -1, undefined, -1, -1, (next) => {
     const _func = _emit;
     return _func(new _M0DTP39moonstudy9moonstudy3app8ThemeMsg11ChangeTheme(next));
-  }, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS434, value === "system", undefined, "跟随系统"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS435, value === "light", undefined, "亮色"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS436, value === "dark", undefined, "暗色")])]));
+  }, undefined, [_M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS535, value === "system", undefined, "跟随系统"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS536, value === "light", undefined, "亮色"), _M0FP319moonbit_2dcommunity7rabbita4html6optionGsE(_M0DTPC16option6OptionGRPB5ArrayGsEE4None__, undefined, undefined, undefined, -1, undefined, -1, _M0FP39moonstudy9moonstudy3app10theme__appN6constrS537, value === "dark", undefined, "暗色")])]));
 }
 (() => {
   const preference = _M0FP39moonstudy9moonstudy3app11read__theme();

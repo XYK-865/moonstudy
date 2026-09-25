@@ -35,6 +35,8 @@ pub struct ViewModel {
   today : String
   week_start : String
   category_choice : String
+  activity_mode : String
+  activity_year : Int
   report_type : String
   report_date : String
   report_markdown : String
@@ -68,6 +70,8 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
       today,
       week_start,
       category_choice: "学习",
+      activity_mode: "daily",
+      activity_year: @study.year_from_iso(today),
       report_type: "daily",
       report_date: today,
       report_markdown: "",
@@ -91,6 +95,8 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
       today,
       week_start,
       category_choice: "学习",
+      activity_mode: "daily",
+      activity_year: @study.year_from_iso(today),
       report_type: "daily",
       report_date: today,
       report_markdown: "",
@@ -108,6 +114,8 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
     today,
     week_start,
     category_choice: "学习",
+    activity_mode: "daily",
+    activity_year: @study.year_from_iso(today),
     report_type: "daily",
     report_date: today,
     report_markdown: "",
@@ -123,6 +131,8 @@ priv enum Msg {
   ShowMore
   ExternalChanged
   SetCategoryChoice(String)
+  SetActivityMode(String)
+  SetActivityYear(String)
   SetReportType(String)
   SetReportDate(String)
   GenerateReport
@@ -132,6 +142,16 @@ priv enum Msg {
   ChooseRestore
   RestoreFileChanged
   RestoreReady
+}
+
+///|
+fn reload_with_preferences(model : ViewModel) -> ViewModel {
+  let refreshed = load_with_limit(model.history_limit)
+  {
+    ..refreshed,
+    activity_mode: model.activity_mode,
+    activity_year: model.activity_year,
+  }
 }
 
 ///|
@@ -160,7 +180,7 @@ fn save_record(model : ViewModel) -> ViewModel {
   }
   reset_form(model.today)
   show_notice("记录已保存。")
-  load_with_limit(model.history_limit)
+  reload_with_preferences(model)
 }
 
 ///|
@@ -178,7 +198,7 @@ fn delete_record(model : ViewModel, id : String) -> ViewModel {
     return model
   }
   show_notice("记录已删除。")
-  load_with_limit(model.history_limit)
+  reload_with_preferences(model)
 }
 
 ///|
@@ -248,7 +268,7 @@ fn finish_restore(model : ViewModel) -> ViewModel {
     show_notice("浏览器存储写入失败，备份没有恢复。")
     return model
   }
-  let next = load_with_limit(model.history_limit)
+  let next = reload_with_preferences(model)
   show_notice("备份恢复完成，共 \{count} 条记录。")
   next
 }
@@ -297,8 +317,21 @@ fn update(
     Save => save_record(model)
     Delete(id) => delete_record(model, id)
     ShowMore => { ..model, history_limit: model.history_limit + page_size, }
-    ExternalChanged => load_with_limit(model.history_limit)
+    ExternalChanged => reload_with_preferences(model)
     SetCategoryChoice(value) => { ..model, category_choice: value, }
+    SetActivityMode(value) => { ..model, activity_mode: value, }
+    SetActivityYear(value) => {
+      let year = if value.length() == 4 {
+        (value[0].to_int() - '0'.to_int()) * 1000 +
+        (value[1].to_int() - '0'.to_int()) * 100 +
+        (value[2].to_int() - '0'.to_int()) * 10 +
+        value[3].to_int() -
+        '0'.to_int()
+      } else {
+        model.activity_year
+      }
+      { ..model, activity_year: year, }
+    }
     SetReportType(value) =>
       { ..model, report_type: value, report_markdown: "", report_filename: "", }
     SetReportDate(value) =>
@@ -347,14 +380,8 @@ fn record_subtitle(record : @study.StudyRecord) -> String {
 }
 
 ///|
-fn month_number(date : String) -> Int {
-  (date[5].to_int() - '0'.to_int()) * 10 + date[6].to_int() - '0'.to_int()
-}
-
-///|
 fn activity_map(model : ViewModel) -> Map[String, @study.DayStat] {
-  let end = activity_end_iso()
-  let start = shift_date_iso(end, -370)
+  let start = shift_date_iso(model.today, -6)
   let result : Map[String, @study.DayStat] = Map([])
   for day in @study.activity_stats(model.records, start, model.today) {
     result[day.date] = day
@@ -376,6 +403,32 @@ fn day_completed(days : Map[String, @study.DayStat], date : String) -> Int {
     Some(day) => day.completed_count
     None => 0
   }
+}
+
+///|
+fn activity_level(value : Int, maximum : Int) -> Int {
+  if value <= 0 || maximum <= 0 {
+    0
+  } else {
+    Int::min(4, Int::max(1, (value * 4 + maximum - 1) / maximum))
+  }
+}
+
+///|
+fn activity_years(model : ViewModel) -> Array[Int] {
+  let current = @study.year_from_iso(model.today)
+  let mut earliest = current
+  for record in model.records {
+    let year = @study.year_from_iso(record.date)
+    if year < earliest {
+      earliest = year
+    }
+  }
+  let years : Array[Int] = []
+  for year = current; year >= earliest; year = year - 1 {
+    years.push(year)
+  }
+  years
 }
 
 ///|
@@ -661,69 +714,233 @@ fn bar_chart(
 }
 
 ///|
-fn heatmap(model : ViewModel, days : Map[String, @study.DayStat]) -> @html.Html {
-  let end = activity_end_iso()
-  let start = shift_date_iso(end, -370)
-  let month_labels : Array[@html.Html] = []
-  let mut previous_month = 0
-  for week = 0; week < 53; week = week + 1 {
-    let marker = shift_date_iso(start, week * 7 + 3)
-    let month = month_number(marker)
-    if month != previous_month {
-      month_labels.push(span(style=["grid-column: \{week + 1}"], "\{month}月"))
-      previous_month = month
-    }
-  }
-  let cells : Array[@html.Html] = []
-  for offset = 0; offset <= 370; offset = offset + 1 {
-    let date = shift_date_iso(start, offset)
-    let future = date > model.today
-    let completed = day_completed(days, date)
-    let minutes = day_minutes(days, date)
-    let level = if future { 0 } else { Int::min(4, completed) }
-    let attrs = @html.Attrs::build().data_set("level", level.to_string())
-    let title = if future {
-      "\{date} · 尚未到达"
-    } else {
-      "\{date} · 完成 \{completed} 条 · 学习 \{minutes} 分钟"
-    }
-    cells.push(i(class=if future { "future" } else { "" }, title~, attrs~, ""))
-  }
-  div(class="trend-block", [
-    div(class="subheading", [
-      h3("过去一年完成记录"),
-      span(class="muted", "颜色越深，完成记录越多"),
-    ]),
-    div(class="heatmap-scroll", [
-      div(class="heatmap-frame", [
-        div(class="heatmap-corner", ""),
-        div(id="heatmap-months", class="heatmap-months", month_labels),
-        div(class="heatmap-weekdays", [
-          span("日"),
-          span(""),
-          span("二"),
-          span(""),
-          span("四"),
-          span(""),
-          span("六"),
-        ]),
-        div(id="heatmap", class="heatmap", cells),
-      ]),
-    ]),
-    div(class="heatmap-legend", [
-      span("少"),
-      i(attrs=@html.Attrs::build().data_set("level", "0"), ""),
-      i(attrs=@html.Attrs::build().data_set("level", "1"), ""),
-      i(attrs=@html.Attrs::build().data_set("level", "2"), ""),
-      i(attrs=@html.Attrs::build().data_set("level", "3"), ""),
-      i(attrs=@html.Attrs::build().data_set("level", "4"), ""),
-      span("多"),
-    ]),
+fn activity_legend() -> @html.Html {
+  div(class="heatmap-legend", [
+    span("少"),
+    i(attrs=@html.Attrs::build().data_set("level", "0"), ""),
+    i(attrs=@html.Attrs::build().data_set("level", "1"), ""),
+    i(attrs=@html.Attrs::build().data_set("level", "2"), ""),
+    i(attrs=@html.Attrs::build().data_set("level", "3"), ""),
+    i(attrs=@html.Attrs::build().data_set("level", "4"), ""),
+    span("多"),
   ])
 }
 
 ///|
-fn trends_view(model : ViewModel) -> @html.Html {
+fn daily_activity(model : ViewModel) -> @html.Html {
+  let year = model.activity_year
+  let year_start = "\{year}-01-01"
+  let year_end = "\{year}-12-31"
+  let days : Map[String, @study.DayStat] = Map([])
+  let mut maximum = 0
+  for day in @study.activity_stats(model.records, year_start, year_end) {
+    days[day.date] = day
+    if day.completed_count > maximum {
+      maximum = day.completed_count
+    }
+  }
+  let leading = (@study.weekday_sunday_zero(year_start) + 6) % 7
+  let cells : Array[@html.Html] = []
+  for blank = 0; blank < leading; blank = blank + 1 {
+    cells.push(span(class="activity-blank", ""))
+  }
+  let total_days = @study.days_in_calendar_year(year)
+  for offset = 0; offset < total_days; offset = offset + 1 {
+    let date = @study.date_for_year_day(year, offset)
+    let completed = day_completed(days, date)
+    let minutes = day_minutes(days, date)
+    let future = date > model.today
+    let attrs = @html.Attrs::build()
+      .data_set(
+        "level",
+        (if future { 0 } else { activity_level(completed, maximum) }).to_string(),
+      )
+      .data_set("count", completed.to_string())
+    cells.push(
+      i(
+        class=if future { "future" } else { "" },
+        title=if future {
+          "\{date} · 尚未到达"
+        } else {
+          "\{date} · 完成 \{completed} 条 · \{minutes} 分钟"
+        },
+        attrs~,
+        "",
+      ),
+    )
+  }
+  let month_days = [
+    31,
+    if @study.days_in_calendar_year(year) == 366 {
+      29
+    } else {
+      28
+    },
+    31,
+    30,
+    31,
+    30,
+    31,
+    31,
+    30,
+    31,
+    30,
+    31,
+  ]
+  let labels : Array[@html.Html] = []
+  let mut elapsed = 0
+  for month = 1; month <= 12; month = month + 1 {
+    let column = (leading + elapsed) / 7 + 1
+    labels.push(span(style=["grid-column: \{column}"], "\{month}月"))
+    elapsed = elapsed + month_days[month - 1]
+  }
+  div(class="activity-body", [
+    div(class="heatmap-scroll", [
+      div(class="heatmap-frame", [
+        div(class="heatmap-corner", ""),
+        div(id="heatmap-months", class="heatmap-months", labels),
+        div(class="heatmap-weekdays", [
+          span("一"),
+          span(""),
+          span("三"),
+          span(""),
+          span("五"),
+          span(""),
+          span("日"),
+        ]),
+        div(id="heatmap", class="heatmap", cells),
+      ]),
+    ]),
+    activity_legend(),
+  ])
+}
+
+///|
+fn weekly_activity(model : ViewModel) -> @html.Html {
+  let weeks = @study.weekly_completion_stats(model.records, model.activity_year)
+  let mut maximum = 0
+  for week in weeks {
+    if week.completed_count > maximum {
+      maximum = week.completed_count
+    }
+  }
+  let cells : Array[@html.Html] = weeks.map(week => {
+    let attrs = @html.Attrs::build()
+      .data_set(
+        "level",
+        activity_level(week.completed_count, maximum).to_string(),
+      )
+      .data_set("count", week.completed_count.to_string())
+    i(
+      title="\{week.start} 至 \{week.end} · 完成 \{week.completed_count} 条",
+      attrs~,
+      "",
+    )
+  })
+  div(class="activity-body", [
+    div(class="heatmap-scroll", [
+      div(id="weekly-activity", class="weekly-activity", cells),
+    ]),
+    activity_legend(),
+  ])
+}
+
+///|
+fn cumulative_activity(model : ViewModel) -> @html.Html {
+  let months = @study.monthly_cumulative_completion_stats(
+    model.records,
+    model.activity_year,
+  )
+  let maximum = if months.length() == 0 {
+    0
+  } else {
+    months[months.length() - 1].completed_count
+  }
+  let cells : Array[@html.Html] = []
+  for month = 0; month < 12; month = month + 1 {
+    let count = months[month].completed_count
+    let attrs = @html.Attrs::build()
+      .data_set("level", activity_level(count, maximum).to_string())
+      .data_set("count", count.to_string())
+    cells.push(
+      div(class="cumulative-item", [
+        i(title="截至 \{month + 1} 月累计完成 \{count} 条", attrs~, ""),
+        span("\{month + 1}月"),
+      ]),
+    )
+  }
+  div(class="activity-body", [
+    div(id="cumulative-activity", class="cumulative-activity", cells),
+    activity_legend(),
+  ])
+}
+
+///|
+fn activity_panel(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
+  let years : Array[@html.Html] = activity_years(model).map(year => {
+    option(
+      value=year.to_string(),
+      selected=year == model.activity_year,
+      "\{year} 年",
+    )
+  })
+  div(class="trend-block activity-panel", [
+    div(class="activity-toolbar", [
+      div(class="activity-heading", [
+        h3("活动记录"),
+        select(
+          id="activity-year",
+          on_change=value => emit(SetActivityYear(value)),
+          years,
+        ),
+      ]),
+      div(class="activity-tabs", [
+        button(
+          id="activity-daily",
+          class=if model.activity_mode == "daily" {
+            "activity-tab active"
+          } else {
+            "activity-tab"
+          },
+          type_="button",
+          on_click=emit(SetActivityMode("daily")),
+          "每日",
+        ),
+        button(
+          id="activity-weekly",
+          class=if model.activity_mode == "weekly" {
+            "activity-tab active"
+          } else {
+            "activity-tab"
+          },
+          type_="button",
+          on_click=emit(SetActivityMode("weekly")),
+          "每周",
+        ),
+        button(
+          id="activity-cumulative",
+          class=if model.activity_mode == "cumulative" {
+            "activity-tab active"
+          } else {
+            "activity-tab"
+          },
+          type_="button",
+          on_click=emit(SetActivityMode("cumulative")),
+          "累计",
+        ),
+      ]),
+    ]),
+    p(class="activity-note", "颜色越深，完成数量越多"),
+    match model.activity_mode {
+      "weekly" => weekly_activity(model)
+      "cumulative" => cumulative_activity(model)
+      _ => daily_activity(model)
+    },
+  ])
+}
+
+///|
+fn trends_view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
   let days = activity_map(model)
   section(class="card", [
     div(class="card-heading", [
@@ -737,7 +954,7 @@ fn trends_view(model : ViewModel) -> @html.Html {
       ]),
       bar_chart(model, days),
     ]),
-    heatmap(model, days),
+    activity_panel(model, emit),
   ])
 }
 
@@ -998,7 +1215,7 @@ fn view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
     form_view(model, emit),
     summary_view(model),
     comparison_view(model),
-    trends_view(model),
+    trends_view(model, emit),
     records_view(model, emit),
     report_view(model, emit),
     backup_view(model, emit),

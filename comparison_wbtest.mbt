@@ -83,3 +83,43 @@ test "week comparison rejects damaged storage and ranges longer than a week" {
   assert_true(!compare_weeks("{bad", "2026-09-14", "2026-09-16").ok)
   assert_true(!compare_weeks(encode_storage([]), "2026-09-14", "2026-09-21").ok)
 }
+
+///|
+test "calendar year helpers cover leap years and weekdays" {
+  assert_eq(days_in_calendar_year(2026), 365)
+  assert_eq(days_in_calendar_year(2024), 366)
+  assert_eq(date_for_year_day(2026, 364), "2026-12-31")
+  assert_eq(weekday_sunday_zero("2026-01-01"), 4)
+}
+
+///|
+test "weekly completion stats use natural weeks but only selected year data" {
+  let records = [
+    make_record("old", "2025-12-31", "旧年", 20, true, ""),
+    make_record("a", "2026-01-01", "元旦", 30, true, ""),
+    make_record("b", "2026-01-04", "周日", 40, true, ""),
+    make_record("c", "2026-01-05", "下一周", 50, false, ""),
+  ]
+  let weeks = weekly_completion_stats(records, 2026)
+  assert_eq(weeks.length(), 53)
+  assert_eq(weeks[0].start, "2025-12-29")
+  assert_eq(weeks[0].end, "2026-01-04")
+  assert_eq(weeks[0].completed_count, 2)
+  assert_eq(weeks[1].completed_count, 0)
+}
+
+///|
+test "monthly cumulative completion stats accumulate through each month" {
+  let records = [
+    make_record("jan", "2026-01-10", "一月", 30, true, ""),
+    make_record("feb", "2026-02-05", "二月", 40, true, ""),
+    make_record("miss", "2026-02-06", "未完成", 50, false, ""),
+    make_record("other", "2025-12-31", "旧年", 60, true, ""),
+  ]
+  let months = monthly_cumulative_completion_stats(records, 2026)
+  assert_eq(months.length(), 12)
+  assert_eq(months[0].end, "2026-01-31")
+  assert_eq(months[0].completed_count, 1)
+  assert_eq(months[1].completed_count, 2)
+  assert_eq(months[11].completed_count, 2)
+}
