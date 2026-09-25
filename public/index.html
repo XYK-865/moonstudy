@@ -7,14 +7,13 @@
     <meta name="description" content="使用 MoonBit 编写的本地学习打卡、趋势统计与报告助手。" />
     <title>MoonStudy · 学习打卡与统计</title>
     <link rel="stylesheet" href="./styles.css" />
-    <!-- Edge 会暂停隐藏页面的原生 rAF；Rabbita 依赖它提交 DOM 补丁。
-         使用计时器保持同一异步边界，避免数据已更新但视图一直等待到重新载入。 -->
+    <!-- Rabbita 在模块求值时捕获 rAF，因此此 Edge 隐藏页调度兼容必须先执行。
+         它只替换调度原语，不包含 UI、数据或业务逻辑。 -->
     <script>
       window.requestAnimationFrame = (callback) => setTimeout(() => callback(performance.now()), 16);
       window.cancelAnimationFrame = (id) => clearTimeout(id);
     </script>
     <script type="module" src="./moonstudy-app_v004.mjs"></script>
-    <script type="module" src="./host.js"></script>
   </head>
   <body>
     <main class="shell">
@@ -29,23 +28,9 @@
 
       <noscript><p class="notice">此应用需要浏览器启用 JavaScript。</p></noscript>
       <div id="notice" class="notice" role="alert" hidden></div>
-      <button id="backup-raw" class="backup" type="button" hidden>下载无法读取的原始数据</button>
 
-      <!-- 表单、概览、图表、主题与历史由 MoonBit + Rabbita 统一渲染。 -->
+      <!-- 全部交互界面由 MoonBit + Rabbita 统一渲染。 -->
       <div id="app-main"></div>
-
-      <section class="card" aria-labelledby="data-title">
-        <div class="card-heading">
-          <h2 id="data-title">数据备份与恢复</h2>
-          <span class="muted">完整 JSON · 只保存在你手中</span>
-        </div>
-        <p class="report-help">建议提交前和清理浏览器数据前下载备份。恢复时会先由 MoonBit 校验，不会导入损坏文件。</p>
-        <div class="actions">
-          <button id="export-data" class="secondary" type="button">导出完整备份</button>
-          <button id="choose-restore" class="secondary" type="button">选择备份恢复</button>
-          <input id="restore-file" type="file" accept="application/json,.json" hidden />
-        </div>
-      </section>
 
       <p class="footnote">数据默认只在当前浏览器中保存。换设备前请先导出完整备份。</p>
     </main>

@@ -1,9 +1,14 @@
 ///|
 /// Thin browser capability layer for the Rabbita UI (v004).
 ///
-/// Only raw browser access lives here: storage, confirmation dialogs, notices
-/// and the page-level event bridge. Statistics and validation stay in the
-/// `moonstudy` core package. Keep this file free of business logic.
+/// Only raw browser access lives here: storage, confirmation dialogs, notices,
+/// downloads and file reads. Statistics and validation stay in the `moonstudy`
+/// core package. Keep this file free of business logic.
+
+///|
+/// Probe storage before the application reads it. A browser policy failure is
+/// different from a damaged envelope and must not be treated as empty data.
+extern "js" fn storage_readable(key : String) -> Bool = "(key) => { try { window.localStorage.getItem(key); return true; } catch (_) { return false; } }"
 
 ///|
 /// Read one localStorage entry; missing keys return an empty string so the
@@ -63,7 +68,30 @@ extern "js" fn download_text(
   text : String,
   filename : String,
   mime : String,
-) -> Unit = "(text, filename, mime) => { const blob = new Blob([text], { type: mime }); const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = filename; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000); }"
+) -> Bool = "(text, filename, mime) => { try { const blob = new Blob([text], { type: mime }); const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href = url; link.download = filename; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000); return true; } catch (_) { return false; } }"
+
+///|
+extern "js" fn choose_restore_file() -> Unit = "() => document.getElementById('restore-file')?.click()"
+
+///|
+/// FileReader is asynchronous. It stores only the raw browser result and then
+/// clicks a hidden Rabbita-owned button so validation stays in MoonBit.
+extern "js" fn begin_restore_read() -> Unit = "() => { const input = document.getElementById('restore-file'); const file = input?.files?.[0]; window.__moonstudyRestoreStatus = 'none'; window.__moonstudyRestoreText = ''; if (!file) return; if (file.size > 5 * 1024 * 1024) { window.__moonstudyRestoreStatus = 'too-large'; input.value = ''; document.getElementById('restore-ready')?.click(); return; } file.text().then((text) => { window.__moonstudyRestoreStatus = 'ok'; window.__moonstudyRestoreText = text; }).catch(() => { window.__moonstudyRestoreStatus = 'read-error'; }).finally(() => { input.value = ''; document.getElementById('restore-ready')?.click(); }); }"
+
+///|
+extern "js" fn restore_read_status() -> String = "() => window.__moonstudyRestoreStatus ?? 'none'"
+
+///|
+extern "js" fn restore_read_text() -> String = "() => window.__moonstudyRestoreText ?? ''"
+
+///|
+extern "js" fn clear_restore_read() -> Unit = "() => { window.__moonstudyRestoreStatus = 'none'; window.__moonstudyRestoreText = ''; }"
+
+///|
+extern "js" fn confirm_restore(count : Int) -> Bool = "(count) => window.confirm(`备份包含 ${count} 条记录。恢复会替换当前学习记录，是否继续？`)"
+
+///|
+extern "js" fn limit_date_inputs(today : String) -> Unit = "(today) => { setTimeout(() => { for (const id of ['date', 'report-date']) { const node = document.getElementById(id); if (node !== null) node.max = today; } }, 32); }"
 
 ///|
 extern "js" fn read_theme() -> String = "() => { try { const value = localStorage.getItem('moonstudy.theme.v1'); return ['light', 'dark', 'system'].includes(value) ? value : 'system'; } catch (_) { return 'system'; } }"
@@ -85,13 +113,3 @@ extern "js" fn confirm_delete() -> Bool = "() => window.confirm('确定删除这
 /// The notice element stays outside the virtual DOM so both layers can use it
 /// without overwriting each other.
 extern "js" fn show_notice(message : String) -> Unit = "(message) => { const node = document.getElementById('notice'); if (node === null) return; node.textContent = message; node.hidden = message === ''; }"
-
-///|
-/// Tell the JavaScript layer (metrics, charts, report, backup) that the stored
-/// data changed.
-extern "js" fn notify_data_changed() -> Unit = "() => { window.dispatchEvent(new CustomEvent('moonstudy:data-changed')); }"
-
-///|
-/// Announce that the app has mounted, so the JavaScript layer can run its first
-/// render knowing the app's markup exists.
-extern "js" fn notify_ready() -> Unit = "() => { setTimeout(() => window.dispatchEvent(new CustomEvent('moonstudy:app-ready')), 0); }"

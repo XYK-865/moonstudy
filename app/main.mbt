@@ -1,7 +1,7 @@
 ///|
-/// Rabbita entry point (v004 S1). The MoonBit application owns the form,
-/// overview, charts, topics and history as one state tree. JavaScript remains a
-/// thin browser capability adapter for dates, UUIDs, storage and downloads.
+/// Rabbita entry point (v004). The MoonBit application owns the form, overview,
+/// charts, topics, history, reports, backup and recovery as one state tree.
+/// JavaScript exists only inside thin browser capability FFI declarations.
 using @html {
   button,
   div,
@@ -27,6 +27,7 @@ using @html {
 ///|
 pub struct ViewModel {
   ok : Bool
+  storage_available : Bool
   message : String
   records : Array[@study.StudyRecord]
   topics : Array[@study.TopicStat]
@@ -52,16 +53,41 @@ let page_size : Int = 25
 ///|
 fn load_with_limit(history_limit : Int) -> ViewModel {
   let today = today_iso()
-  let loaded = @study.load_storage(read_local(storage_key))
-  if !loaded.ok {
+  let week_start = week_start_iso()
+  if !storage_readable(storage_key) {
+    let message = "浏览器存储不可用，暂时不能保存记录。"
+    show_notice(message)
     return {
       ok: false,
+      storage_available: false,
+      message,
+      records: [],
+      topics: [],
+      history_limit,
+      today,
+      week_start,
+      report_type: "daily",
+      report_date: today,
+      report_markdown: "",
+      report_title: "日报预览",
+      report_filename: "",
+    }
+  }
+  let loaded = @study.load_storage(read_local(storage_key))
+  if !loaded.ok {
+    show_notice(
+      loaded.message +
+      "。请下载原始数据备份，当前页面不会覆盖它。",
+    )
+    return {
+      ok: false,
+      storage_available: true,
       message: loaded.message,
       records: [],
       topics: [],
       history_limit,
       today,
-      week_start: week_start_iso(),
+      week_start,
       report_type: "daily",
       report_date: today,
       report_markdown: "",
@@ -71,12 +97,13 @@ fn load_with_limit(history_limit : Int) -> ViewModel {
   }
   {
     ok: true,
+    storage_available: true,
     message: "",
     records: loaded.records,
     topics: @study.topic_stats(loaded.records),
     history_limit,
     today,
-    week_start: week_start_iso(),
+    week_start,
     report_type: "daily",
     report_date: today,
     report_markdown: "",
@@ -95,6 +122,11 @@ priv enum Msg {
   SetReportDate(String)
   GenerateReport
   DownloadReport
+  ExportBackup
+  DownloadRaw
+  ChooseRestore
+  RestoreFileChanged
+  RestoreReady
 }
 
 ///|
@@ -122,7 +154,6 @@ fn save_record(model : ViewModel) -> ViewModel {
   }
   reset_form(model.today)
   show_notice("记录已保存。")
-  notify_data_changed()
   load_with_limit(model.history_limit)
 }
 
@@ -141,8 +172,79 @@ fn delete_record(model : ViewModel, id : String) -> ViewModel {
     return model
   }
   show_notice("记录已删除。")
-  notify_data_changed()
   load_with_limit(model.history_limit)
+}
+
+///|
+fn export_backup(model : ViewModel) -> ViewModel {
+  guard model.ok else { return model }
+  let result = @study.export_storage(read_local(storage_key))
+  if !result.ok {
+    show_notice(result.message)
+    return model
+  }
+  if !download_text(
+      result.storage_json + "\n",
+      "moonstudy-backup-\{model.today}.json",
+      "application/json;charset=utf-8",
+    ) {
+    show_notice("无法生成备份下载，请检查浏览器下载权限。")
+    return model
+  }
+  show_notice(
+    "完整备份已下载。请把文件保存在你找得到的位置。",
+  )
+  model
+}
+
+///|
+fn download_raw_storage(model : ViewModel) -> ViewModel {
+  guard model.storage_available else {
+    show_notice("无法读取原始数据，请检查浏览器存储权限。")
+    return model
+  }
+  if !download_text(
+      read_local(storage_key),
+      "moonstudy-unreadable-original.json",
+      "application/json;charset=utf-8",
+    ) {
+    show_notice("无法下载原始数据，请检查浏览器下载权限。")
+  }
+  model
+}
+
+///|
+fn finish_restore(model : ViewModel) -> ViewModel {
+  let status = restore_read_status()
+  let candidate = restore_read_text()
+  clear_restore_read()
+  if status == "too-large" {
+    show_notice("备份文件超过 5 MB，已停止读取。")
+    return model
+  }
+  if status == "read-error" {
+    show_notice("无法读取这个备份文件。")
+    return model
+  }
+  guard status == "ok" else { return model }
+  let result = @study.restore_storage(candidate)
+  if !result.ok {
+    show_notice("备份未导入：" + result.message)
+    return model
+  }
+  let restored = @study.load_storage(result.storage_json)
+  let count = restored.records.length()
+  if !confirm_restore(count) {
+    show_notice("已取消恢复，当前数据没有变化。")
+    return model
+  }
+  if !write_local(storage_key, result.storage_json) {
+    show_notice("浏览器存储写入失败，备份没有恢复。")
+    return model
+  }
+  let next = load_with_limit(model.history_limit)
+  show_notice("备份恢复完成，共 \{count} 条记录。")
+  next
 }
 
 ///|
@@ -197,14 +299,27 @@ fn update(
     GenerateReport => generate_report(model)
     DownloadReport => {
       if model.report_filename.length() > 0 {
-        download_text(
-          model.report_markdown,
-          model.report_filename,
-          "text/markdown;charset=utf-8",
-        )
+        if !download_text(
+            model.report_markdown,
+            model.report_filename,
+            "text/markdown;charset=utf-8",
+          ) {
+          show_notice("报告下载失败，请检查浏览器下载权限。")
+        }
       }
       model
     }
+    ExportBackup => export_backup(model)
+    DownloadRaw => download_raw_storage(model)
+    ChooseRestore => {
+      choose_restore_file()
+      model
+    }
+    RestoreFileChanged => {
+      begin_restore_read()
+      model
+    }
+    RestoreReady => finish_restore(model)
   }
   (next, @rabbita.none)
 }
@@ -720,10 +835,66 @@ fn records_view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
 }
 
 ///|
+fn backup_view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
+  fragment([
+    button(
+      id="backup-raw",
+      class="backup",
+      type_="button",
+      hidden=model.ok || !model.storage_available,
+      on_click=emit(DownloadRaw),
+      "下载无法读取的原始数据",
+    ),
+    section(class="card", [
+      div(class="card-heading", [
+        h2(id="data-title", "数据备份与恢复"),
+        span(class="muted", "完整 JSON · 只保存在你手中"),
+      ]),
+      p(
+        class="report-help",
+        "建议提交前和清理浏览器数据前下载备份。恢复时会先由 MoonBit 校验，不会导入损坏文件。",
+      ),
+      div(class="actions", [
+        button(
+          id="export-data",
+          class="secondary",
+          type_="button",
+          disabled=!model.ok,
+          on_click=emit(ExportBackup),
+          "导出完整备份",
+        ),
+        button(
+          id="choose-restore",
+          class="secondary",
+          type_="button",
+          disabled=!model.storage_available,
+          on_click=emit(ChooseRestore),
+          "选择备份恢复",
+        ),
+        input(
+          id="restore-file",
+          input_type=@html.File,
+          accept="application/json,.json",
+          hidden=true,
+          on_change=_value => emit(RestoreFileChanged),
+        ),
+        button(
+          id="restore-ready",
+          type_="button",
+          hidden=true,
+          on_click=emit(RestoreReady),
+          "",
+        ),
+      ]),
+    ]),
+  ])
+}
+
+///|
 fn view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
   fragment([
-    // Backup restoration is still hosted by JavaScript during S1. Its only
-    // bridge asks this application to reload the validated storage envelope.
+    // Kept as a test and extension integration hook. All ordinary changes now
+    // flow through the MoonBit model without a cross-layer refresh.
     button(
       id="app-refresh",
       type_="button",
@@ -737,6 +908,7 @@ fn view(model : ViewModel, emit : @rabbita.Emit[Msg]) -> @html.Html {
     trends_view(model),
     records_view(model, emit),
     report_view(model, emit),
+    backup_view(model, emit),
   ])
 }
 
@@ -788,5 +960,5 @@ fn main {
   watch_system_theme()
   @rabbita.new(theme_app).mount("theme-root")
   @rabbita.new(study_app).mount("app-main")
-  notify_ready()
+  limit_date_inputs(today_iso())
 }

@@ -51,9 +51,10 @@ http://127.0.0.1:8124/
 - `storage.mbt`：版本化存储契约、增删、读取、备份导出和恢复校验。
 - `report.mbt`：Markdown 日报与周报。
 - `comparison.mbt`：同进度周环比、跨月/跨年日期切片和变化率。
-- `app/`：MoonBit + Rabbita 页面状态树，负责表单、统计、图表、主题、报告与记录列表。
+- `app/`：MoonBit + Rabbita 页面状态树，负责表单、统计、图表、主题、报告、记录列表、完整备份与恢复。
 - `web/api.mbt`：11 个浏览器 ESM 导出入口。
-- `public/host.js`：剩余的薄浏览器适配，只负责完整备份、文件恢复和损坏数据入口，不重算业务统计。
+- `app/browser.mbt`：极薄浏览器能力 FFI，只提供 localStorage、日期、文件读取、下载和确认框；校验与状态决策仍由 MoonBit 完成。
+- `public/index.html`：静态挂载壳；加载 MoonBit 构建产物，并在其执行前提供 Edge 隐藏页所需的两行 Rabbita 调度兼容代码，不包含 UI 或业务逻辑。
 
 既有 10 个接口保持兼容：`moonstudy_ready`、`empty_total`、`read_state`、`add_record`、`delete_record`、`weekly_report`、`daily_report`、`activity_series`、`export_backup`、`restore_backup`。v004 新增 `week_comparison`，不改变既有接口、存储键或封套格式。
 
@@ -66,12 +67,12 @@ moon fmt
 moon check --target js
 moon test --target js
 moon build --target js --release
-node --check public/host.js
+node --check ../03_测试与验证/浏览器首版验收_v004.mjs
 ```
 
 核心 JS 构建产物位于 `_build/js/release/build/web/web.js`，Rabbita 应用产物位于 `_build/js/release/build/app/app.js`。v004 发布候选分别保存在 `public/moonstudy-core_v004.mjs` 与 `public/moonstudy-app_v004.mjs`。仓库保留真实构建结果供 GitHub Pages 直接提供静态网页，并通过 `.gitattributes` 标记为生成文件；MoonBit 源码仍是唯一业务实现来源。
 
-当前 v004 分支包含 31 项 MoonBit 测试，覆盖统计、日期边界、存储损坏、重复编号、日报、任意周周报、活动聚合、备份恢复和同进度周环比。目标浏览器为桌面版 Microsoft Edge；v004 的 14 类自动验收结果见 `03_测试与验证/浏览器首版验收_v004.md`。v004 尚未合并到 `main`，公开页面仍是 v003。
+当前 v004 分支包含 31 项 MoonBit 测试，覆盖统计、日期边界、存储损坏、重复编号、日报、任意周周报、活动聚合、备份恢复和同进度周环比。目标浏览器为桌面版 Microsoft Edge；v004 的 15 类自动验收结果见 `03_测试与验证/浏览器首版验收_v004.md`，其中包含“页面未加载 `host.js`、备份恢复位于 MoonBit 应用树内”的 S4 所有权断言。v004 尚未合并到 `main`，公开页面仍是 v003。
 
 ## 项目边界
 
