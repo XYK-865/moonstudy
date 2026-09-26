@@ -758,17 +758,20 @@ fn activity_month_labels(year : Int) -> Array[@html.Html] {
 }
 
 ///|
-fn activity_bar_height(value : Int, maximum : Int) -> Int {
-  if value <= 0 || maximum <= 0 {
-    0
-  } else {
-    Int::min(7, Int::max(1, (value * 7 + maximum - 1) / maximum))
-  }
-}
-
-///|
-fn month_from_iso(date : String) -> Int {
-  (date[5].to_int() - '0'.to_int()) * 10 + date[6].to_int() - '0'.to_int()
+fn yearly_activity_frame(
+  id : String,
+  year : Int,
+  cells : Array[@html.Html],
+) -> @html.Html {
+  div(class="heatmap-scroll activity-grid-scroll", [
+    div(class="activity-matrix-frame", [
+      div(id~, class="heatmap activity-matrix", cells),
+      div(
+        class="heatmap-months activity-matrix-months",
+        activity_month_labels(year),
+      ),
+    ]),
+  ])
 }
 
 ///|
@@ -795,20 +798,22 @@ fn daily_activity(model : ViewModel) -> @html.Html {
     let completed = day_completed(days, date)
     let minutes = day_minutes(days, date)
     let future = date > model.today
+    let tooltip = if future {
+      "\{date} · 尚未到达"
+    } else {
+      "\{date} 完成了 \{completed} 件事"
+    }
     let attrs = @html.Attrs::build()
       .data_set(
         "level",
         (if future { 0 } else { activity_level(completed, maximum) }).to_string(),
       )
       .data_set("count", completed.to_string())
+      .data_set("tooltip", tooltip)
     cells.push(
       i(
-        class=if future { "future" } else { "" },
-        title=if future {
-          "\{date} · 尚未到达"
-        } else {
-          "\{date} · 完成 \{completed} 条 · \{minutes} 分钟"
-        },
+        class=if future { "activity-cell future" } else { "activity-cell" },
+        title="\{tooltip} · \{minutes} 分钟",
         attrs~,
         "",
       ),
@@ -816,7 +821,7 @@ fn daily_activity(model : ViewModel) -> @html.Html {
   }
   let labels = activity_month_labels(year)
   div(class="activity-body", [
-    div(class="heatmap-scroll", [
+    div(class="heatmap-scroll activity-grid-scroll", [
       div(class="heatmap-frame", [
         div(class="heatmap-corner", ""),
         div(id="heatmap-months", class="heatmap-months", labels),
@@ -839,6 +844,13 @@ fn daily_activity(model : ViewModel) -> @html.Html {
 ///|
 fn weekly_activity(model : ViewModel) -> @html.Html {
   let weeks = @study.weekly_completion_stats(model.records, model.activity_year)
+  let year = model.activity_year
+  let year_start = "\{year}-01-01"
+  let year_end = "\{year}-12-31"
+  let days : Map[String, @study.DayStat] = Map([])
+  for day in @study.activity_stats(model.records, year_start, year_end) {
+    days[day.date] = day
+  }
   let mut maximum = 0
   for week in weeks {
     if week.completed_count > maximum {
@@ -846,33 +858,29 @@ fn weekly_activity(model : ViewModel) -> @html.Html {
     }
   }
   let cells : Array[@html.Html] = []
-  for week in weeks {
-    let height = activity_bar_height(week.completed_count, maximum)
-    let filled_level = activity_level(week.completed_count, maximum)
-    for row = 0; row < 7; row = row + 1 {
-      let filled = row >= 7 - height
-      let attrs = @html.Attrs::build()
-        .data_set("level", (if filled { filled_level } else { 0 }).to_string())
-        .data_set("count", week.completed_count.to_string())
-      cells.push(
-        i(
-          title="\{week.start} 至 \{week.end} · 完成 \{week.completed_count} 条",
-          attrs~,
-          "",
-        ),
+  let leading = (@study.weekday_sunday_zero(year_start) + 6) % 7
+  for blank = 0; blank < leading; blank = blank + 1 {
+    cells.push(span(class="activity-blank", ""))
+  }
+  for offset = 0
+      offset < @study.days_in_calendar_year(year)
+      offset = offset + 1 {
+    let date = @study.date_for_year_day(year, offset)
+    let completed = day_completed(days, date)
+    let week_index = (leading + offset) / 7
+    let week_total = weeks[week_index].completed_count
+    let tooltip = "\{date} 完成了 \{completed} 件事 · 本周共 \{week_total} 件"
+    let attrs = @html.Attrs::build()
+      .data_set(
+        "level",
+        (if completed == 0 { 0 } else { activity_level(week_total, maximum) }).to_string(),
       )
-    }
+      .data_set("count", completed.to_string())
+      .data_set("tooltip", tooltip)
+    cells.push(i(class="activity-cell", title=tooltip, attrs~, ""))
   }
   div(class="activity-body", [
-    div(class="heatmap-scroll", [
-      div(class="activity-matrix-frame", [
-        div(id="weekly-activity", class="heatmap activity-matrix", cells),
-        div(
-          class="heatmap-months activity-matrix-months",
-          activity_month_labels(model.activity_year),
-        ),
-      ]),
-    ]),
+    yearly_activity_frame("weekly-activity", year, cells),
     activity_legend(),
   ])
 }
@@ -888,35 +896,38 @@ fn cumulative_activity(model : ViewModel) -> @html.Html {
   } else {
     months[months.length() - 1].completed_count
   }
-  let weeks = @study.weekly_completion_stats(model.records, model.activity_year)
-  let year_end = "\{model.activity_year}-12-31"
+  let year = model.activity_year
+  let year_start = "\{year}-01-01"
+  let year_end = "\{year}-12-31"
+  let days : Map[String, @study.DayStat] = Map([])
+  for day in @study.activity_stats(model.records, year_start, year_end) {
+    days[day.date] = day
+  }
   let cells : Array[@html.Html] = []
-  for week in weeks {
-    let marker = if week.end > year_end { year_end } else { week.end }
-    let month = month_from_iso(marker)
-    let count = months[month - 1].completed_count
-    let height = activity_bar_height(count, maximum)
-    let filled_level = activity_level(count, maximum)
-    for row = 0; row < 7; row = row + 1 {
-      let filled = row >= 7 - height
-      let attrs = @html.Attrs::build()
-        .data_set("level", (if filled { filled_level } else { 0 }).to_string())
-        .data_set("count", count.to_string())
-      cells.push(
-        i(title="截至 \{month} 月累计完成 \{count} 条", attrs~, ""),
+  let leading = (@study.weekday_sunday_zero(year_start) + 6) % 7
+  for blank = 0; blank < leading; blank = blank + 1 {
+    cells.push(span(class="activity-blank", ""))
+  }
+  let mut cumulative = 0
+  for offset = 0
+      offset < @study.days_in_calendar_year(year)
+      offset = offset + 1 {
+    let date = @study.date_for_year_day(year, offset)
+    let completed = day_completed(days, date)
+    cumulative = cumulative + completed
+    let tooltip = "\{date} 完成了 \{completed} 件事 · 年内累计 \{cumulative} 件"
+    let attrs = @html.Attrs::build()
+      .data_set(
+        "level",
+        (if completed == 0 { 0 } else { activity_level(cumulative, maximum) }).to_string(),
       )
-    }
+      .data_set("count", completed.to_string())
+      .data_set("cumulative", cumulative.to_string())
+      .data_set("tooltip", tooltip)
+    cells.push(i(class="activity-cell", title=tooltip, attrs~, ""))
   }
   div(class="activity-body", [
-    div(class="heatmap-scroll", [
-      div(class="activity-matrix-frame", [
-        div(id="cumulative-activity", class="heatmap activity-matrix", cells),
-        div(
-          class="heatmap-months activity-matrix-months",
-          activity_month_labels(model.activity_year),
-        ),
-      ]),
-    ]),
+    yearly_activity_frame("cumulative-activity", year, cells),
     activity_legend(),
   ])
 }

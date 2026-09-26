@@ -21,10 +21,10 @@
   --notice-text: #8b3c21;
   --shadow: #1939220c;
   --level-0: #edf1ed;
-  --level-1: #b7e4c7;
-  --level-2: #74c69d;
-  --level-3: #40916c;
-  --level-4: #1b5e3c;
+  --level-1: #d2efdc;
+  --level-2: #8bd0a6;
+  --level-3: #3e9f69;
+  --level-4: #126238;
 }
 
 :root[data-theme="dark"] {
@@ -48,10 +48,10 @@
   --notice-text: #ffc4a6;
   --shadow: #0000003d;
   --level-0: #26332b;
-  --level-1: #315b42;
-  --level-2: #3d7c56;
-  --level-3: #52a56f;
-  --level-4: #78d69a;
+  --level-1: #294936;
+  --level-2: #397452;
+  --level-3: #55a777;
+  --level-4: #83dda2;
 }
 
 * { box-sizing: border-box; }
@@ -135,6 +135,11 @@ input:focus, select:focus, textarea:focus, button:focus-visible { outline: 3px s
 .activity-matrix-frame { width: max-content; display: grid; grid-template-rows: auto 20px; gap: 4px; }
 .activity-matrix { grid-column: 1; grid-row: 1; }
 .activity-matrix-months { grid-column: 1; grid-row: 2; }
+.activity-grid-scroll { padding-top: 52px; margin-top: -44px; }
+.activity-cell { position: relative; overflow: visible; }
+.activity-cell:hover { z-index: 20; outline: 2px solid var(--text); outline-offset: 1px; }
+.activity-cell:hover::after { content: attr(data-tooltip); position: absolute; left: 50%; bottom: calc(100% + 9px); transform: translateX(-50%); width: max-content; max-width: 290px; padding: 8px 11px; border-radius: 9px; background: #171918; color: #fff; box-shadow: 0 8px 22px #0005; font: 600 .76rem/1.35 "Segoe UI", "Microsoft YaHei", sans-serif; white-space: nowrap; pointer-events: none; }
+.activity-cell:hover::before { content: ""; position: absolute; left: 50%; bottom: calc(100% + 4px); transform: translateX(-50%); border: 5px solid transparent; border-top-color: #171918; pointer-events: none; }
 .heatmap-legend { display: flex; justify-content: flex-end; align-items: center; gap: 5px; color: var(--quiet); font-size: .75rem; }
 
 .empty { color: var(--quiet); margin: 0; }
