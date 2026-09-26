@@ -132,10 +132,9 @@ input:focus, select:focus, textarea:focus, button:focus-visible { outline: 3px s
 .heatmap i[data-level="3"], .weekly-activity i[data-level="3"], .cumulative-activity i[data-level="3"], .heatmap-legend i[data-level="3"] { background: var(--level-3); }
 .heatmap i[data-level="4"], .weekly-activity i[data-level="4"], .cumulative-activity i[data-level="4"], .heatmap-legend i[data-level="4"] { background: var(--level-4); }
 .heatmap i.future { opacity: .35; }
-.weekly-activity { width: max-content; min-width: 100%; display: grid; grid-template-columns: repeat(53, 12px); gap: 3px; padding: 18px 0; }
-.cumulative-activity { display: grid; grid-template-columns: repeat(12, minmax(42px, 1fr)); gap: 7px; padding: 12px 0 8px; }
-.cumulative-item { display: grid; justify-items: center; gap: 7px; color: var(--quiet); font-size: .7rem; }
-.cumulative-activity i { width: 100%; height: 34px; border-radius: 6px; }
+.activity-matrix-frame { width: max-content; display: grid; grid-template-rows: auto 20px; gap: 4px; }
+.activity-matrix { grid-column: 1; grid-row: 1; }
+.activity-matrix-months { grid-column: 1; grid-row: 2; }
 .heatmap-legend { display: flex; justify-content: flex-end; align-items: center; gap: 5px; color: var(--quiet); font-size: .75rem; }
 
 .empty { color: var(--quiet); margin: 0; }
@@ -182,5 +181,4 @@ textarea { padding: 12px; resize: vertical; background: var(--surface-soft); lin
   .bar-track { height: 125px; }
   .activity-toolbar { align-items: flex-start; flex-direction: column; }
   .activity-tabs { align-self: flex-end; }
-  .cumulative-activity { grid-template-columns: repeat(6, minmax(42px, 1fr)); row-gap: 14px; }
 }

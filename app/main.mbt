@@ -727,6 +727,51 @@ fn activity_legend() -> @html.Html {
 }
 
 ///|
+fn activity_month_labels(year : Int) -> Array[@html.Html] {
+  let leading = (@study.weekday_sunday_zero("\{year}-01-01") + 6) % 7
+  let month_days = [
+    31,
+    if @study.days_in_calendar_year(year) == 366 {
+      29
+    } else {
+      28
+    },
+    31,
+    30,
+    31,
+    30,
+    31,
+    31,
+    30,
+    31,
+    30,
+    31,
+  ]
+  let labels : Array[@html.Html] = []
+  let mut elapsed = 0
+  for month = 1; month <= 12; month = month + 1 {
+    let column = (leading + elapsed) / 7 + 1
+    labels.push(span(style=["grid-column: \{column}"], "\{month}月"))
+    elapsed = elapsed + month_days[month - 1]
+  }
+  labels
+}
+
+///|
+fn activity_bar_height(value : Int, maximum : Int) -> Int {
+  if value <= 0 || maximum <= 0 {
+    0
+  } else {
+    Int::min(7, Int::max(1, (value * 7 + maximum - 1) / maximum))
+  }
+}
+
+///|
+fn month_from_iso(date : String) -> Int {
+  (date[5].to_int() - '0'.to_int()) * 10 + date[6].to_int() - '0'.to_int()
+}
+
+///|
 fn daily_activity(model : ViewModel) -> @html.Html {
   let year = model.activity_year
   let year_start = "\{year}-01-01"
@@ -769,31 +814,7 @@ fn daily_activity(model : ViewModel) -> @html.Html {
       ),
     )
   }
-  let month_days = [
-    31,
-    if @study.days_in_calendar_year(year) == 366 {
-      29
-    } else {
-      28
-    },
-    31,
-    30,
-    31,
-    30,
-    31,
-    31,
-    30,
-    31,
-    30,
-    31,
-  ]
-  let labels : Array[@html.Html] = []
-  let mut elapsed = 0
-  for month = 1; month <= 12; month = month + 1 {
-    let column = (leading + elapsed) / 7 + 1
-    labels.push(span(style=["grid-column: \{column}"], "\{month}月"))
-    elapsed = elapsed + month_days[month - 1]
-  }
+  let labels = activity_month_labels(year)
   div(class="activity-body", [
     div(class="heatmap-scroll", [
       div(class="heatmap-frame", [
@@ -824,22 +845,33 @@ fn weekly_activity(model : ViewModel) -> @html.Html {
       maximum = week.completed_count
     }
   }
-  let cells : Array[@html.Html] = weeks.map(week => {
-    let attrs = @html.Attrs::build()
-      .data_set(
-        "level",
-        activity_level(week.completed_count, maximum).to_string(),
+  let cells : Array[@html.Html] = []
+  for week in weeks {
+    let height = activity_bar_height(week.completed_count, maximum)
+    let filled_level = activity_level(week.completed_count, maximum)
+    for row = 0; row < 7; row = row + 1 {
+      let filled = row >= 7 - height
+      let attrs = @html.Attrs::build()
+        .data_set("level", (if filled { filled_level } else { 0 }).to_string())
+        .data_set("count", week.completed_count.to_string())
+      cells.push(
+        i(
+          title="\{week.start} 至 \{week.end} · 完成 \{week.completed_count} 条",
+          attrs~,
+          "",
+        ),
       )
-      .data_set("count", week.completed_count.to_string())
-    i(
-      title="\{week.start} 至 \{week.end} · 完成 \{week.completed_count} 条",
-      attrs~,
-      "",
-    )
-  })
+    }
+  }
   div(class="activity-body", [
     div(class="heatmap-scroll", [
-      div(id="weekly-activity", class="weekly-activity", cells),
+      div(class="activity-matrix-frame", [
+        div(id="weekly-activity", class="heatmap activity-matrix", cells),
+        div(
+          class="heatmap-months activity-matrix-months",
+          activity_month_labels(model.activity_year),
+        ),
+      ]),
     ]),
     activity_legend(),
   ])
@@ -856,21 +888,35 @@ fn cumulative_activity(model : ViewModel) -> @html.Html {
   } else {
     months[months.length() - 1].completed_count
   }
+  let weeks = @study.weekly_completion_stats(model.records, model.activity_year)
+  let year_end = "\{model.activity_year}-12-31"
   let cells : Array[@html.Html] = []
-  for month = 0; month < 12; month = month + 1 {
-    let count = months[month].completed_count
-    let attrs = @html.Attrs::build()
-      .data_set("level", activity_level(count, maximum).to_string())
-      .data_set("count", count.to_string())
-    cells.push(
-      div(class="cumulative-item", [
-        i(title="截至 \{month + 1} 月累计完成 \{count} 条", attrs~, ""),
-        span("\{month + 1}月"),
-      ]),
-    )
+  for week in weeks {
+    let marker = if week.end > year_end { year_end } else { week.end }
+    let month = month_from_iso(marker)
+    let count = months[month - 1].completed_count
+    let height = activity_bar_height(count, maximum)
+    let filled_level = activity_level(count, maximum)
+    for row = 0; row < 7; row = row + 1 {
+      let filled = row >= 7 - height
+      let attrs = @html.Attrs::build()
+        .data_set("level", (if filled { filled_level } else { 0 }).to_string())
+        .data_set("count", count.to_string())
+      cells.push(
+        i(title="截至 \{month} 月累计完成 \{count} 条", attrs~, ""),
+      )
+    }
   }
   div(class="activity-body", [
-    div(id="cumulative-activity", class="cumulative-activity", cells),
+    div(class="heatmap-scroll", [
+      div(class="activity-matrix-frame", [
+        div(id="cumulative-activity", class="heatmap activity-matrix", cells),
+        div(
+          class="heatmap-months activity-matrix-months",
+          activity_month_labels(model.activity_year),
+        ),
+      ]),
+    ]),
     activity_legend(),
   ])
 }
