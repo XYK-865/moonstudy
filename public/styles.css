@@ -141,6 +141,7 @@ input:focus, select:focus, textarea:focus, button:focus-visible { outline: 3px s
 .activity-cell:hover::after { content: attr(data-tooltip); position: absolute; left: 50%; bottom: calc(100% + 9px); transform: translateX(-50%); width: max-content; max-width: 290px; padding: 8px 11px; border-radius: 9px; background: #171918; color: #fff; box-shadow: 0 8px 22px #0005; font: 600 .76rem/1.35 "Segoe UI", "Microsoft YaHei", sans-serif; white-space: nowrap; pointer-events: none; }
 .activity-cell:hover::before { content: ""; position: absolute; left: 50%; bottom: calc(100% + 4px); transform: translateX(-50%); border: 5px solid transparent; border-top-color: #171918; pointer-events: none; }
 .heatmap-legend { display: flex; justify-content: flex-end; align-items: center; gap: 5px; color: var(--quiet); font-size: .75rem; }
+.legend-maximum { margin-right: 5px; color: var(--muted); }
 
 .empty { color: var(--quiet); margin: 0; }
 .history, .topic-list { list-style: none; padding: 0; margin: 0; }

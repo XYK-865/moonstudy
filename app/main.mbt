@@ -714,14 +714,54 @@ fn bar_chart(
 }
 
 ///|
-fn activity_legend() -> @html.Html {
+fn activity_range_label(level : Int, maximum : Int) -> String {
+  if level == 0 {
+    "0 件"
+  } else if maximum <= 0 {
+    "暂无对应数据"
+  } else {
+    let lower = (level - 1) * maximum / 4 + 1
+    let upper = level * maximum / 4
+    if lower > upper {
+      "当前最高值下无对应频次"
+    } else if lower == upper {
+      "\{lower} 件"
+    } else {
+      "\{lower}–\{upper} 件"
+    }
+  }
+}
+
+///|
+fn activity_legend(maximum : Int) -> @html.Html {
   div(class="heatmap-legend", [
+    span(class="legend-maximum", "当前最高 \{maximum} 件"),
     span("少"),
-    i(attrs=@html.Attrs::build().data_set("level", "0"), ""),
-    i(attrs=@html.Attrs::build().data_set("level", "1"), ""),
-    i(attrs=@html.Attrs::build().data_set("level", "2"), ""),
-    i(attrs=@html.Attrs::build().data_set("level", "3"), ""),
-    i(attrs=@html.Attrs::build().data_set("level", "4"), ""),
+    i(
+      title=activity_range_label(0, maximum),
+      attrs=@html.Attrs::build().data_set("level", "0"),
+      "",
+    ),
+    i(
+      title=activity_range_label(1, maximum),
+      attrs=@html.Attrs::build().data_set("level", "1"),
+      "",
+    ),
+    i(
+      title=activity_range_label(2, maximum),
+      attrs=@html.Attrs::build().data_set("level", "2"),
+      "",
+    ),
+    i(
+      title=activity_range_label(3, maximum),
+      attrs=@html.Attrs::build().data_set("level", "3"),
+      "",
+    ),
+    i(
+      title=activity_range_label(4, maximum),
+      attrs=@html.Attrs::build().data_set("level", "4"),
+      "",
+    ),
     span("多"),
   ])
 }
@@ -837,7 +877,7 @@ fn daily_activity(model : ViewModel) -> @html.Html {
         div(id="heatmap", class="heatmap", cells),
       ]),
     ]),
-    activity_legend(),
+    activity_legend(maximum),
   ])
 }
 
@@ -881,7 +921,7 @@ fn weekly_activity(model : ViewModel) -> @html.Html {
   }
   div(class="activity-body", [
     yearly_activity_frame("weekly-activity", year, cells),
-    activity_legend(),
+    activity_legend(maximum),
   ])
 }
 
@@ -928,7 +968,7 @@ fn cumulative_activity(model : ViewModel) -> @html.Html {
   }
   div(class="activity-body", [
     yearly_activity_frame("cumulative-activity", year, cells),
-    activity_legend(),
+    activity_legend(maximum),
   ])
 }
 
